@@ -1,0 +1,144 @@
+
+> antigravity@1.0.0 dist
+> electron-builder
+
+  ÔÇó electron-builder  version=26.8.1 os=10.0.26100
+  ÔÇó Implicit publishing triggered by CI detection. This behavior will be disabled in electron-builder v27. Please use --publish explicitly.
+  ÔÇó loaded configuration  file=package.json ("build" field)
+  ÔÇó description is missed in the package.json  appPackageFile=C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity\package.json
+  ÔÇó executing @electron/rebuild  electronVersion=40.6.1 arch=x64 buildFromSource=false workspaceRoot=C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity projectDir=./ appDir=./
+  ÔÇó installing native dependencies  arch=x64
+  ÔÇó completed installing native dependencies
+  ÔÇó packaging       platform=win32 arch=x64 electron=40.6.1 appOutDir=dist\win-unpacked
+  ÔÇó searching for node modules  pm=npm searchDir=C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity
+(node:35792) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+  ÔÇó searching for node modules  pm=traversal searchDir=C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity
+  ÔÇó using manual traversal of node_modules to build dependency tree
+  ÔÇó no node modules returned while searching directories  searchDirectories=[""]
+  ÔÇó updating asar integrity executable resource  executablePath=dist\win-unpacked\Security+ Simulator.exe
+  ÔÇó default Electron icon is used  reason=application icon is not set
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=42.917s
+  Ô¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011.7z
+    --
+    Path = C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011.7z' '-oC:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\379774011'
+                    workingDir=C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=49.612s
+  Ô¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563.7z
+    --
+    Path = C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563.7z' '-oC:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\705440563'
+                    workingDir=C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=42.77s
+  Ô¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107.7z
+    --
+    Path = C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107.7z' '-oC:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\857777107'
+                    workingDir=C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=42.745s
+  Ô¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187.7z
+    --
+    Path = C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187\darwin\10.12\lib\libssl.dylib
+    
+                    command='C:\Users\fdemello\OneDrive - Bison Transport\Desktop\Excel Files\Excel Sheets\Antigravity\node_modules\7zip-bin\win\x64\7za.exe' x -snld -bd 'C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187.7z' '-oC:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign\829783187'
+                    workingDir=C:\Users\fdemello\AppData\Local\electron-builder\Cache\winCodeSign

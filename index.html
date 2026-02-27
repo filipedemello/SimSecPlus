@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security+ SY0-701 Simulator</title>
+    <meta name="description" content="Offline simulator for CompTIA Security+ SY0-701 certification with 900 questions">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a0c">
+
+    <!-- iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SecPlus Sim">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+    <!-- SCREEN 1: Welcome -->
+    <section id="screen-welcome" class="screen active">
+        <div class="container">
+            <div class="logo-area">
+                <div class="shield-icon">🛡️</div>
+                <h1>Security<span class="accent">+</span></h1>
+                <p class="subtitle">SY0-701 Exam Simulator</p>
+                <p class="tagline">900 questions · 5 domains · Instant feedback</p>
+            </div>
+            <div class="card welcome-card">
+                <h2>Choose test mode</h2>
+                <button class="btn btn-primary btn-lg" id="btn-general">
+                    <span class="btn-icon">📋</span>
+                    <span class="btn-text">
+                        <strong>General Test</strong>
+                        <small>All domains</small>
+                    </span>
+                </button>
+                <button class="btn btn-secondary btn-lg" id="btn-custom">
+                    <span class="btn-icon">🎯</span>
+                    <span class="btn-text">
+                        <strong>Custom Test</strong>
+                        <small>Choose domains</small>
+                    </span>
+                </button>
+                <button class="btn btn-outline btn-lg" id="btn-study-mode">
+                    <span class="btn-icon">📖</span>
+                    <span class="btn-text">
+                        <strong>Study Mode</strong>
+                        <small>No timer</small>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 2: Domain Selection (Custom mode) -->
+    <section id="screen-domains" class="screen">
+        <div class="container">
+            <button class="btn-back" id="btn-back-domains">← Back</button>
+            <div class="card">
+                <h2>Select domains</h2>
+                <p class="hint-text">Select one or more domains for the test</p>
+                <div class="domain-list" id="domain-list">
+                    <label class="domain-item" data-domain="1">
+                        <input type="checkbox" value="1">
+                        <span class="domain-info">
+                            <strong>Domain 1</strong>
+                            <span>General Security Concepts</span>
+                            <span class="badge">12%</span>
+                        </span>
+                    </label>
+                    <label class="domain-item" data-domain="2">
+                        <input type="checkbox" value="2">
+                        <span class="domain-info">
+                            <strong>Domain 2</strong>
+                            <span>Threats, Vulnerabilities, and Mitigations</span>
+                            <span class="badge">22%</span>
+                        </span>
+                    </label>
+                    <label class="domain-item" data-domain="3">
+                        <input type="checkbox" value="3">
+                        <span class="domain-info">
+                            <strong>Domain 3</strong>
+                            <span>Security Architecture</span>
+                            <span class="badge">18%</span>
+                        </span>
+                    </label>
+                    <label class="domain-item" data-domain="4">
+                        <input type="checkbox" value="4">
+                        <span class="domain-info">
+                            <strong>Domain 4</strong>
+                            <span>Security Operations</span>
+                            <span class="badge">28%</span>
+                        </span>
+                    </label>
+                    <label class="domain-item" data-domain="5">
+                        <input type="checkbox" value="5">
+                        <span class="domain-info">
+                            <strong>Domain 5</strong>
+                            <span>Security Program Management and Oversight</span>
+                            <span class="badge">20%</span>
+                        </span>
+                    </label>
+                </div>
+                <button class="btn btn-primary" id="btn-domains-next" disabled>Continue</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 3: Question Count -->
+    <section id="screen-count" class="screen">
+        <div class="container">
+            <button class="btn-back" id="btn-back-count">← Back</button>
+            <div class="card">
+                <h2>Number of questions</h2>
+                <div class="count-grid">
+                    <button class="count-btn" data-count="10">10</button>
+                    <button class="count-btn" data-count="20">20</button>
+                    <button class="count-btn" data-count="30">30</button>
+                    <button class="count-btn" data-count="50">50</button>
+                </div>
+                <div class="custom-count">
+                    <label for="custom-count-input">Custom:</label>
+                    <input type="number" id="custom-count-input" min="1" max="900" placeholder="e.g. 45">
+                    <button class="btn btn-primary btn-sm" id="btn-custom-count">Start</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 4: Quiz -->
+    <section id="screen-quiz" class="screen">
+        <div class="quiz-header">
+            <div class="quiz-progress">
+                <span id="quiz-current">1</span> / <span id="quiz-total">10</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="quiz-timer" id="quiz-timer">
+                <span class="timer-icon">⏱️</span>
+                <span id="timer-display">00:00</span>
+                <button class="btn-icon-only" id="btn-pause" title="Pausar">⏸️</button>
+            </div>
+            <div class="quiz-domain-badge" id="quiz-domain-badge">Domain 1</div>
+        </div>
+
+        <div class="container quiz-container">
+            <div class="card question-card">
+                <div class="question-number" id="question-number">Questão 1</div>
+                <p class="question-text" id="question-text"></p>
+                <div class="options-list" id="options-list"></div>
+                <button class="btn btn-hint" id="btn-hint">💡 Show hint</button>
+                <div class="hint-box hidden" id="hint-box"></div>
+                <div class="feedback-box hidden" id="feedback-box"></div>
+            </div>
+
+            <div class="quiz-nav">
+                <button class="btn btn-outline" id="btn-prev" disabled>← Previous</button>
+                <div class="question-dots" id="question-dots"></div>
+                <button class="btn btn-primary" id="btn-next">Next →</button>
+                <button class="btn btn-finish hidden" id="btn-finish">Finish Test</button>
+            </div>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div class="overlay hidden" id="pause-overlay">
+            <div class="card pause-card">
+                <h2>⏸️ Test Paused</h2>
+                <p>Your progress is saved.</p>
+                <button class="btn btn-primary" id="btn-resume">▶️ Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 5: Results -->
+    <section id="screen-results" class="screen">
+        <div class="container results-container">
+            <h2>📊 Test Results</h2>
+
+            <div class="results-grid">
+                <div class="card result-score-card">
+                    <div class="score-circle" id="score-circle">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" class="score-bg" />
+                            <circle cx="60" cy="60" r="54" class="score-fill" id="score-arc" />
+                        </svg>
+                        <div class="score-value" id="score-value">0%</div>
+                    </div>
+                    <p class="score-label" id="score-label">Score</p>
+                    <p class="score-detail" id="score-detail">0 de 0 corretas</p>
+                </div>
+
+                <div class="card result-domains-card">
+                    <h3>Performance by Domain</h3>
+                    <div id="domain-results"></div>
+                </div>
+            </div>
+
+            <div class="card result-diagnostic-card">
+                <h3>🧠 Smart Diagnostic</h3>
+                <div id="diagnostic-content"></div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn-primary" id="btn-review">🔄 Review Mode (wrong only)</button>
+                <button class="btn btn-secondary" id="btn-study-again">📖 Study Mode (no timer)</button>
+                <button class="btn btn-outline" id="btn-new-test">🏠 New Test</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="questions/block01.js"></script>
+    <script src="questions/block02.js"></script>
+    <script src="questions/block03.js"></script>
+    <script src="questions/block04.js"></script>
+    <script src="questions/block05.js"></script>
+    <script src="questions/block06.js"></script>
+    <script src="questions/block07.js"></script>
+    <script src="questions/block08.js"></script>
+    <script src="questions/block09.js"></script>
+    <script src="questions/block10.js"></script>
+    <script src="questions/block11.js"></script>
+    <script src="questions/block12.js"></script>
+    <script src="questions/block13.js"></script>
+    <script src="questions/block14.js"></script>
+    <script src="questions/block15.js"></script>
+    <script src="questions/block16.js"></script>
+    <script src="questions/block17.js"></script>
+    <script src="questions/block18.js"></script>
+    <script src="questions/block19.js"></script>
+    <script src="questions/block20.js"></script>
+    <script src="questions/block21.js"></script>
+    <script src="questions/block22.js"></script>
+    <script src="questions/block23.js"></script>
+    <script src="questions/block24.js"></script>
+    <script src="questions/block25.js"></script>
+    <script src="questions/block26.js"></script>
+    <script src="questions/block27.js"></script>
+    <script src="questions/block28.js"></script>
+    <script src="questions/block29.js"></script>
+    <script src="questions/block30.js"></script>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registered', reg))
+                    .catch(err => console.error('Service Worker registration failed', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

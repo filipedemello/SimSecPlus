@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+SecurityPlus_Simulator - Copy*.html
+bundle.ps1
+shuffle.ps1
+gen.ps1
+generate.js
+package-lock.json
+build.log
+build2.log

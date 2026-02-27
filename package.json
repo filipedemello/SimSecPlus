@@ -1,0 +1,31 @@
+{
+  "name": "antigravity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "npx electron-packager . \"Security+ Simulator\" --platform=win32 --arch=x64 --out=dist --overwrite",
+    "dist": "npx electron-packager . \"Security+ Simulator\" --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^40.6.1",
+    "electron-builder": "^26.8.1",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.securityplus.simulator",
+    "productName": "Security+ Simulator",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable"
+    }
+  }
+}
