@@ -1482,8 +1482,6 @@ body {
 }
 
 /* Insights section */
-.db-insights {}
-
 .insight-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
