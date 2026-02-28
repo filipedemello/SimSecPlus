@@ -1,5 +1,5 @@
 /**
- * SimSecPlus — Reinforcement Module
+ * SimSecPlus \u2014 Reinforcement Module
  * Manages automatic re-insertion of incorrectly answered questions.
  *
  * Rules:
@@ -45,7 +45,7 @@ const Reinforcement = (() => {
             if (correct) {
                 s.consecutiveCorrect++;
                 if (s.consecutiveCorrect >= 2) {
-                    // Graduate — question is mastered
+                    // Graduate \u2014 question is mastered
                     _state.delete(questionId);
                     return 0;
                 }

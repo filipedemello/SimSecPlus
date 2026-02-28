@@ -1,5 +1,5 @@
 /**
- * SimSecPlus — Test Generator Module
+ * SimSecPlus \u2014 Test Generator Module
  * Generates a smart question pool using 80/20 rule, cooldown, and domain balancing.
  * 100% client-side. No dependencies beyond storage.js and domains.js.
  *
@@ -89,7 +89,7 @@ const TestGenerator = (() => {
             allQuestions = (typeof window !== 'undefined' ? window.QUESTIONS : []) || []
         } = opts;
 
-        // No user / no history → use classic weighted selection
+        // No user / no history \u2192 use classic weighted selection
         if (!userId) {
             return selectWeighted(allQuestions, domains, count, domainConfig);
         }
@@ -99,7 +99,7 @@ const TestGenerator = (() => {
         const latestPerQ = stats.latest_per_question || {};
 
         if (Object.keys(latestPerQ).length === 0) {
-            // No history yet → weighted
+            // No history yet \u2192 weighted
             return selectWeighted(allQuestions, domains, count, domainConfig);
         }
 
@@ -134,7 +134,7 @@ const TestGenerator = (() => {
             }
         });
 
-        // ── Weakness mode: aggressively target wrong questions & weak areas ──
+        // \u2500\u2500 Weakness mode: aggressively target wrong questions & weak areas \u2500\u2500
         if (mode === 'weakness') {
             // Compute subdomain weakness scores
             const bySub = stats.by_subdomain || {};
@@ -193,7 +193,7 @@ const TestGenerator = (() => {
             return shuffle(selected).slice(0, count);
         }
 
-        // ── Adaptive mode: weight domains by error rate, balanced mix ────────
+        // \u2500\u2500 Adaptive mode: weight domains by error rate, balanced mix \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         if (mode === 'adaptive') {
             const byDomain = stats.by_domain || {};
 
@@ -255,7 +255,7 @@ const TestGenerator = (() => {
             return shuffle(selected).slice(0, count);
         }
 
-        // ── Standard 80/20 selection ───────────────────────────────────────────
+        // \u2500\u2500 Standard 80/20 selection \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         shuffle(never_seen);
         shuffle(wrong_questions);
         shuffle(correctly_answered);

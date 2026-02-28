@@ -1,5 +1,5 @@
 /**
- * SimSecPlus — Analytics Module
+ * SimSecPlus \u2014 Analytics Module
  * Computes all metrics from IndexedDB data via Storage.getStats()
  * Used by dashboardView.js
  */

@@ -50,7 +50,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
     "incorrect": {
       "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
-      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "2": "Rivest\u2013Shamir\u2013Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
       "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
     }
   }
@@ -320,7 +320,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
     "incorrect": {
       "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
-      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "2": "Rivest\u2013Shamir\u2013Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
       "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
     }
   }
@@ -482,7 +482,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
     "incorrect": {
       "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
-      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "2": "Rivest\u2013Shamir\u2013Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
       "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
     }
   }

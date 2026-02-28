@@ -236,7 +236,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "How far back in time can you afford to lose data?",
   "explanation": {
-    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time \u2013 how old the most recent backup can be.",
     "incorrect": {
       "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
       "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
@@ -267,7 +267,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "incorrect": {
       "1": "Both can be hardware or software-based.",
       "2": "Both can operate at multiple network layers.",
-      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) \u2013 the answer has them reversed."
     }
   }
 },
@@ -294,7 +294,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "incorrect": {
       "1": "Both can be hardware or software-based.",
       "2": "Both can operate at multiple network layers.",
-      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) \u2013 the answer has them reversed."
     }
   }
 },
@@ -803,7 +803,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "How far back in time can you afford to lose data?",
   "explanation": {
-    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time \u2013 how old the most recent backup can be.",
     "incorrect": {
       "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
       "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",

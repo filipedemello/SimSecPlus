@@ -1,5 +1,5 @@
 /**
- * SimSecPlus — Dashboard View Module
+ * SimSecPlus \u2014 Dashboard View Module
  * Renders the analytics dashboard as HTML/SVG in #screen-dashboard,
  * with no external dependencies. Mobile-first.
  */
@@ -27,17 +27,17 @@ const DashboardView = (() => {
         return e;
     }
 
-    // ─── Bar chart (SVG) for domain breakdown ─────────────────────────────────
+    // \u2500\u2500\u2500 Bar chart (SVG) for domain breakdown \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function renderDomainChart(domainData, container) {
         const chartWrap = el('div', { class: 'db-chart-wrap' });
-        const title = el('h3', {}, '📊 Performance by Domain');
+        const title = el('h3', {}, '\uD83D\uDCCA Performance by Domain');
         chartWrap.appendChild(title);
 
         domainData.forEach(d => {
             const pct = d.pct || 0;
             const cls = pct >= 75 ? 'high' : pct >= 50 ? 'mid' : 'low';
             const row = el('div', { class: 'domain-result-row' },
-                el('span', { class: 'dr-label', title: d.name }, `D${d.domain_id} – ${d.name}`),
+                el('span', { class: 'dr-label', title: d.name }, `D${d.domain_id} \u2013 ${d.name}`),
                 el('div', { class: 'dr-bar' },
                     el('div', { class: `dr-fill ${cls}`, style: `width:0%`, 'data-pct': pct })
                 ),
@@ -56,10 +56,10 @@ const DashboardView = (() => {
         });
     }
 
-    // ─── Line chart (SVG) for time series ─────────────────────────────────────
+    // \u2500\u2500\u2500 Line chart (SVG) for time series \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function renderTimeSeries(series, container) {
         if (!series || series.length < 2) {
-            container.appendChild(el('p', { class: 'db-empty' }, '📈 Complete more sessions to see your evolution.'));
+            container.appendChild(el('p', { class: 'db-empty' }, '\uD83D\uDCC8 Complete more sessions to see your evolution.'));
             return;
         }
 
@@ -112,19 +112,19 @@ const DashboardView = (() => {
         });
 
         const wrap = el('div', { class: 'db-chart-wrap' },
-            el('h3', {}, '📈 Score Evolution'),
+            el('h3', {}, '\uD83D\uDCC8 Score Evolution'),
             svg
         );
         container.appendChild(wrap);
     }
 
-    // ─── Top weaknesses ───────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Top weaknesses \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function renderWeaknesses(weaknesses, container) {
         const wrap = el('div', { class: 'db-chart-wrap' });
-        wrap.appendChild(el('h3', {}, '⚠️  Top 3 Weaknesses'));
+        wrap.appendChild(el('h3', {}, '\u26A0\uFE0F  Top 3 Weaknesses'));
 
         if (!weaknesses || weaknesses.length === 0) {
-            wrap.appendChild(el('p', { class: 'db-empty' }, '🎉 No major weaknesses yet! Keep studying.'));
+            wrap.appendChild(el('p', { class: 'db-empty' }, '\uD83C\uDF89 No major weaknesses yet! Keep studying.'));
         } else {
             weaknesses.forEach((w, i) => {
                 const card = el('div', { class: 'weakness-card' },
@@ -141,7 +141,7 @@ const DashboardView = (() => {
         container.appendChild(wrap);
     }
 
-    // ─── Overall stats card ───────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Overall stats card \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function renderOverall(data, container) {
         const { overall } = data;
         const pct = overall.pct || 0;
@@ -182,11 +182,11 @@ const DashboardView = (() => {
         container.appendChild(card);
     }
 
-    // ─── Main render ──────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Main render \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     async function render(user) {
         const contentEl = document.getElementById('dashboard-content');
         if (!contentEl) return;
-        contentEl.innerHTML = '<div class="dashboard-loading">⏳ Loading your stats...</div>';
+        contentEl.innerHTML = '<div class="dashboard-loading">\u23F3 Loading your stats...</div>';
 
         try {
             const data = await Analytics.getUserAnalytics(user);
@@ -196,7 +196,7 @@ const DashboardView = (() => {
             if (data.overall.total === 0) {
                 contentEl.innerHTML = `
                     <div class="card db-empty-state">
-                        <h3>🚀 No data yet for ${user.name}</h3>
+                        <h3>\uD83D\uDE80 No data yet for ${user.name}</h3>
                         <p>Complete at least one quiz to see your dashboard.</p>
                     </div>`;
                 return;
@@ -214,7 +214,7 @@ const DashboardView = (() => {
         }
     }
 
-    // ─── Insights + CTA ──────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Insights + CTA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function renderInsights(data, container) {
         const wrap = el('div', { class: 'db-chart-wrap db-insights' });
         wrap.appendChild(el('h3', {}, '\uD83D\uDCA1 Quick Insights'));

@@ -1,19 +1,19 @@
 /**
- * SimSecPlus — Storage Module (IndexedDB wrapper)
+ * SimSecPlus \u2014 Storage Module (IndexedDB wrapper)
  * 100% client-side, offline-ready.
  * No dependencies. Compatible with modern browsers (iOS Safari 14+, Chrome 80+).
  *
  * API:
- *   Storage.init()                          → Promise<void>
- *   Storage.createUser(name, email?)        → Promise<User>
- *   Storage.listUsers()                     → Promise<User[]>
- *   Storage.setCurrentUser(userId)          → void  (localStorage)
- *   Storage.getCurrentUser()                → Promise<User | null>
- *   Storage.logAttempt(opts)                → Promise<Attempt>
- *   Storage.createTestSession(opts)         → Promise<Session>
- *   Storage.closeTestSession(id, stats)     → Promise<Session>
- *   Storage.getStats(userId, filters?)      → Promise<StatsResult>
- *   Storage.getUserAttempts(userId, filters?) → Promise<Attempt[]>
+ *   Storage.init()                          \u2192 Promise<void>
+ *   Storage.createUser(name, email?)        \u2192 Promise<User>
+ *   Storage.listUsers()                     \u2192 Promise<User[]>
+ *   Storage.setCurrentUser(userId)          \u2192 void  (localStorage)
+ *   Storage.getCurrentUser()                \u2192 Promise<User | null>
+ *   Storage.logAttempt(opts)                \u2192 Promise<Attempt>
+ *   Storage.createTestSession(opts)         \u2192 Promise<Session>
+ *   Storage.closeTestSession(id, stats)     \u2192 Promise<Session>
+ *   Storage.getStats(userId, filters?)      \u2192 Promise<StatsResult>
+ *   Storage.getUserAttempts(userId, filters?) \u2192 Promise<Attempt[]>
  */
 
 const Storage = (() => {
@@ -25,7 +25,7 @@ const Storage = (() => {
 
     let _db = null;
 
-    // ─── UUID v4 (no crypto.randomUUID fallback for iOS 12 compat) ─────────────
+    // \u2500\u2500\u2500 UUID v4 (no crypto.randomUUID fallback for iOS 12 compat) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function uuid() {
         if (typeof crypto !== 'undefined' && crypto.randomUUID) {
             return crypto.randomUUID();
@@ -36,7 +36,7 @@ const Storage = (() => {
         });
     }
 
-    // ─── Open / Migrate DB ──────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Open / Migrate DB \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function init() {
         if (_db) return Promise.resolve();
 
@@ -74,7 +74,7 @@ const Storage = (() => {
         });
     }
 
-    // ─── Generic helpers ────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Generic helpers \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function tx(storeName, mode = 'readonly') {
         return _db.transaction([storeName], mode).objectStore(storeName);
     }
@@ -93,7 +93,7 @@ const Storage = (() => {
         return promisify(req);
     }
 
-    // ─── Users ──────────────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Users \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function createUser(name, email = null) {
         const user = {
             user_id: uuid(),
@@ -132,7 +132,7 @@ const Storage = (() => {
         });
     }
 
-    // ─── Attempts ───────────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Attempts \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     /**
      * Log a single answer attempt.
      * @param {object} opts
@@ -176,7 +176,7 @@ const Storage = (() => {
         });
     }
 
-    // ─── Test Sessions ──────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Test Sessions \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     /**
      * @param {object} opts
      * @param {string} opts.user_id
@@ -212,7 +212,7 @@ const Storage = (() => {
         return getAll('test_sessions', 'user_id_idx', userId);
     }
 
-    // ─── Stats Aggregation ──────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Stats Aggregation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     /**
      * Compute aggregated stats for a user.
      * @param {string} userId
@@ -304,7 +304,7 @@ const Storage = (() => {
         });
     }
 
-    // ─── Public API ─────────────────────────────────────────────────────────────
+    // \u2500\u2500\u2500 Public API \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     return {
         init,
         // Users

@@ -74,9 +74,9 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Preparation always comes first.",
   "explanation": {
-    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation \u2192 Detection & Analysis \u2192 Containment \u2192 Eradication \u2192 Recovery \u2192 Lessons Learned.",
     "incorrect": {
-      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "1": "Detection cannot come before Preparation \u2013 teams must be prepared first.",
       "2": "Containment requires detection first; you must find the threat before containing it.",
       "3": "Analysis follows detection, and preparation must come before any response."
     }
@@ -261,7 +261,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "False negative"
   ],
   "correctIndex": 0,
-  "hint": "The alert is correct – there IS a real threat.",
+  "hint": "The alert is correct \u2013 there IS a real threat.",
   "explanation": {
     "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
     "incorrect": {
@@ -290,9 +290,9 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Preparation always comes first.",
   "explanation": {
-    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation \u2192 Detection & Analysis \u2192 Containment \u2192 Eradication \u2192 Recovery \u2192 Lessons Learned.",
     "incorrect": {
-      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "1": "Detection cannot come before Preparation \u2013 teams must be prepared first.",
       "2": "Containment requires detection first; you must find the threat before containing it.",
       "3": "Analysis follows detection, and preparation must come before any response."
     }
@@ -317,9 +317,9 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Preparation always comes first.",
   "explanation": {
-    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation \u2192 Detection & Analysis \u2192 Containment \u2192 Eradication \u2192 Recovery \u2192 Lessons Learned.",
     "incorrect": {
-      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "1": "Detection cannot come before Preparation \u2013 teams must be prepared first.",
       "2": "Containment requires detection first; you must find the threat before containing it.",
       "3": "Analysis follows detection, and preparation must come before any response."
     }
@@ -342,7 +342,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "False negative"
   ],
   "correctIndex": 0,
-  "hint": "The alert is correct – there IS a real threat.",
+  "hint": "The alert is correct \u2013 there IS a real threat.",
   "explanation": {
     "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
     "incorrect": {
@@ -423,7 +423,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
     "False negative"
   ],
   "correctIndex": 0,
-  "hint": "The alert is correct – there IS a real threat.",
+  "hint": "The alert is correct \u2013 there IS a real threat.",
   "explanation": {
     "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
     "incorrect": {
@@ -641,9 +641,9 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Preparation always comes first.",
   "explanation": {
-    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation \u2192 Detection & Analysis \u2192 Containment \u2192 Eradication \u2192 Recovery \u2192 Lessons Learned.",
     "incorrect": {
-      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "1": "Detection cannot come before Preparation \u2013 teams must be prepared first.",
       "2": "Containment requires detection first; you must find the threat before containing it.",
       "3": "Analysis follows detection, and preparation must come before any response."
     }

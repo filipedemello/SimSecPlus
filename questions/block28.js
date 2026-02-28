@@ -128,7 +128,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",
@@ -155,7 +155,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",
@@ -290,7 +290,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",
@@ -587,7 +587,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",
@@ -749,7 +749,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",
@@ -803,7 +803,7 @@ window.QUESTIONS = (window.QUESTIONS || []).concat([
   "correctIndex": 0,
   "hint": "Think numbers and monetary values.",
   "explanation": {
-    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) \u00D7 Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
     "incorrect": {
       "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
       "2": "A risk register is a document that tracks risks, not an analysis method.",

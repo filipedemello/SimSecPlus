@@ -1,5 +1,5 @@
 /* ============================
-   Security+ SY0-701 Simulator â€“ App Engine
+   Security+ SY0-701 Simulator \u2014 App Engine
    ============================ */
 (function () {
     'use strict';
@@ -30,7 +30,7 @@
         paused: false,
         isStudyMode: false,
         wrongQuestions: [],     // for review mode
-        // â”€â”€ New: User + Session â”€â”€
+        // \u2500\u2500 New: User + Session \u2500\u2500
         currentUser: null,      // { user_id, name, ... } | null
         currentSessionId: null, // active test session ID
         questionStartTime: 0,   // timestamp when current question was shown
@@ -201,7 +201,7 @@
         const container = $('.quiz-timer');
 
         if (state.isStudyMode) {
-            display.textContent = 'âˆž Study';
+            display.textContent = '\u221E Study';
             container.classList.remove('warning');
             return;
         }
@@ -224,10 +224,10 @@
 
         if (state.paused) {
             overlay.classList.remove('hidden');
-            btn.textContent = 'â–¶ï¸';
+            btn.textContent = '\u25B6\uFE0F';
         } else {
             overlay.classList.add('hidden');
-            btn.textContent = 'â¸ï¸';
+            btn.textContent = '\u23F8\uFE0F';
         }
     }
 
@@ -304,7 +304,7 @@
         if (q.hint) {
             hintBtn.classList.remove('hidden');
             hintBtn.onclick = () => {
-                hintBox.textContent = 'ðŸ’¡ ' + q.hint;
+                hintBox.textContent = '\uD83D\uDCA1 ' + q.hint;
                 hintBox.classList.remove('hidden');
                 hintBtn.classList.add('hidden');
             };
@@ -394,7 +394,7 @@
         }
         state.questionStartTime = Date.now(); // reset for next question
 
-        // ── Reinforcement: re-insert wrong answers ────────────────────────
+        // \u2500\u2500 Reinforcement: re-insert wrong answers \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         if (state.reinforcementMgr && !state.isStudyMode) {
             const offset = state.reinforcementMgr.processAnswer(q.id, ans.correct);
             if (offset > 0) {
@@ -424,8 +424,8 @@
         fbBox.classList.add(ans.correct ? 'correct-feedback' : 'incorrect-feedback');
 
         let html = ans.correct
-            ? '<h4>✅ Correct!</h4>'
-            : '<h4>❌ Incorrect</h4>';
+            ? '<h4>\u2705 Correct!</h4>'
+            : '<h4>\u274C Incorrect</h4>';
 
         // Reinforcement notice
         if (!ans.correct && state.reinforcementMgr && !state.isStudyMode) {
@@ -437,7 +437,7 @@
             if (q.explanation.incorrect) {
                 // Show explanations for all incorrect options
                 Object.values(q.explanation.incorrect).forEach(text => {
-                    html += `<p class="fb-incorrect">→ ${text}</p>`;
+                    html += `<p class="fb-incorrect">\u2192 ${text}</p>`;
                 });
             }
         }
@@ -483,7 +483,7 @@
         setTimeout(() => { arc.style.strokeDashoffset = offset; }, 100);
 
         $('#score-value').textContent = `${pct}%`;
-        $('#score-label').textContent = pct >= 75 ? 'ðŸŽ‰ Excellent!' : pct >= 50 ? 'ðŸ“ˆ Good progress' : 'ðŸ“š Keep studying';
+        $('#score-label').textContent = pct >= 75 ? '\uD83C\uDF89 Excellent!' : pct >= 50 ? '\uD83D\uDCC8 Good progress' : '\uD83D\uDCDA Keep studying';
         $('#score-detail').textContent = `${correctCount} of ${total} correct`;
 
         // Per-domain results
@@ -505,7 +505,7 @@
 
             domainContainer.innerHTML += `
                 <div class="domain-result-row">
-                    <span class="dr-label" title="${s.name}">D${d} â€“ ${s.name}</span>
+                    <span class="dr-label" title="${s.name}">D${d} \u2014 ${s.name}</span>
                     <div class="dr-bar"><div class="dr-fill ${cls}" style="width:0%"></div></div>
                     <span class="dr-value">${dpct}%</span>
                 </div>`;
@@ -531,10 +531,10 @@
         // Update review button text
         if (state.wrongQuestions.length === 0) {
             reviewBtn.disabled = true;
-            reviewBtn.textContent = 'âœ… No mistakes to review!';
+            reviewBtn.textContent = '\u2705 No mistakes to review!';
         } else {
             reviewBtn.disabled = false;
-            reviewBtn.textContent = `ðŸ”„ Review Mode (${state.wrongQuestions.length} wrong)`;
+            reviewBtn.textContent = `\uD83D\uDD04 Review Mode (${state.wrongQuestions.length} wrong)`;
         }
     }
 
@@ -551,8 +551,8 @@
         const strong = sorted.filter(d => d.pct >= 75);
         strong.forEach(d => {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸ’ª</span>
-                <span><strong class="diag-strong">${d.name}</strong> â€“ ${d.pct}% correct. Excellent mastery!</span>
+                <span class="diag-icon">\uD83D\uDCAA</span>
+                <span><strong class="diag-strong">${d.name}</strong> \u2014 ${d.pct}% correct. Excellent mastery!</span>
             </div>`;
         });
 
@@ -560,8 +560,8 @@
         const weak = sorted.filter(d => d.pct < 50);
         weak.forEach(d => {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">âš ï¸</span>
-                <span><strong class="diag-weak">${d.name}</strong> â€“ ${d.pct}% correct. Needs special attention.</span>
+                <span class="diag-icon">\u26A0\uFE0F</span>
+                <span><strong class="diag-weak">${d.name}</strong> \u2014 ${d.pct}% correct. Needs special attention.</span>
             </div>`;
         });
 
@@ -569,8 +569,8 @@
         const medium = sorted.filter(d => d.pct >= 50 && d.pct < 75);
         medium.forEach(d => {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸ“Š</span>
-                <span><strong class="diag-tip">${d.name}</strong> â€“ ${d.pct}% correct. Good, but can improve.</span>
+                <span class="diag-icon">\uD83D\uDCCA</span>
+                <span><strong class="diag-tip">${d.name}</strong> \u2014 ${d.pct}% correct. Good, but can improve.</span>
             </div>`;
         });
 
@@ -578,7 +578,7 @@
         if (weak.length > 0) {
             const focusList = weak.map(d => `Domain ${d.domain}`).join(', ');
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸŽ¯</span>
+                <span class="diag-icon">\uD83C\uDFAF</span>
                 <span>Recommendation: Focus your studies on <strong class="diag-weak">${focusList}</strong> to improve your performance.</span>
             </div>`;
         }
@@ -586,17 +586,17 @@
         // Overall verdict
         if (overallPct >= 75) {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸ†</span>
+                <span class="diag-icon">\uD83C\uDFC6</span>
                 <span>You are on track to pass! Keep practicing to solidify your knowledge.</span>
             </div>`;
         } else if (overallPct >= 50) {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸ“ˆ</span>
+                <span class="diag-icon">\uD83D\uDCC8</span>
                 <span>Good progress! Review weak areas and retake focused tests on them.</span>
             </div>`;
         } else {
             html += `<div class="diagnostic-item">
-                <span class="diag-icon">ðŸ“š</span>
+                <span class="diag-icon">\uD83D\uDCDA</span>
                 <span>We recommend reviewing study material before retaking the test. Use Study Mode without a timer.</span>
             </div>`;
         }
@@ -606,7 +606,7 @@
 
     // ---------- EVENT LISTENERS ----------
     function bindEvents() {
-        // â”€â”€ User screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 User screen \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         const showCreateBtn = $('#btn-show-create-user');
         const createForm = $('#create-user-form');
         if (showCreateBtn && createForm) {
@@ -641,7 +641,7 @@
             });
         }
 
-        // â”€â”€ Welcome: test mode buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 Welcome: test mode buttons \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         $('#btn-general').addEventListener('click', () => {
             state.mode = 'general';
             state.isStudyMode = false;
@@ -724,7 +724,7 @@
             });
         }
 
-        // â”€â”€ Domain selection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 Domain selection \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         $$('#domain-list input').forEach(cb => {
             cb.addEventListener('change', () => {
                 state.selectedDomains = [...$$('#domain-list input:checked')].map(c => parseInt(c.value));
@@ -740,7 +740,7 @@
             showScreen(state.mode === 'custom' ? 'domains' : 'welcome');
         });
 
-        // â”€â”€ Count screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 Count screen \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         $$('.count-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 state.totalQuestions = parseInt(btn.dataset.count);
@@ -756,7 +756,7 @@
             }
         });
 
-        // â”€â”€ Quiz navigation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 Quiz navigation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         $('#btn-next').addEventListener('click', () => {
             if (state.currentIndex < state.questions.length - 1) {
                 state.currentIndex++;
@@ -783,7 +783,7 @@
         $('#btn-pause').addEventListener('click', togglePause);
         $('#btn-resume').addEventListener('click', togglePause);
 
-        // â”€â”€ Results actions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // \u2500\u2500 Results actions \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
         $('#btn-review').addEventListener('click', () => {
             if (state.wrongQuestions.length === 0) return;
             state.mode = 'review';
@@ -835,7 +835,7 @@
         Storage.setCurrentUser(user.user_id);
         const greeting = $('#user-greeting');
         if (greeting) {
-            greeting.textContent = `ðŸ‘‹ Hello, ${user.name}!`;
+            greeting.textContent = `\uD83D\uDC4B Hello, ${user.name}!`;
             greeting.classList.remove('hidden');
         }
         // Show smart modes since user has history potential
@@ -856,7 +856,7 @@
                     state.currentUser = user;
                     const greeting = $('#user-greeting');
                     if (greeting) {
-                        greeting.textContent = `ðŸ‘‹ Hello, ${user.name}!`;
+                        greeting.textContent = `\uD83D\uDC4B Hello, ${user.name}!`;
                         greeting.classList.remove('hidden');
                     }
                     const smartModes = $('#smart-modes');

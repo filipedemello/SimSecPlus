@@ -1,4 +1,4 @@
-const CACHE_NAME = 'security-plus-v4';
+const CACHE_NAME = 'security-plus-v5';
 const ASSETS = [
     './',
     './index.html',
