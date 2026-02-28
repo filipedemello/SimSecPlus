@@ -4,7 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node tests/test-runner.js",
+    "validate": "node scripts/validate.js",
+    "generate": "node generate.js",
+    "serve": "npx -y http-server . -p 8766 -c-1",
     "start": "electron .",
     "pack": "npx electron-packager . \"Security+ Simulator\" --platform=win32 --arch=x64 --out=dist --overwrite",
     "dist": "npx electron-packager . \"Security+ Simulator\" --platform=win32 --arch=x64 --out=dist --overwrite"

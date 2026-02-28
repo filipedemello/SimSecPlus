@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 91 to 120
+// Security+ SY0-701 - Questions 91 to 120
 // Block 4 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":91,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. a security guard stationed at a building entrance is an example of which type of security control?","options":["Managerial detective","Physical deterrent","Technical preventive","Operational corrective"],"correctIndex":1,"hint":"Consider both the category and function of this control.","explanation":{"correct":"A security guard is a physical control that also serves as a deterrent by discouraging unauthorized entry.","incorrect":{"2":"Technical controls involve technology like firewalls.","3":"Operational corrective controls fix issues after they occur.","0":"Managerial controls are policies and procedures."}}},
-{"id":92,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control?","options":["Physical compensating","Technical detective","Operational deterrent","Technical preventive"],"correctIndex":1,"hint":"IDS detects threats but does not automatically block them.","explanation":{"correct":"An IDS is a technical control that serves a detective function by identifying threats after they occur.","incorrect":{"2":"Deterrent controls discourage actions.","3":"Preventive controls stop threats before they happen.","0":"Physical controls involve tangible barriers."}}},
-{"id":93,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A company is reviewing its security posture. a company policy requiring employees to change passwords every 90 days is an example of which control type?","options":["Operational corrective","Physical deterrent","Technical detective","Managerial preventive"],"correctIndex":3,"hint":"Policies are administrative documents.","explanation":{"correct":"Password policies are managerial/administrative controls designed to prevent unauthorized access.","incorrect":{"2":"Technical controls are implemented through technology.","1":"Physical controls are tangible barriers.","0":"Corrective controls fix issues after they occur."}}},
-{"id":94,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which Zero Trust component is responsible for making access decisions based on policies?","options":["Data Plane","Policy Engine","Policy Enforcement Point","Implicit Trust Zone"],"correctIndex":1,"hint":"This component evaluates policies before granting access.","explanation":{"correct":"The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.","incorrect":{"2":"The Policy Enforcement Point enforces the decision but does not make it.","3":"Implicit Trust Zones contradict Zero Trust principles.","0":"The Data Plane carries the actual traffic."}}},
-{"id":95,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. zero Trust architecture operates on which fundamental principle?","options":["Trust internal networks","Never trust, always verify","Verify only external traffic","Trust but verify"],"correctIndex":1,"hint":"No entity is inherently trusted.","explanation":{"correct":"Zero Trust assumes no implicit trust for any entity, requiring continuous verification regardless of location.","incorrect":{"2":"Zero Trust verifies ALL traffic, not just external.","3":"Trust but verify still implies initial trust, which Zero Trust rejects.","0":"Zero Trust does NOT trust internal networks."}}},
-{"id":96,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. which encryption type uses the SAME key for both encryption and decryption?","options":["Hashing","Asymmetric encryption","Digital signatures","Symmetric encryption"],"correctIndex":3,"hint":"One key serves dual purposes.","explanation":{"correct":"Symmetric encryption (e.g., AES) uses a single shared key for both encryption and decryption.","incorrect":{"2":"Digital signatures use asymmetric keys.","1":"Asymmetric encryption uses a key pair (public/private).","0":"Hashing is one-way and does not use keys for decryption."}}},
-{"id":97,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which algorithm provides a fixed-length output regardless of input size and is NOT reversible?","options":["Diffie-Hellman","AES-256","SHA-256","RSA"],"correctIndex":2,"hint":"This produces a digest or fingerprint of data.","explanation":{"correct":"SHA-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed.","incorrect":{"3":"RSA is an asymmetric encryption algorithm.","1":"AES-256 is a symmetric encryption algorithm that is reversible.","0":"Diffie-Hellman is a key exchange protocol."}}},
-{"id":98,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. in PKI, which entity issues and manages digital certificates?","options":["Key escrow","Registration Authority","CRL","Certificate Authority (CA)"],"correctIndex":3,"hint":"This is the trusted third party in PKI.","explanation":{"correct":"A Certificate Authority issues, manages, and revokes digital certificates, establishing trust in PKI.","incorrect":{"2":"A CRL lists revoked certificates but does not issue them.","1":"A Registration Authority verifies identities but does not issue certificates.","0":"Key escrow stores backup copies of keys."}}},
-{"id":99,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which key is used to encrypt data so that only the intended recipient can decrypt it?","options":["Recipient\u0027s private key","Sender\u0027s private key","Recipient\u0027s public key","Sender\u0027s public key"],"correctIndex":2,"hint":"The recipient needs their secret key to decrypt.","explanation":{"correct":"Data is encrypted with the recipient\u0027s public key. Only their corresponding private key can decrypt it.","incorrect":{"3":"The sender\u0027s public key would mean anyone with the sender\u0027s private key could decrypt.","1":"The sender\u0027s private key is used for digital signatures, not encrypting for others.","0":"The recipient\u0027s private key is used for decryption, not encryption by others."}}},
-{"id":100,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. a change management process requires approval before modifications to production systems. Which group typically reviews and approves changes?","options":["Help Desk","Security Operations Center (SOC)","Board of Directors","Change Advisory Board (CAB)"],"correctIndex":3,"hint":"This group evaluates the risk and impact of changes.","explanation":{"correct":"The CAB reviews proposed changes, assesses risks, and approves or rejects them before implementation.","incorrect":{"2":"The Board sets strategy but does not review individual changes.","1":"The SOC monitors for security incidents, not change approval.","0":"Help Desk handles user support tickets."}}},
-{"id":101,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. what is the primary purpose of a gap analysis in security?","options":["Monitor user activity","Test network vulnerabilities","Identify differences between current state and desired security posture","Encrypt sensitive data"],"correctIndex":2,"hint":"It compares where you are to where you need to be.","explanation":{"correct":"Gap analysis identifies the differences between an organization\u0027s current security state and its desired/required security posture.","incorrect":{"3":"Encrypting data is a security control, not an analysis.","1":"Testing network vulnerabilities is vulnerability assessment.","0":"Monitoring user activity is part of security operations."}}},
-{"id":102,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which of the following BEST describes non-repudiation?","options":["Maintaining system uptime","Ensuring data remains unchanged","Preventing unauthorized access to data","Ensuring an action cannot be denied by the party who performed it"],"correctIndex":3,"hint":"Think about proving someone did something.","explanation":{"correct":"Non-repudiation provides proof of the origin and integrity of data, ensuring that the sender cannot deny having sent a message.","incorrect":{"2":"Preventing unauthorized access is confidentiality.","1":"Ensuring data remains unchanged is integrity.","0":"Maintaining uptime is availability."}}},
-{"id":103,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which type of cryptographic key should NEVER be shared with anyone?","options":["Shared key","Private key","Public key","Session key"],"correctIndex":1,"hint":"This key must remain secret to maintain security.","explanation":{"correct":"A private key must never be shared. It is used for decryption and digital signatures, and its secrecy is fundamental to asymmetric cryptography.","incorrect":{"2":"Public keys are designed to be shared openly.","3":"Session keys are shared between communicating parties during a session.","0":"Shared keys are exchanged between authorized parties in symmetric encryption."}}},
-{"id":104,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A company is reviewing its security posture. which security control is implemented to fix or restore systems after a security incident?","options":["Detective control","Preventive control","Corrective control","Deterrent control"],"correctIndex":2,"hint":"Think about what happens AFTER an incident.","explanation":{"correct":"Corrective controls restore systems to normal operation after an incident, such as patching, restoring from backup, or reimaging.","incorrect":{"3":"Deterrent controls discourage potential attackers.","1":"Preventive controls stop incidents before they occur.","0":"Detective controls identify incidents as they happen."}}},
-{"id":105,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A company is reviewing its security posture. an organization deploys security cameras around its perimeter. These cameras PRIMARILY function as which two types of controls?","options":["Operational and compensating","Physical and detective","Managerial and corrective","Technical and preventive"],"correctIndex":1,"hint":"Cameras are tangible and they record/identify events.","explanation":{"correct":"Security cameras are physical controls (tangible devices) that serve a detective function (recording events for later review).","incorrect":{"2":"Cameras are not policies (managerial) and they do not correct issues.","3":"Cameras are physical, not purely technical. They detect, not prevent.","0":"Cameras are physical devices, not operational procedures."}}},
-{"id":106,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. diffie-Hellman is BEST described as a:","options":["Symmetric encryption algorithm","Digital signature algorithm","Key exchange protocol","Hashing algorithm"],"correctIndex":2,"hint":"It allows two parties to establish a shared secret.","explanation":{"correct":"Diffie-Hellman enables two parties to securely establish a shared secret key over an insecure channel without transmitting the key itself.","incorrect":{"0":"Symmetric encryption uses a shared key but DH is not encryption itself.","1":"Digital signatures use asymmetric keys for verification; DH exchanges keys.","3":"Hashing produces a digest; DH establishes shared keys."}}},
-{"id":107,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. which of the following is an example of something you ARE in multi-factor authentication?","options":["Smart card","Password","Fingerprint scan","PIN"],"correctIndex":2,"hint":"Think biometrics.","explanation":{"correct":"A fingerprint scan is a biometric factor (something you are) used in multi-factor authentication.","incorrect":{"0":"A smart card is something you have.","1":"A password is something you know.","3":"A PIN is something you know."}}},
-{"id":108,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. what process ensures that all changes to a system are documented, reviewed, and approved before implementation?","options":["Vulnerability management","Risk assessment","Incident response","Change management"],"correctIndex":3,"hint":"This formalizes how modifications are handled.","explanation":{"correct":"Change management provides a structured process to evaluate, approve, implement, and document changes to minimize risk.","incorrect":{"2":"Incident response handles security events after they occur.","1":"Risk assessment evaluates threats and their potential impact.","0":"Vulnerability management identifies and remediates weaknesses."}}},
-{"id":109,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A well-funded group sponsored by a foreign government conducts a prolonged cyber espionage campaign. What type of threat actor is this?","options":["Nation-state","Hacktivist","Script kiddie","Insider threat"],"correctIndex":0,"hint":"Government backing and espionage are key indicators.","explanation":{"correct":"Nation-state actors are government-sponsored, well-funded, and conduct sophisticated, long-term campaigns.","incorrect":{"2":"Script kiddies lack sophistication.","1":"Hacktivists are motivated by ideology.","3":"Insider threats originate from within the organization."}}},
-{"id":110,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"An employee who is unhappy with their employer deliberately leaks sensitive documents. This is an example of:","options":["Organized crime","Nation-state actor","Insider threat","Hacktivist"],"correctIndex":2,"hint":"The threat comes from within the organization.","explanation":{"correct":"Insider threats originate from current or former employees who misuse their authorized access.","incorrect":{"3":"Hacktivists are external actors with political motivations.","1":"Nation-state actors are government-sponsored external attackers.","0":"Organized crime groups are external and financially motivated."}}},
-{"id":111,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"An attacker with limited technical skills uses pre-made tools downloaded from the internet to launch attacks. This describes a:","options":["Script kiddie","Insider threat","Nation-state actor","APT group"],"correctIndex":0,"hint":"They rely on others\u0027 tools without deep understanding.","explanation":{"correct":"Script kiddies use existing tools and scripts without fully understanding them, typically causing less sophisticated attacks.","incorrect":{"2":"Nation-state actors are sophisticated and well-funded.","1":"Insider threats originate from within the organization.","3":"APT groups are highly skilled and persistent."}}},
-{"id":112,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"An attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is:","options":["Phishing","Smishing","Vishing","Whaling"],"correctIndex":3,"hint":"This targets a high-profile executive specifically.","explanation":{"correct":"Whaling is spear phishing specifically targeting high-profile individuals like executives.","incorrect":{"2":"Vishing uses voice/phone calls.","1":"Smishing uses SMS text messages.","0":"Phishing is a general untargeted email attack."}}},
-{"id":113,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"An attacker compromises a website frequently visited by employees of a target company. This is a:","options":["Watering hole attack","Pretexting","Tailgating","Spear phishing"],"correctIndex":0,"hint":"Think of where prey gathers to drink.","explanation":{"correct":"A watering hole attack compromises a website commonly used by the target group to infect visitors.","incorrect":{"2":"Tailgating is physical access by following someone.","1":"Pretexting creates a fabricated scenario.","3":"Spear phishing targets specific individuals via email."}}},
-{"id":114,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"An attacker registers \u0027g00gle.com\u0027 hoping users will mistype the URL. This is:","options":["Typosquatting","Pharming","Session hijacking","DNS poisoning"],"correctIndex":0,"hint":"The domain closely resembles the legitimate one.","explanation":{"correct":"Typosquatting registers domains similar to legitimate ones, exploiting common typing errors.","incorrect":{"2":"Session hijacking steals active session tokens.","1":"Pharming redirects at the DNS level.","3":"DNS poisoning corrupts DNS cache entries."}}},
-{"id":115,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"An attacker calls an employee pretending to be IT support and asks for their password. This is:","options":["Smishing","Whaling","Phishing","Vishing"],"correctIndex":3,"hint":"This attack uses voice/phone communication.","explanation":{"correct":"Vishing (voice phishing) uses phone calls to manipulate victims into revealing sensitive information.","incorrect":{"2":"Phishing uses email.","1":"Whaling targets executives via email.","0":"Smishing uses SMS text messages."}}},
-{"id":116,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"A user downloads a free game that secretly installs a keylogger. This malware is a:","options":["Ransomware","Rootkit","Worm","Trojan"],"correctIndex":3,"hint":"It disguises itself as something legitimate.","explanation":{"correct":"A Trojan disguises itself as legitimate software while carrying a hidden malicious payload.","incorrect":{"2":"Worms self-replicate without user interaction.","1":"Rootkits hide deep in the system for persistent access.","0":"Ransomware encrypts files and demands payment."}}},
-{"id":117,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"Malware that encrypts all files on a system and demands cryptocurrency payment is:","options":["Ransomware","Logic bomb","Rootkit","Spyware"],"correctIndex":0,"hint":"The attacker demands payment to restore access.","explanation":{"correct":"Ransomware encrypts victim files and demands a ransom for the decryption key.","incorrect":{"2":"Rootkits provide hidden persistent access.","1":"Logic bombs trigger on specific conditions.","3":"Spyware silently monitors activity."}}},
-{"id":118,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"Malware that self-replicates and spreads across networks WITHOUT user interaction is a:","options":["Worm","Spyware","Trojan","Virus"],"correctIndex":0,"hint":"It propagates independently through networks.","explanation":{"correct":"Worms self-replicate and spread automatically across networks without requiring user action.","incorrect":{"2":"Trojans require user interaction to install.","1":"Spyware monitors activity but does not self-replicate.","3":"Viruses require a host file and user action to spread."}}},
-{"id":119,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"An attacker floods a web server with SYN packets without completing the TCP handshake. This is a:","options":["Replay attack","DNS poisoning","ARP spoofing","SYN flood (DDoS)"],"correctIndex":3,"hint":"The TCP three-way handshake is left incomplete.","explanation":{"correct":"A SYN flood overwhelms a server by sending many SYN packets without completing the handshake.","incorrect":{"2":"ARP spoofing associates the attacker\u0027s MAC with a legitimate IP.","1":"DNS poisoning corrupts DNS records.","0":"Replay attacks retransmit captured valid data."}}},
-{"id":120,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"An attacker intercepts communication between two parties, secretly relaying messages. This describes:","options":["Password spraying","Replay attack","On-path (Man-in-the-Middle) attack","DDoS attack"],"correctIndex":2,"hint":"The attacker sits between two communicating parties.","explanation":{"correct":"An on-path attack allows the attacker to intercept, read, and modify communications between two parties.","incorrect":{"3":"DDoS attacks overwhelm services with traffic.","1":"Replay attacks retransmit previously captured data.","0":"Password spraying tries common passwords against many accounts."}}}
+{
+  "id": 91,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption Which answer BEST applies in an enterprise environment? [Variant 1-90]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 92,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which algorithm provides a fixed-length output regardless of input size and is NOT reversible Which answer BEST applies in an enterprise environment? [Variant 1-91]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 93,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Rollback Plan in the context of Change Management Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Change Management that ensures Rollback Plan functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Rollback Plan relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Rollback Plan is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Rollback Plan is directly related to Change Management.",
+      "2": "Rollback Plan works alongside other components, it does not replace them.",
+      "3": "Rollback Plan is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 94,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST ensures data integrity during transmission Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Hashing algorithms",
+    "Firewalls",
+    "VPN tunnels",
+    "Access control lists"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about verifying data has not been tampered with.",
+  "explanation": {
+    "correct": "Hashing algorithms like Secure Hash Algorithm (SHA)-256 create a digest that can verify data has not been modified during transit.",
+    "incorrect": {
+      "1": "Firewalls filter network traffic but do not verify data integrity.",
+      "2": "VPNs encrypt data in transit (confidentiality) but do not inherently verify integrity.",
+      "3": "ACLs control access permissions, not data integrity verification."
+    }
+  }
+},
+{
+  "id": 95,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-94]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 96,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.6",
+  "subdomain_name": "Gap Analysis",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Business Gap in the context of Gap Analysis Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Gap Analysis that ensures Business Gap functionality",
+    "It is unrelated to Gap Analysis",
+    "It replaces all other aspects of Gap Analysis",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Business Gap relates to the broader concept of Gap Analysis.",
+  "explanation": {
+    "correct": "Business Gap is indeed a key component of Gap Analysis and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Business Gap is directly related to Gap Analysis.",
+      "2": "Business Gap works alongside other components, it does not replace them.",
+      "3": "Business Gap is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 97,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-96]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 98,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-97]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 99,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-98]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 100,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-99]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 101,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption Which answer BEST applies in an enterprise environment? [Variant 1-100]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 102,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which algorithm provides a fixed-length output regardless of input size and is NOT reversible Which answer BEST applies in an enterprise environment? [Variant 1-101]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 103,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Impact Analysis in the context of Change Management Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Change Management that ensures Impact Analysis functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Impact Analysis relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Impact Analysis is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Impact Analysis is directly related to Change Management.",
+      "2": "Impact Analysis works alongside other components, it does not replace them.",
+      "3": "Impact Analysis is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 104,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-103]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 105,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: after a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible Which answer BEST applies in an enterprise environment? [Variant 1-104]",
+  "options": [
+    "Authorization",
+    "Authentication",
+    "Accounting",
+    "Identification"
+  ],
+  "correctIndex": 0,
+  "hint": "This determines permissions after identity verification.",
+  "explanation": {
+    "correct": "Authorization determines what actions and resources a user is permitted to access after authentication.",
+    "incorrect": {
+      "1": "Authentication only verifies identity; it does not assign permissions.",
+      "2": "Accounting tracks what users do; it does not assign permissions.",
+      "3": "Identification is providing a username; it does not assign permissions."
+    }
+  }
+},
+{
+  "id": 106,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.6",
+  "subdomain_name": "Gap Analysis",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Technical Gap in the context of Gap Analysis Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Gap Analysis that ensures Technical Gap functionality",
+    "It is unrelated to Gap Analysis",
+    "It replaces all other aspects of Gap Analysis",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Technical Gap relates to the broader concept of Gap Analysis.",
+  "explanation": {
+    "correct": "Technical Gap is indeed a key component of Gap Analysis and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Technical Gap is directly related to Gap Analysis.",
+      "2": "Technical Gap works alongside other components, it does not replace them.",
+      "3": "Technical Gap is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 107,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: a hacker modifies financial records in a database without authorization. Which element of the CIA triad has been compromised Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Integrity",
+    "Confidentiality",
+    "Availability",
+    "Accountability"
+  ],
+  "correctIndex": 0,
+  "hint": "This involves unauthorized modification of data.",
+  "explanation": {
+    "correct": "Integrity ensures data remains accurate and unaltered. Unauthorized modification directly violates this principle.",
+    "incorrect": {
+      "1": "Confidentiality involves unauthorized viewing of data, not modification.",
+      "2": "Availability relates to system uptime.",
+      "3": "Accountability tracks user actions but is not a CIA triad element."
+    }
+  }
+},
+{
+  "id": 108,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which algorithm provides a fixed-length output regardless of input size and is NOT reversible Which answer BEST applies in an enterprise environment? [Variant 1-107]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 109,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is BEST described as:",
+  "options": [
+    "Whaling",
+    "Phishing",
+    "Vishing",
+    "Smishing"
+  ],
+  "correctIndex": 0,
+  "hint": "This targets a high-profile executive specifically.",
+  "explanation": {
+    "correct": "Whaling is a form of spear phishing specifically targeting high-profile individuals like executives (the \"big fish\").",
+    "incorrect": {
+      "1": "Phishing is a general untargeted email attack.",
+      "2": "Vishing uses voice/phone calls, not email.",
+      "3": "Smishing uses SMS text messages, not email."
+    }
+  }
+},
+{
+  "id": 110,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker intercepts communication between two parties, secretly relaying and possibly altering messages. This describes:",
+  "options": [
+    "Man-in-the-Middle (On-path) attack",
+    "Replay attack",
+    "DDoS attack",
+    "Password spraying"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker sits between two communicating parties.",
+  "explanation": {
+    "correct": "A Man-in-the-Middle (on-path) attack allows the attacker to intercept, read, and modify communications between two parties.",
+    "incorrect": {
+      "1": "Replay attacks retransmit previously captured data without real-time interception.",
+      "2": "Distributed Denial of Service (DDoS) attacks overwhelm services with traffic, they don't intercept communications.",
+      "3": "Password spraying tries common passwords against many accounts."
+    }
+  }
+},
+{
+  "id": 111,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.5",
+  "subdomain_name": "Vulnerability Types and Indicators",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A newly discovered vulnerability with no available patch is known as:",
+  "options": [
+    "Zero-day vulnerability",
+    "Misconfiguration",
+    "Default credential exposure",
+    "Legacy vulnerability"
+  ],
+  "correctIndex": 0,
+  "hint": "No fix exists yet for this vulnerability.",
+  "explanation": {
+    "correct": "A zero-day vulnerability is unknown to the vendor and has no patch available, making it extremely dangerous.",
+    "incorrect": {
+      "1": "Misconfiguration is a known issue caused by improper setup.",
+      "2": "Default credentials are a known, preventable vulnerability.",
+      "3": "Legacy vulnerabilities exist in old, known-about systems."
+    }
+  }
+},
+{
+  "id": 112,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker floods a web server with thousands of SYN packets without completing the TCP handshake. This is a:",
+  "options": [
+    "SYN flood (DDoS)",
+    "DNS poisoning",
+    "ARP spoofing",
+    "Replay attack"
+  ],
+  "correctIndex": 0,
+  "hint": "The TCP three-way handshake is left incomplete.",
+  "explanation": {
+    "correct": "A SYN flood overwhelms a server by sending many SYN packets without completing the handshake, exhausting server resources.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS records to redirect traffic.",
+      "2": "Address Resolution Protocol (ARP) spoofing associates the attacker's Mandatory Access Control (MAC) with a legitimate IP.",
+      "3": "Replay attacks retransmit captured valid data packets."
+    }
+  }
+},
+{
+  "id": 113,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker inputs ' OR 1=1 -- into a login form. This is an example of:",
+  "options": [
+    "SQL injection",
+    "Cross-site scripting",
+    "Buffer overflow",
+    "CSRF"
+  ],
+  "correctIndex": 0,
+  "hint": "The input manipulates a database query.",
+  "explanation": {
+    "correct": "SQL injection inserts malicious SQL code into input fields to manipulate database queries, potentially bypassing authentication.",
+    "incorrect": {
+      "1": "Cross-Site Scripting (XSS) injects malicious scripts into web pages viewed by other users.",
+      "2": "Buffer overflow writes data beyond allocated memory boundaries.",
+      "3": "Cross-Site Request Forgery (CSRF) tricks users into performing unwanted actions on authenticated sites."
+    }
+  }
+},
+{
+  "id": 114,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker floods a web server with thousands of SYN packets without completing the TCP handshake. This is a: [Variant 0-5]",
+  "options": [
+    "SYN flood (DDoS)",
+    "DNS poisoning",
+    "ARP spoofing",
+    "Replay attack"
+  ],
+  "correctIndex": 0,
+  "hint": "The TCP three-way handshake is left incomplete.",
+  "explanation": {
+    "correct": "A SYN flood overwhelms a server by sending many SYN packets without completing the handshake, exhausting server resources.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS records to redirect traffic.",
+      "2": "Address Resolution Protocol (ARP) spoofing associates the attacker's Mandatory Access Control (MAC) with a legitimate IP.",
+      "3": "Replay attacks retransmit captured valid data packets."
+    }
+  }
+},
+{
+  "id": 115,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker injects a malicious JavaScript payload into a forum post that executes in other users' browsers. This is:",
+  "options": [
+    "Stored XSS (Cross-Site Scripting)",
+    "SQL injection",
+    "CSRF",
+    "Directory traversal"
+  ],
+  "correctIndex": 0,
+  "hint": "The malicious script is permanently stored on the server.",
+  "explanation": {
+    "correct": "Stored Cross-Site Scripting (XSS) permanently injects malicious scripts into a web application that execute in every visitor's browser.",
+    "incorrect": {
+      "1": "SQL injection targets databases, not browser-side script execution.",
+      "2": "Cross-Site Request Forgery (CSRF) forces users to perform actions, not execute scripts.",
+      "3": "Directory traversal accesses unauthorized files on the server."
+    }
+  }
+},
+{
+  "id": 116,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as:",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 117,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker injects a malicious JavaScript payload into a forum post that executes in other users' browsers. This is: [Variant 0-8]",
+  "options": [
+    "Stored XSS (Cross-Site Scripting)",
+    "SQL injection",
+    "CSRF",
+    "Directory traversal"
+  ],
+  "correctIndex": 0,
+  "hint": "The malicious script is permanently stored on the server.",
+  "explanation": {
+    "correct": "Stored Cross-Site Scripting (XSS) permanently injects malicious scripts into a web application that execute in every visitor's browser.",
+    "incorrect": {
+      "1": "SQL injection targets databases, not browser-side script execution.",
+      "2": "Cross-Site Request Forgery (CSRF) forces users to perform actions, not execute scripts.",
+      "3": "Directory traversal accesses unauthorized files on the server."
+    }
+  }
+},
+{
+  "id": 118,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker intercepts communication between two parties, secretly relaying and possibly altering messages. This describes: [Variant 0-9]",
+  "options": [
+    "Man-in-the-Middle (On-path) attack",
+    "Replay attack",
+    "DDoS attack",
+    "Password spraying"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker sits between two communicating parties.",
+  "explanation": {
+    "correct": "A Man-in-the-Middle (on-path) attack allows the attacker to intercept, read, and modify communications between two parties.",
+    "incorrect": {
+      "1": "Replay attacks retransmit previously captured data without real-time interception.",
+      "2": "Distributed Denial of Service (DDoS) attacks overwhelm services with traffic, they don't intercept communications.",
+      "3": "Password spraying tries common passwords against many accounts."
+    }
+  }
+},
+{
+  "id": 119,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker compromises a website frequently visited by employees of a target company. What type of attack is this?",
+  "options": [
+    "Watering hole",
+    "Phishing",
+    "Pretexting",
+    "Tailgating"
+  ],
+  "correctIndex": 0,
+  "hint": "Think of where prey gathers to drink.",
+  "explanation": {
+    "correct": "A watering hole attack compromises a website commonly used by the target group, infecting visitors with malware.",
+    "incorrect": {
+      "1": "Phishing uses fraudulent emails, not compromised websites.",
+      "2": "Pretexting creates a fabricated scenario to extract information.",
+      "3": "Tailgating is physical access by following an authorized person."
+    }
+  }
+},
+{
+  "id": 120,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker intercepts communication between two parties, secretly relaying and possibly altering messages. This describes: [Variant 0-11]",
+  "options": [
+    "Man-in-the-Middle (On-path) attack",
+    "Replay attack",
+    "DDoS attack",
+    "Password spraying"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker sits between two communicating parties.",
+  "explanation": {
+    "correct": "A Man-in-the-Middle (on-path) attack allows the attacker to intercept, read, and modify communications between two parties.",
+    "incorrect": {
+      "1": "Replay attacks retransmit previously captured data without real-time interception.",
+      "2": "Distributed Denial of Service (DDoS) attacks overwhelm services with traffic, they don't intercept communications.",
+      "3": "Password spraying tries common passwords against many accounts."
+    }
+  }
+}
 ]);

@@ -1,0 +1,1075 @@
+{
+  "generated_at": "2026-02-28T06:59:45.523Z",
+  "threshold": 0.95,
+  "ngram_size": 3,
+  "total_active_before": 900,
+  "duplicate_pairs": 133,
+  "questions_to_archive": 133,
+  "active_after_dedup": 767,
+  "pairs": [
+    {
+      "kept_id": 1,
+      "archived_id": 61,
+      "similarity": 1,
+      "kept_q": "Which Zero Trust component is responsible for making access decisions based on p",
+      "archived_q": "A security analyst needs to determine: which Zero Trust component is responsible",
+      "subdomain_id": "1.4"
+    },
+    {
+      "kept_id": 2,
+      "archived_id": 62,
+      "similarity": 1,
+      "kept_q": "A security guard stationed at a building entrance is an example of which type of",
+      "archived_q": "A security analyst needs to determine: a security guard stationed at a building ",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 3,
+      "archived_id": 63,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Version Control in the context of Change M",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Ver",
+      "subdomain_id": "1.5"
+    },
+    {
+      "kept_id": 4,
+      "archived_id": 64,
+      "similarity": 1,
+      "kept_q": "Which algorithm provides a fixed-length output regardless of input size and is N",
+      "archived_q": "A security analyst needs to determine: which algorithm provides a fixed-length o",
+      "subdomain_id": "1.2"
+    },
+    {
+      "kept_id": 5,
+      "archived_id": 65,
+      "similarity": 1,
+      "kept_q": "An IDS that alerts administrators of suspicious network activity is BEST classif",
+      "archived_q": "A security analyst needs to determine: an IDS that alerts administrators of susp",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 6,
+      "archived_id": 66,
+      "similarity": 1,
+      "kept_q": "Which encryption type uses the SAME key for both encryption and decryption?",
+      "archived_q": "A security analyst needs to determine: which encryption type uses the SAME key f",
+      "subdomain_id": "1.2"
+    },
+    {
+      "kept_id": 10,
+      "archived_id": 70,
+      "similarity": 1,
+      "kept_q": "Which of the following technologies BEST supports confidentiality?",
+      "archived_q": "A security analyst needs to determine: which of the following technologies BEST ",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 12,
+      "archived_id": 72,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Change Advisory Board in the context of Ch",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Cha",
+      "subdomain_id": "1.5"
+    },
+    {
+      "kept_id": 17,
+      "archived_id": 77,
+      "similarity": 1,
+      "kept_q": "An employee accidentally sends a file containing PII to an unauthorized recipien",
+      "archived_q": "A security analyst needs to determine: an employee accidentally sends a file con",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 19,
+      "archived_id": 79,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Security Baseline in the context of Gap An",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Sec",
+      "subdomain_id": "1.6"
+    },
+    {
+      "kept_id": 22,
+      "archived_id": 82,
+      "similarity": 1,
+      "kept_q": "Which AAA component verifies a user's identity before granting system access?",
+      "archived_q": "A security analyst needs to determine: which AAA component verifies a user's ide",
+      "subdomain_id": "1.3"
+    },
+    {
+      "kept_id": 25,
+      "archived_id": 85,
+      "similarity": 1,
+      "kept_q": "After a user logs in, the system determines they can only read files but not mod",
+      "archived_q": "A security analyst needs to determine: after a user logs in, the system determin",
+      "subdomain_id": "1.3"
+    },
+    {
+      "kept_id": 33,
+      "archived_id": 93,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Rollback Plan in the context of Change Man",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Rol",
+      "subdomain_id": "1.5"
+    },
+    {
+      "kept_id": 34,
+      "archived_id": 94,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST ensures data integrity during transmission?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST ensures data ",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 36,
+      "archived_id": 96,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Business Gap in the context of Gap Analysi",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Bus",
+      "subdomain_id": "1.6"
+    },
+    {
+      "kept_id": 43,
+      "archived_id": 103,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Impact Analysis in the context of Change M",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Imp",
+      "subdomain_id": "1.5"
+    },
+    {
+      "kept_id": 46,
+      "archived_id": 106,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Technical Gap in the context of Gap Analys",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Tec",
+      "subdomain_id": "1.6"
+    },
+    {
+      "kept_id": 47,
+      "archived_id": 107,
+      "similarity": 1,
+      "kept_q": "A hacker modifies financial records in a database without authorization. Which e",
+      "archived_q": "A security analyst needs to determine: a hacker modifies financial records in a ",
+      "subdomain_id": "1.1"
+    },
+    {
+      "kept_id": 109,
+      "archived_id": 220,
+      "similarity": 1,
+      "kept_q": "An attacker sends a targeted email to the CEO impersonating the CFO, requesting ",
+      "archived_q": "A security analyst needs to determine: an attacker sends a targeted email to the",
+      "subdomain_id": "2.2"
+    },
+    {
+      "kept_id": 110,
+      "archived_id": 221,
+      "similarity": 1,
+      "kept_q": "An attacker intercepts communication between two parties, secretly relaying and ",
+      "archived_q": "A security analyst needs to determine: an attacker intercepts communication betw",
+      "subdomain_id": "2.4"
+    },
+    {
+      "kept_id": 111,
+      "archived_id": 222,
+      "similarity": 1,
+      "kept_q": "A newly discovered vulnerability with no available patch is known as:",
+      "archived_q": "A security analyst needs to determine: a newly discovered vulnerability with no ",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 112,
+      "archived_id": 223,
+      "similarity": 1,
+      "kept_q": "An attacker floods a web server with thousands of SYN packets without completing",
+      "archived_q": "A security analyst needs to determine: an attacker floods a web server with thou",
+      "subdomain_id": "2.4"
+    },
+    {
+      "kept_id": 113,
+      "archived_id": 224,
+      "similarity": 1,
+      "kept_q": "An attacker inputs ' OR 1=1 -- into a login form. This is an example of:",
+      "archived_q": "A security analyst needs to determine: an attacker inputs ' OR 1=1 -- into a log",
+      "subdomain_id": "2.4"
+    },
+    {
+      "kept_id": 115,
+      "archived_id": 226,
+      "similarity": 1,
+      "kept_q": "An attacker injects a malicious JavaScript payload into a forum post that execut",
+      "archived_q": "A security analyst needs to determine: an attacker injects a malicious JavaScrip",
+      "subdomain_id": "2.4"
+    },
+    {
+      "kept_id": 116,
+      "archived_id": 227,
+      "similarity": 1,
+      "kept_q": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL.",
+      "archived_q": "A security analyst needs to determine: an attacker registers \"g00gle.com\" hoping",
+      "subdomain_id": "2.2"
+    },
+    {
+      "kept_id": 119,
+      "archived_id": 230,
+      "similarity": 1,
+      "kept_q": "An attacker compromises a website frequently visited by employees of a target co",
+      "archived_q": "A security analyst needs to determine: an attacker compromises a website frequen",
+      "subdomain_id": "2.2"
+    },
+    {
+      "kept_id": 123,
+      "archived_id": 234,
+      "similarity": 1,
+      "kept_q": "A user downloads a free game that secretly installs a keylogger. This malware is",
+      "archived_q": "A security analyst needs to determine: a user downloads a free game that secretl",
+      "subdomain_id": "2.3"
+    },
+    {
+      "kept_id": 126,
+      "archived_id": 237,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Unusual Traffic in the context of Indicato",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Unu",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 127,
+      "archived_id": 238,
+      "similarity": 1,
+      "kept_q": "Which mitigation technique divides a network into isolated segments to limit lat",
+      "archived_q": "A security analyst needs to determine: which mitigation technique divides a netw",
+      "subdomain_id": "2.6"
+    },
+    {
+      "kept_id": 128,
+      "archived_id": 239,
+      "similarity": 1,
+      "kept_q": "A well-funded group sponsored by a foreign government conducts a prolonged cyber",
+      "archived_q": "A security analyst needs to determine: a well-funded group sponsored by a foreig",
+      "subdomain_id": "2.1"
+    },
+    {
+      "kept_id": 133,
+      "archived_id": 244,
+      "similarity": 1,
+      "kept_q": "Malware that encrypts all files on a system and demands cryptocurrency payment i",
+      "archived_q": "A security analyst needs to determine: malware that encrypts all files on a syst",
+      "subdomain_id": "2.3"
+    },
+    {
+      "kept_id": 150,
+      "archived_id": 261,
+      "similarity": 1,
+      "kept_q": "An employee who is unhappy with their employer deliberately leaks sensitive docu",
+      "archived_q": "A security analyst needs to determine: an employee who is unhappy with their emp",
+      "subdomain_id": "2.1"
+    },
+    {
+      "kept_id": 163,
+      "archived_id": 274,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Resource Consumption in the context of Ind",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Res",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 164,
+      "archived_id": 275,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Blocked Content in the context of Indicato",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Blo",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 170,
+      "archived_id": 281,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Log Anomalies in the context of Indicators",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Log",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 188,
+      "archived_id": 299,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Impossible Travel in the context of Indica",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Imp",
+      "subdomain_id": "2.5"
+    },
+    {
+      "kept_id": 307,
+      "archived_id": 387,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes FPGA in the context of Embedded Systems?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes FPG",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 307,
+      "archived_id": 467,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes FPGA in the context of Embedded Systems?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes FPG",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 308,
+      "archived_id": 388,
+      "similarity": 1,
+      "kept_q": "Which security device inspects incoming web traffic and blocks common web applic",
+      "archived_q": "A security analyst needs to determine: which security device inspects incoming w",
+      "subdomain_id": "3.3"
+    },
+    {
+      "kept_id": 308,
+      "archived_id": 468,
+      "similarity": 1,
+      "kept_q": "Which security device inspects incoming web traffic and blocks common web applic",
+      "archived_q": "A security analyst needs to determine: which security device inspects incoming w",
+      "subdomain_id": "3.3"
+    },
+    {
+      "kept_id": 309,
+      "archived_id": 389,
+      "similarity": 1,
+      "kept_q": "The maximum acceptable amount of data loss measured in time is known as:",
+      "archived_q": "A security analyst needs to determine: the maximum acceptable amount of data los",
+      "subdomain_id": "3.5"
+    },
+    {
+      "kept_id": 310,
+      "archived_id": 390,
+      "similarity": 1,
+      "kept_q": "What is the PRIMARY difference between an IDS and an IPS?",
+      "archived_q": "A security analyst needs to determine: what is the PRIMARY difference between an",
+      "subdomain_id": "3.3"
+    },
+    {
+      "kept_id": 312,
+      "archived_id": 392,
+      "similarity": 1,
+      "kept_q": "A network zone that sits between the internal network and the internet, hosting ",
+      "archived_q": "A security analyst needs to determine: a network zone that sits between the inte",
+      "subdomain_id": "3.1"
+    },
+    {
+      "kept_id": 313,
+      "archived_id": 393,
+      "similarity": 1,
+      "kept_q": "Which RAID level provides disk mirroring for redundancy?",
+      "archived_q": "A security analyst needs to determine: which RAID level provides disk mirroring ",
+      "subdomain_id": "3.5"
+    },
+    {
+      "kept_id": 314,
+      "archived_id": 394,
+      "similarity": 1,
+      "kept_q": "Which cloud security solution acts as an intermediary between users and cloud se",
+      "archived_q": "A security analyst needs to determine: which cloud security solution acts as an ",
+      "subdomain_id": "3.2"
+    },
+    {
+      "kept_id": 317,
+      "archived_id": 397,
+      "similarity": 1,
+      "kept_q": "Which technique provides the MOST complete isolation between two networks?",
+      "archived_q": "A security analyst needs to determine: which technique provides the MOST complet",
+      "subdomain_id": "3.1"
+    },
+    {
+      "kept_id": 320,
+      "archived_id": 400,
+      "similarity": 1,
+      "kept_q": "Which technology replaces sensitive data with non-sensitive placeholder values w",
+      "archived_q": "A security analyst needs to determine: which technology replaces sensitive data ",
+      "subdomain_id": "3.4"
+    },
+    {
+      "kept_id": 321,
+      "archived_id": 401,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes VM Escape in the context of Virtualization",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes VM ",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 327,
+      "archived_id": 407,
+      "similarity": 1,
+      "kept_q": "In which cloud model is the customer responsible for managing the operating syst",
+      "archived_q": "A security analyst needs to determine: in which cloud model is the customer resp",
+      "subdomain_id": "3.2"
+    },
+    {
+      "kept_id": 336,
+      "archived_id": 416,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes RTOS in the context of Embedded Systems?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes RTO",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 351,
+      "archived_id": 431,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Infrastructure as Code in the context of V",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Inf",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 352,
+      "archived_id": 432,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Container Security in the context of Virtu",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Con",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 358,
+      "archived_id": 438,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes VM Sprawl in the context of Virtualization",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes VM ",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 365,
+      "archived_id": 445,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes SoC in the context of Embedded Systems?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes SoC",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 368,
+      "archived_id": 448,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Hypervisor Types in the context of Virtual",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Hyp",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 379,
+      "archived_id": 459,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes IoT Security in the context of Embedded Sy",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes IoT",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 382,
+      "archived_id": 462,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes SCADA in the context of Embedded Systems?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes SCA",
+      "subdomain_id": "3.6"
+    },
+    {
+      "kept_id": 469,
+      "archived_id": 574,
+      "similarity": 1,
+      "kept_q": "A security team is authorized to attempt to exploit vulnerabilities in a system ",
+      "archived_q": "A security analyst needs to determine: a security team is authorized to attempt ",
+      "subdomain_id": "4.2"
+    },
+    {
+      "kept_id": 469,
+      "archived_id": 679,
+      "similarity": 1,
+      "kept_q": "A security team is authorized to attempt to exploit vulnerabilities in a system ",
+      "archived_q": "A security analyst needs to determine: a security team is authorized to attempt ",
+      "subdomain_id": "4.2"
+    },
+    {
+      "kept_id": 470,
+      "archived_id": 575,
+      "similarity": 1,
+      "kept_q": "What is the CORRECT order of the incident response phases?",
+      "archived_q": "A security analyst needs to determine: what is the CORRECT order of the incident",
+      "subdomain_id": "4.3"
+    },
+    {
+      "kept_id": 470,
+      "archived_id": 680,
+      "similarity": 1,
+      "kept_q": "What is the CORRECT order of the incident response phases?",
+      "archived_q": "A security analyst needs to determine: what is the CORRECT order of the incident",
+      "subdomain_id": "4.3"
+    },
+    {
+      "kept_id": 471,
+      "archived_id": 576,
+      "similarity": 1,
+      "kept_q": "Which solution provides continuous monitoring, threat detection, and automated r",
+      "archived_q": "A security analyst needs to determine: which solution provides continuous monito",
+      "subdomain_id": "4.7"
+    },
+    {
+      "kept_id": 471,
+      "archived_id": 681,
+      "similarity": 1,
+      "kept_q": "Which solution provides continuous monitoring, threat detection, and automated r",
+      "archived_q": "A security analyst needs to determine: which solution provides continuous monito",
+      "subdomain_id": "4.7"
+    },
+    {
+      "kept_id": 472,
+      "archived_id": 577,
+      "similarity": 1,
+      "kept_q": "During which incident response phase are infected systems isolated to prevent fu",
+      "archived_q": "A security analyst needs to determine: during which incident response phase are ",
+      "subdomain_id": "4.3"
+    },
+    {
+      "kept_id": 472,
+      "archived_id": 682,
+      "similarity": 1,
+      "kept_q": "During which incident response phase are infected systems isolated to prevent fu",
+      "archived_q": "A security analyst needs to determine: during which incident response phase are ",
+      "subdomain_id": "4.3"
+    },
+    {
+      "kept_id": 473,
+      "archived_id": 578,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Memory Forensics in the context of Digital",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Mem",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 473,
+      "archived_id": 683,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Memory Forensics in the context of Digital",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Mem",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 474,
+      "archived_id": 579,
+      "similarity": 1,
+      "kept_q": "Which access control model assigns permissions based on a user's job function or",
+      "archived_q": "A security analyst needs to determine: which access control model assigns permis",
+      "subdomain_id": "4.6"
+    },
+    {
+      "kept_id": 474,
+      "archived_id": 684,
+      "similarity": 1,
+      "kept_q": "Which access control model assigns permissions based on a user's job function or",
+      "archived_q": "A security analyst needs to determine: which access control model assigns permis",
+      "subdomain_id": "4.6"
+    },
+    {
+      "kept_id": 475,
+      "archived_id": 580,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Evidence Collection in the context of Digi",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Evi",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 475,
+      "archived_id": 685,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Evidence Collection in the context of Digi",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Evi",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 476,
+      "archived_id": 581,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Removing Software in the context of Harden",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Rem",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 476,
+      "archived_id": 686,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Removing Software in the context of Harden",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Rem",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 477,
+      "archived_id": 582,
+      "similarity": 1,
+      "kept_q": "Which solution automates incident response playbooks and orchestrates security t",
+      "archived_q": "A security analyst needs to determine: which solution automates incident respons",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 477,
+      "archived_id": 687,
+      "similarity": 1,
+      "kept_q": "Which solution automates incident response playbooks and orchestrates security t",
+      "archived_q": "A security analyst needs to determine: which solution automates incident respons",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 480,
+      "archived_id": 585,
+      "similarity": 1,
+      "kept_q": "Which technology aggregates logs from multiple sources and correlates events to ",
+      "archived_q": "A security analyst needs to determine: which technology aggregates logs from mul",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 480,
+      "archived_id": 690,
+      "similarity": 1,
+      "kept_q": "Which technology aggregates logs from multiple sources and correlates events to ",
+      "archived_q": "A security analyst needs to determine: which technology aggregates logs from mul",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 483,
+      "archived_id": 588,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Network Forensics in the context of Digita",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Net",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 483,
+      "archived_id": 693,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Network Forensics in the context of Digita",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Net",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 484,
+      "archived_id": 589,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Scripting in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Scr",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 484,
+      "archived_id": 694,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Scripting in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Scr",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 486,
+      "archived_id": 591,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Runbooks in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Run",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 486,
+      "archived_id": 696,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Runbooks in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Run",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 490,
+      "archived_id": 595,
+      "similarity": 1,
+      "kept_q": "Which scoring system rates the severity of security vulnerabilities on a scale o",
+      "archived_q": "A security analyst needs to determine: which scoring system rates the severity o",
+      "subdomain_id": "4.2"
+    },
+    {
+      "kept_id": 490,
+      "archived_id": 700,
+      "similarity": 1,
+      "kept_q": "Which scoring system rates the severity of security vulnerabilities on a scale o",
+      "archived_q": "A security analyst needs to determine: which scoring system rates the severity o",
+      "subdomain_id": "4.2"
+    },
+    {
+      "kept_id": 491,
+      "archived_id": 596,
+      "similarity": 1,
+      "kept_q": "Which authentication method requires MULTIPLE different types of verification fa",
+      "archived_q": "A security analyst needs to determine: which authentication method requires MULT",
+      "subdomain_id": "4.5"
+    },
+    {
+      "kept_id": 491,
+      "archived_id": 701,
+      "similarity": 1,
+      "kept_q": "Which authentication method requires MULTIPLE different types of verification fa",
+      "archived_q": "A security analyst needs to determine: which authentication method requires MULT",
+      "subdomain_id": "4.5"
+    },
+    {
+      "kept_id": 493,
+      "archived_id": 598,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Disk Imaging in the context of Digital For",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dis",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 493,
+      "archived_id": 703,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Disk Imaging in the context of Digital For",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dis",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 496,
+      "archived_id": 601,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Disabling Services in the context of Harde",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dis",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 496,
+      "archived_id": 706,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Disabling Services in the context of Harde",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dis",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 500,
+      "archived_id": 605,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Write Blockers in the context of Digital F",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Wri",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 500,
+      "archived_id": 710,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Write Blockers in the context of Digital F",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Wri",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 505,
+      "archived_id": 610,
+      "similarity": 1,
+      "kept_q": "A security tool generates an alert for a legitimate attack that is actually occu",
+      "archived_q": "A security analyst needs to determine: a security tool generates an alert for a ",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 505,
+      "archived_id": 715,
+      "similarity": 1,
+      "kept_q": "A security tool generates an alert for a legitimate attack that is actually occu",
+      "archived_q": "A security analyst needs to determine: a security tool generates an alert for a ",
+      "subdomain_id": "4.1"
+    },
+    {
+      "kept_id": 513,
+      "archived_id": 618,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes API Integration in the context of Automati",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes API",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 515,
+      "archived_id": 620,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes DevSecOps in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dev",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 518,
+      "archived_id": 623,
+      "similarity": 1,
+      "kept_q": "Which protocol allows a user to log in once and access multiple applications wit",
+      "archived_q": "A security analyst needs to determine: which protocol allows a user to log in on",
+      "subdomain_id": "4.5"
+    },
+    {
+      "kept_id": 521,
+      "archived_id": 626,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Playbooks in the context of Automation?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Pla",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 535,
+      "archived_id": 640,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Disk Encryption in the context of Hardenin",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Dis",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 540,
+      "archived_id": 645,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes CI/CD Security in the context of Automatio",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes CI/",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 547,
+      "archived_id": 652,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Timeline Analysis in the context of Digita",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Tim",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 557,
+      "archived_id": 662,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Legal Hold in the context of Digital Foren",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Leg",
+      "subdomain_id": "4.4"
+    },
+    {
+      "kept_id": 563,
+      "archived_id": 668,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Registry in the context of Hardening?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Reg",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 569,
+      "archived_id": 674,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Firmware Updates in the context of Hardeni",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Fir",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 571,
+      "archived_id": 676,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Group Policy in the context of Hardening?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Gro",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 573,
+      "archived_id": 678,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes CIS Benchmarks in the context of Hardening",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes CIS",
+      "subdomain_id": "4.8"
+    },
+    {
+      "kept_id": 721,
+      "archived_id": 797,
+      "similarity": 1,
+      "kept_q": "Which document identifies critical business functions and the impact of their di",
+      "archived_q": "A security analyst needs to determine: which document identifies critical busine",
+      "subdomain_id": "5.7"
+    },
+    {
+      "kept_id": 721,
+      "archived_id": 873,
+      "similarity": 1,
+      "kept_q": "Which document identifies critical business functions and the impact of their di",
+      "archived_q": "A security analyst needs to determine: which document identifies critical busine",
+      "subdomain_id": "5.7"
+    },
+    {
+      "kept_id": 722,
+      "archived_id": 798,
+      "similarity": 1,
+      "kept_q": "Which agreement defines the expected performance metrics and responsibilities be",
+      "archived_q": "A security analyst needs to determine: which agreement defines the expected perf",
+      "subdomain_id": "5.6"
+    },
+    {
+      "kept_id": 722,
+      "archived_id": 874,
+      "similarity": 1,
+      "kept_q": "Which agreement defines the expected performance metrics and responsibilities be",
+      "archived_q": "A security analyst needs to determine: which agreement defines the expected perf",
+      "subdomain_id": "5.6"
+    },
+    {
+      "kept_id": 724,
+      "archived_id": 800,
+      "similarity": 1,
+      "kept_q": "A risk assessment approach that uses numerical values like ALE, SLE, and ARO is:",
+      "archived_q": "A security analyst needs to determine: a risk assessment approach that uses nume",
+      "subdomain_id": "5.2"
+    },
+    {
+      "kept_id": 724,
+      "archived_id": 876,
+      "similarity": 1,
+      "kept_q": "A risk assessment approach that uses numerical values like ALE, SLE, and ARO is:",
+      "archived_q": "A security analyst needs to determine: a risk assessment approach that uses nume",
+      "subdomain_id": "5.2"
+    },
+    {
+      "kept_id": 725,
+      "archived_id": 801,
+      "similarity": 1,
+      "kept_q": "Which document type defines the high-level goals and direction for an organizati",
+      "archived_q": "A security analyst needs to determine: which document type defines the high-leve",
+      "subdomain_id": "5.1"
+    },
+    {
+      "kept_id": 725,
+      "archived_id": 877,
+      "similarity": 1,
+      "kept_q": "Which document type defines the high-level goals and direction for an organizati",
+      "archived_q": "A security analyst needs to determine: which document type defines the high-leve",
+      "subdomain_id": "5.1"
+    },
+    {
+      "kept_id": 728,
+      "archived_id": 804,
+      "similarity": 1,
+      "kept_q": "Which standard is REQUIRED for organizations that process, store, or transmit cr",
+      "archived_q": "A security analyst needs to determine: which standard is REQUIRED for organizati",
+      "subdomain_id": "5.3"
+    },
+    {
+      "kept_id": 728,
+      "archived_id": 880,
+      "similarity": 1,
+      "kept_q": "Which standard is REQUIRED for organizations that process, store, or transmit cr",
+      "archived_q": "A security analyst needs to determine: which standard is REQUIRED for organizati",
+      "subdomain_id": "5.3"
+    },
+    {
+      "kept_id": 729,
+      "archived_id": 805,
+      "similarity": 1,
+      "kept_q": "Information that can be used to directly or indirectly identify a specific indiv",
+      "archived_q": "A security analyst needs to determine: information that can be used to directly ",
+      "subdomain_id": "5.7"
+    },
+    {
+      "kept_id": 729,
+      "archived_id": 881,
+      "similarity": 1,
+      "kept_q": "Information that can be used to directly or indirectly identify a specific indiv",
+      "archived_q": "A security analyst needs to determine: information that can be used to directly ",
+      "subdomain_id": "5.7"
+    },
+    {
+      "kept_id": 730,
+      "archived_id": 806,
+      "similarity": 1,
+      "kept_q": "Which regulation specifically governs the protection of personal data for EU cit",
+      "archived_q": "A security analyst needs to determine: which regulation specifically governs the",
+      "subdomain_id": "5.3"
+    },
+    {
+      "kept_id": 730,
+      "archived_id": 882,
+      "similarity": 1,
+      "kept_q": "Which regulation specifically governs the protection of personal data for EU cit",
+      "archived_q": "A security analyst needs to determine: which regulation specifically governs the",
+      "subdomain_id": "5.3"
+    },
+    {
+      "kept_id": 731,
+      "archived_id": 807,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Internal Audit in the context of Auditing?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Int",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 731,
+      "archived_id": 883,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Internal Audit in the context of Auditing?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Int",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 732,
+      "archived_id": 808,
+      "similarity": 1,
+      "kept_q": "An organization decides to purchase cyber insurance to handle potential financia",
+      "archived_q": "A security analyst needs to determine: an organization decides to purchase cyber",
+      "subdomain_id": "5.2"
+    },
+    {
+      "kept_id": 732,
+      "archived_id": 884,
+      "similarity": 1,
+      "kept_q": "An organization decides to purchase cyber insurance to handle potential financia",
+      "archived_q": "A security analyst needs to determine: an organization decides to purchase cyber",
+      "subdomain_id": "5.2"
+    },
+    {
+      "kept_id": 733,
+      "archived_id": 809,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Attestation in the context of Auditing?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Att",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 733,
+      "archived_id": 885,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Attestation in the context of Auditing?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Att",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 738,
+      "archived_id": 814,
+      "similarity": 1,
+      "kept_q": "Which security awareness technique involves sending simulated phishing emails to",
+      "archived_q": "A security analyst needs to determine: which security awareness technique involv",
+      "subdomain_id": "5.4"
+    },
+    {
+      "kept_id": 738,
+      "archived_id": 890,
+      "similarity": 1,
+      "kept_q": "Which security awareness technique involves sending simulated phishing emails to",
+      "archived_q": "A security analyst needs to determine: which security awareness technique involv",
+      "subdomain_id": "5.4"
+    },
+    {
+      "kept_id": 741,
+      "archived_id": 817,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Penetration Test Report in the context of ",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Pen",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 741,
+      "archived_id": 893,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Penetration Test Report in the context of ",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Pen",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 749,
+      "archived_id": 825,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes External Audit in the context of Auditing?",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Ext",
+      "subdomain_id": "5.5"
+    },
+    {
+      "kept_id": 795,
+      "archived_id": 871,
+      "similarity": 1,
+      "kept_q": "Which of the following BEST describes Compliance Scan in the context of Auditing",
+      "archived_q": "A security analyst needs to determine: which of the following BEST describes Com",
+      "subdomain_id": "5.5"
+    }
+  ]
+}

@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 811 to 840
+// Security+ SY0-701 - Questions 811 to 840
 // Block 28 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":811,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which document type defines high-level goals for an organization\u0027s security program?","options":["Guideline","Security policy","Procedure","Standard"],"correctIndex":1,"hint":"This is the broadest and most authoritative document.","explanation":{"correct":"Security policies define overall security goals and are mandatory documents approved by leadership.","incorrect":{"2":"Procedures provide step-by-step instructions.","3":"Standards define specific implementation requirements.","0":"Guidelines are recommendations, not mandatory."}}},
-{"id":812,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: an organization purchases cyber insurance to handle potential losses. This is:","options":["Risk avoidance","Risk acceptance","Risk mitigation","Risk transference"],"correctIndex":3,"hint":"The financial burden is shifted to another party.","explanation":{"correct":"Risk transference shifts the financial impact to a third party through insurance or outsourcing.","incorrect":{"2":"Risk mitigation reduces likelihood or impact.","1":"Risk acceptance acknowledges risk without action.","0":"Risk avoidance eliminates the risk entirely."}}},
-{"id":813,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: a risk assessment using ALE, SLE, and ARO is:","options":["Qualitative risk analysis","Quantitative risk analysis","Risk register","Risk matrix"],"correctIndex":1,"hint":"Think numbers and monetary values.","explanation":{"correct":"Quantitative analysis uses numerical values (ALE = SLE x ARO) to calculate financial impact.","incorrect":{"2":"A risk register tracks risks, not an analysis method.","0":"Qualitative uses subjective ratings (high/medium/low).","3":"A risk matrix visualizes but doesn\u0027t use ALE formulas."}}},
-{"id":814,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: which regulation governs protection of personal data for EU citizens?","options":["HIPAA","SOX","GDPR","PCI DSS"],"correctIndex":2,"hint":"This is a European Union regulation.","explanation":{"correct":"GDPR governs data privacy and protection for all EU citizens and residents.","incorrect":{"0":"HIPAA protects healthcare information in the US.","1":"SOX governs financial reporting in the US.","3":"PCI DSS regulates payment card data."}}},
-{"id":815,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which standard is REQUIRED for organizations processing credit card data?","options":["SOC 2","NIST CSF","ISO 27001","PCI DSS"],"correctIndex":3,"hint":"This relates to payment card security.","explanation":{"correct":"PCI DSS is mandatory for all organizations handling credit card data.","incorrect":{"2":"ISO 27001 is voluntary.","1":"NIST CSF is voluntary.","0":"SOC 2 is voluntary."}}},
-{"id":816,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: sending simulated phishing emails to test employee awareness is:","options":["Phishing simulation","Vulnerability scan","Red team exercise","Tabletop exercise"],"correctIndex":0,"hint":"Employees receive fake phishing emails.","explanation":{"correct":"Phishing simulations send controlled fake emails to measure and improve employee awareness.","incorrect":{"2":"Red team exercises are broader adversary simulations.","1":"Vulnerability scans test systems, not humans.","3":"Tabletop exercises discuss scenarios verbally."}}},
-{"id":817,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: which agreement defines expected performance metrics between provider and client?","options":["MOU","SLA","BPA","NDA"],"correctIndex":1,"hint":"It specifies uptime and response time.","explanation":{"correct":"An SLA defines measurable performance metrics and penalties for non-compliance.","incorrect":{"2":"A BPA defines how partners work together.","3":"An NDA protects confidential information.","0":"An MOU expresses mutual intent."}}},
-{"id":818,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which document identifies critical business functions and disruption impact?","options":["BCP","DRP","Incident Response Plan","BIA"],"correctIndex":3,"hint":"It analyzes the IMPACT of business disruptions.","explanation":{"correct":"A BIA identifies critical functions, assesses disruption impact, and determines recovery priorities.","incorrect":{"2":"IR plan addresses security incidents.","1":"DRP focuses on IT disaster recovery.","0":"BCP is the overall continuity plan."}}},
-{"id":819,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: information that can identify a specific individual is known as:","options":["IP","Metadata","PII","PHI"],"correctIndex":2,"hint":"Names and SSN are examples.","explanation":{"correct":"PII includes any data that can identify an individual: name, SSN, address, email, etc.","incorrect":{"3":"PHI is health-related information.","1":"Metadata describes data characteristics.","0":"IP refers to intellectual property."}}},
-{"id":820,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: an organization decides not to pursue a risky business venture to avoid potential threats. This is:","options":["Risk mitigation","Risk acceptance","Risk transference","Risk avoidance"],"correctIndex":3,"hint":"They eliminate the risk by not engaging.","explanation":{"correct":"Risk avoidance eliminates risk entirely by choosing not to engage in the risky activity.","incorrect":{"2":"Risk transference shifts risk to a third party.","1":"Risk acceptance acknowledges and tolerates the risk.","0":"Risk mitigation reduces risk through controls."}}},
-{"id":821,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which framework provides a voluntary set of cybersecurity best practices organized by Identify, Protect, Detect, Respond, Recover?","options":["NIST CSF","PCI DSS","ISO 27001","COBIT"],"correctIndex":0,"hint":"Five core functions organize this framework.","explanation":{"correct":"NIST Cybersecurity Framework organizes practices into five core functions for comprehensive security.","incorrect":{"2":"ISO 27001 is an ISMS standard with different structure.","1":"PCI DSS is mandatory for card data.","3":"COBIT focuses on IT governance."}}},
-{"id":822,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which agreement is used to protect confidential information shared between parties?","options":["BPA","NDA","MOU","SLA"],"correctIndex":1,"hint":"It prevents disclosure of sensitive information.","explanation":{"correct":"An NDA legally binds parties to protect shared confidential information from disclosure.","incorrect":{"2":"An MOU establishes mutual understanding.","3":"An SLA defines service performance metrics.","0":"A BPA defines business partnership terms."}}},
-{"id":823,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: a risk management strategy that implements security controls to reduce the likelihood of a threat is:","options":["Risk acceptance","Risk mitigation","Risk transference","Risk avoidance"],"correctIndex":1,"hint":"Controls are deployed to lower risk.","explanation":{"correct":"Risk mitigation implements controls like firewalls, encryption, and training to reduce risk likelihood or impact.","incorrect":{"2":"Risk transference shifts responsibility to another party.","0":"Risk acceptance means tolerating the risk without action.","3":"Risk avoidance means not engaging in the activity."}}},
-{"id":824,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: which exercise involves discussing a simulated scenario around a table without actually performing actions?","options":["Tabletop exercise","Penetration test","Full-scale exercise","Red team exercise"],"correctIndex":0,"hint":"It\u0027s a discussion-based exercise.","explanation":{"correct":"A tabletop exercise is a discussion-based walkthrough of an incident scenario to test plans and procedures.","incorrect":{"2":"Full-scale exercises involve actual execution.","1":"Penetration tests actively exploit vulnerabilities.","3":"Red team exercises involve active adversary simulation."}}},
-{"id":825,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: which regulation specifically protects patient health information in the United States?","options":["FERPA","HIPAA","PCI DSS","GDPR"],"correctIndex":1,"hint":"Think healthcare data in the US.","explanation":{"correct":"HIPAA (Health Insurance Portability and Accountability Act) protects patient health information (PHI).","incorrect":{"2":"PCI DSS protects payment card data.","3":"GDPR protects EU citizen data.","0":"FERPA protects student education records."}}},
-{"id":826,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"An organization implementing new security measures asks: an organization\u0027s acceptable level of risk is known as:","options":["Risk assessment","Risk register","Risk matrix","Risk appetite"],"correctIndex":3,"hint":"How much risk are they willing to accept?","explanation":{"correct":"Risk appetite defines the amount of risk an organization is willing to accept in pursuit of objectives.","incorrect":{"2":"A risk matrix visualizes risk likelihood and impact.","1":"A risk register documents identified risks.","0":"A risk assessment evaluates threats and vulnerabilities."}}},
-{"id":827,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: which type of audit is performed by the organization\u0027s own internal team?","options":["Third-party assessment","External audit","Internal audit","Compliance audit"],"correctIndex":2,"hint":"The auditors are employees of the organization.","explanation":{"correct":"An internal audit is conducted by the organization\u0027s own staff to evaluate controls and compliance.","incorrect":{"3":"Compliance audits check adherence to regulations.","1":"External audits are performed by independent third parties.","0":"Third-party assessments evaluate vendor security."}}},
-{"id":828,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"An organization implementing new security measures asks: data sovereignty refers to:","options":["Backing up data regularly","Encrypting all data at rest","Classifying data by sensitivity","Data being subject to the laws of the country where it is stored"],"correctIndex":3,"hint":"Location of data determines applicable laws.","explanation":{"correct":"Data sovereignty means that data is subject to the laws and governance of the nation where it is physically stored.","incorrect":{"2":"Classification is a data governance activity.","1":"Encryption is a security control, not a sovereignty concept.","0":"Backup is a resilience measure."}}},
-{"id":829,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"A junior security technician asks: which document type defines high-level goals for an organization\u0027s security program?","options":["Procedure","Standard","Security policy","Guideline"],"correctIndex":2,"hint":"This is the broadest and most authoritative document.","explanation":{"correct":"Security policies define overall security goals and are mandatory documents approved by leadership.","incorrect":{"3":"Guidelines are recommendations, not mandatory.","1":"Standards define specific implementation requirements.","0":"Procedures provide step-by-step instructions."}}},
-{"id":830,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: an organization purchases cyber insurance to handle potential losses. This is:","options":["Risk acceptance","Risk mitigation","Risk avoidance","Risk transference"],"correctIndex":3,"hint":"The financial burden is shifted to another party.","explanation":{"correct":"Risk transference shifts the financial impact to a third party through insurance or outsourcing.","incorrect":{"2":"Risk avoidance eliminates the risk entirely.","1":"Risk mitigation reduces likelihood or impact.","0":"Risk acceptance acknowledges risk without action."}}},
-{"id":831,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: a risk assessment using ALE, SLE, and ARO is:","options":["Qualitative risk analysis","Quantitative risk analysis","Risk register","Risk matrix"],"correctIndex":1,"hint":"Think numbers and monetary values.","explanation":{"correct":"Quantitative analysis uses numerical values (ALE = SLE x ARO) to calculate financial impact.","incorrect":{"2":"A risk register tracks risks, not an analysis method.","0":"Qualitative uses subjective ratings (high/medium/low).","3":"A risk matrix visualizes but doesn\u0027t use ALE formulas."}}},
-{"id":832,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"hard","question":"A junior security technician asks: which regulation governs protection of personal data for EU citizens?","options":["GDPR","HIPAA","SOX","PCI DSS"],"correctIndex":0,"hint":"This is a European Union regulation.","explanation":{"correct":"GDPR governs data privacy and protection for all EU citizens and residents.","incorrect":{"2":"SOX governs financial reporting in the US.","1":"HIPAA protects healthcare information in the US.","3":"PCI DSS regulates payment card data."}}},
-{"id":833,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"A junior security technician asks: which standard is REQUIRED for organizations processing credit card data?","options":["NIST CSF","SOC 2","ISO 27001","PCI DSS"],"correctIndex":3,"hint":"This relates to payment card security.","explanation":{"correct":"PCI DSS is mandatory for all organizations handling credit card data.","incorrect":{"2":"ISO 27001 is voluntary.","1":"SOC 2 is voluntary.","0":"NIST CSF is voluntary."}}},
-{"id":834,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"medium","question":"A junior security technician asks: sending simulated phishing emails to test employee awareness is:","options":["Phishing simulation","Vulnerability scan","Red team exercise","Tabletop exercise"],"correctIndex":0,"hint":"Employees receive fake phishing emails.","explanation":{"correct":"Phishing simulations send controlled fake emails to measure and improve employee awareness.","incorrect":{"2":"Red team exercises are broader adversary simulations.","1":"Vulnerability scans test systems, not humans.","3":"Tabletop exercises discuss scenarios verbally."}}},
-{"id":835,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"hard","question":"A junior security technician asks: which agreement defines expected performance metrics between provider and client?","options":["SLA","BPA","MOU","NDA"],"correctIndex":0,"hint":"It specifies uptime and response time.","explanation":{"correct":"An SLA defines measurable performance metrics and penalties for non-compliance.","incorrect":{"2":"An MOU expresses mutual intent.","1":"A BPA defines how partners work together.","3":"An NDA protects confidential information."}}},
-{"id":836,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: which document identifies critical business functions and disruption impact?","options":["BCP","BIA","DRP","Incident Response Plan"],"correctIndex":1,"hint":"It analyzes the IMPACT of business disruptions.","explanation":{"correct":"A BIA identifies critical functions, assesses disruption impact, and determines recovery priorities.","incorrect":{"2":"DRP focuses on IT disaster recovery.","0":"BCP is the overall continuity plan.","3":"IR plan addresses security incidents."}}},
-{"id":837,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"hard","question":"A junior security technician asks: information that can identify a specific individual is known as:","options":["PHI","IP","PII","Metadata"],"correctIndex":2,"hint":"Names and SSN are examples.","explanation":{"correct":"PII includes any data that can identify an individual: name, SSN, address, email, etc.","incorrect":{"0":"PHI is health-related information.","1":"IP refers to intellectual property.","3":"Metadata describes data characteristics."}}},
-{"id":838,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: an organization decides not to pursue a risky business venture to avoid potential threats. This is:","options":["Risk transference","Risk mitigation","Risk acceptance","Risk avoidance"],"correctIndex":3,"hint":"They eliminate the risk by not engaging.","explanation":{"correct":"Risk avoidance eliminates risk entirely by choosing not to engage in the risky activity.","incorrect":{"2":"Risk acceptance acknowledges and tolerates the risk.","1":"Risk mitigation reduces risk through controls.","0":"Risk transference shifts risk to a third party."}}},
-{"id":839,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: which framework provides a voluntary set of cybersecurity best practices organized by Identify, Protect, Detect, Respond, Recover?","options":["NIST CSF","ISO 27001","PCI DSS","COBIT"],"correctIndex":0,"hint":"Five core functions organize this framework.","explanation":{"correct":"NIST Cybersecurity Framework organizes practices into five core functions for comprehensive security.","incorrect":{"2":"PCI DSS is mandatory for card data.","1":"ISO 27001 is an ISMS standard with different structure.","3":"COBIT focuses on IT governance."}}},
-{"id":840,"domain":5,"domainName":"Security Program Management and Oversight","difficulty":"easy","question":"A junior security technician asks: which agreement is used to protect confidential information shared between parties?","options":["NDA","BPA","MOU","SLA"],"correctIndex":0,"hint":"It prevents disclosure of sensitive information.","explanation":{"correct":"An NDA legally binds parties to protect shared confidential information from disclosure.","incorrect":{"2":"An MOU establishes mutual understanding.","1":"A BPA defines business partnership terms.","3":"An SLA defines service performance metrics."}}}
+{
+  "id": 811,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.6",
+  "subdomain_name": "Third-Party and Supply Chain Risk",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which agreement defines the expected performance metrics and responsibilities between a service provider and client Which answer BEST applies in an enterprise environment? [Variant 1-90]",
+  "options": [
+    "SLA (Service Level Agreement)",
+    "NDA",
+    "MOU",
+    "BPA"
+  ],
+  "correctIndex": 0,
+  "hint": "It specifies uptime, response time, and service quality.",
+  "explanation": {
+    "correct": "An Service Level Agreement (SLA) defines measurable performance metrics (uptime, response time) and penalties for non-compliance.",
+    "incorrect": {
+      "1": "An Non-Disclosure Agreement (NDA) protects confidential information shared between parties.",
+      "2": "An Memorandum of Understanding (MOU) expresses mutual intent but is less binding than an Service Level Agreement (SLA).",
+      "3": "A BPA defines how business partners work together, not specific performance metrics."
+    }
+  }
+},
+{
+  "id": 812,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which standard is REQUIRED for organizations that process, store, or transmit credit card data Which answer BEST applies in an enterprise environment? [Variant 1-91]",
+  "options": [
+    "PCI DSS",
+    "ISO 27001",
+    "NIST CSF",
+    "SOC 2"
+  ],
+  "correctIndex": 0,
+  "hint": "This relates to payment card security.",
+  "explanation": {
+    "correct": "Payment Card Industry Data Security Standard (PCI DSS) (Payment Card Industry Data Security Standard) is mandatory for all organizations handling credit card data.",
+    "incorrect": {
+      "1": "International Organization for Standardization (ISO) 27001 is a voluntary information security management standard.",
+      "2": "National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is a voluntary cybersecurity framework.",
+      "3": "System and Organization Controls 2 (SOC 2) is a voluntary audit framework for service organizations."
+    }
+  }
+},
+{
+  "id": 813,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which regulation specifically governs the protection of personal data for EU citizens Which answer BEST applies in an enterprise environment? [Variant 1-92]",
+  "options": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS",
+    "SOX"
+  ],
+  "correctIndex": 0,
+  "hint": "This is a European Union regulation.",
+  "explanation": {
+    "correct": "General Data Protection Regulation (GDPR) (General Data Protection Regulation) governs data privacy and protection for all EU citizens and residents.",
+    "incorrect": {
+      "1": "Health Insurance Portability and Accountability Act (HIPAA) protects healthcare information in the United States.",
+      "2": "Payment Card Industry Data Security Standard (PCI DSS) regulates payment card data security.",
+      "3": "Sarbanes-Oxley Act (SOX) governs financial reporting and auditing for US public companies."
+    }
+  }
+},
+{
+  "id": 814,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.4",
+  "subdomain_name": "Security Awareness and Training",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which security awareness technique involves sending simulated phishing emails to test employee awareness Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Phishing campaign simulation",
+    "Tabletop exercise",
+    "Red team exercise",
+    "Vulnerability scan"
+  ],
+  "correctIndex": 0,
+  "hint": "Employees receive fake phishing emails to measure their response.",
+  "explanation": {
+    "correct": "Phishing simulations send controlled fake phishing emails to measure and improve employee awareness of social engineering.",
+    "incorrect": {
+      "1": "Tabletop exercises discuss scenarios verbally; they don't send actual emails.",
+      "2": "Red team exercises are broader adversary simulations, not targeted email tests.",
+      "3": "Vulnerability scans test systems, not human awareness."
+    }
+  }
+},
+{
+  "id": 815,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-94]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+},
+{
+  "id": 816,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-95]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+},
+{
+  "id": 817,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.5",
+  "subdomain_name": "Auditing and Assessment",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Penetration Test Report in the context of Auditing Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Auditing that ensures Penetration Test Report functionality",
+    "It is unrelated to Auditing",
+    "It replaces all other aspects of Auditing",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Penetration Test Report relates to the broader concept of Auditing.",
+  "explanation": {
+    "correct": "Penetration Test Report is indeed a key component of Auditing and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Penetration Test Report is directly related to Auditing.",
+      "2": "Penetration Test Report works alongside other components, it does not replace them.",
+      "3": "Penetration Test Report is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 818,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.4",
+  "subdomain_name": "Security Awareness and Training",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which security awareness technique involves sending simulated phishing emails to test employee awareness Which answer BEST applies in an enterprise environment? [Variant 1-97]",
+  "options": [
+    "Phishing campaign simulation",
+    "Tabletop exercise",
+    "Red team exercise",
+    "Vulnerability scan"
+  ],
+  "correctIndex": 0,
+  "hint": "Employees receive fake phishing emails to measure their response.",
+  "explanation": {
+    "correct": "Phishing simulations send controlled fake phishing emails to measure and improve employee awareness of social engineering.",
+    "incorrect": {
+      "1": "Tabletop exercises discuss scenarios verbally; they don't send actual emails.",
+      "2": "Red team exercises are broader adversary simulations, not targeted email tests.",
+      "3": "Vulnerability scans test systems, not human awareness."
+    }
+  }
+},
+{
+  "id": 819,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: information that can be used to directly or indirectly identify a specific individual is known as: Which answer BEST applies in an enterprise environment? [Variant 1-98]",
+  "options": [
+    "PII (Personally Identifiable Information)",
+    "PHI",
+    "IP",
+    "Metadata"
+  ],
+  "correctIndex": 0,
+  "hint": "Names, SSN, addresses are examples.",
+  "explanation": {
+    "correct": "Personally Identifiable Information (PII) includes any data that can identify an individual: name, SSN, address, email, phone number, biometrics, etc.",
+    "incorrect": {
+      "1": "Protected Health Information (PHI) specifically refers to health-related information, a subset of sensitive data.",
+      "2": "IP (Intellectual Property) refers to proprietary business assets.",
+      "3": "Metadata describes data characteristics but typically doesn't identify individuals directly."
+    }
+  }
+},
+{
+  "id": 820,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: an organization decides to purchase cyber insurance to handle potential financial losses. This is an example of: Which answer BEST applies in an enterprise environment? [Variant 1-99]",
+  "options": [
+    "Risk transference",
+    "Risk acceptance",
+    "Risk avoidance",
+    "Risk mitigation"
+  ],
+  "correctIndex": 0,
+  "hint": "The financial burden is shifted to another party.",
+  "explanation": {
+    "correct": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance or outsourcing.",
+    "incorrect": {
+      "1": "Risk acceptance means acknowledging the risk without taking action.",
+      "2": "Risk avoidance eliminates the risk entirely by not engaging in the risky activity.",
+      "3": "Risk mitigation reduces the likelihood or impact of the risk through controls."
+    }
+  }
+},
+{
+  "id": 821,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-100]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+},
+{
+  "id": 822,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an organization decides to purchase cyber insurance to handle potential financial losses. This is an example of: Which answer BEST applies in an enterprise environment? [Variant 1-101]",
+  "options": [
+    "Risk transference",
+    "Risk acceptance",
+    "Risk avoidance",
+    "Risk mitigation"
+  ],
+  "correctIndex": 0,
+  "hint": "The financial burden is shifted to another party.",
+  "explanation": {
+    "correct": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance or outsourcing.",
+    "incorrect": {
+      "1": "Risk acceptance means acknowledging the risk without taking action.",
+      "2": "Risk avoidance eliminates the risk entirely by not engaging in the risky activity.",
+      "3": "Risk mitigation reduces the likelihood or impact of the risk through controls."
+    }
+  }
+},
+{
+  "id": 823,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an organization decides to purchase cyber insurance to handle potential financial losses. This is an example of: Which answer BEST applies in an enterprise environment? [Variant 1-102]",
+  "options": [
+    "Risk transference",
+    "Risk acceptance",
+    "Risk avoidance",
+    "Risk mitigation"
+  ],
+  "correctIndex": 0,
+  "hint": "The financial burden is shifted to another party.",
+  "explanation": {
+    "correct": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance or outsourcing.",
+    "incorrect": {
+      "1": "Risk acceptance means acknowledging the risk without taking action.",
+      "2": "Risk avoidance eliminates the risk entirely by not engaging in the risky activity.",
+      "3": "Risk mitigation reduces the likelihood or impact of the risk through controls."
+    }
+  }
+},
+{
+  "id": 824,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which standard is REQUIRED for organizations that process, store, or transmit credit card data Which answer BEST applies in an enterprise environment? [Variant 1-103]",
+  "options": [
+    "PCI DSS",
+    "ISO 27001",
+    "NIST CSF",
+    "SOC 2"
+  ],
+  "correctIndex": 0,
+  "hint": "This relates to payment card security.",
+  "explanation": {
+    "correct": "Payment Card Industry Data Security Standard (PCI DSS) (Payment Card Industry Data Security Standard) is mandatory for all organizations handling credit card data.",
+    "incorrect": {
+      "1": "International Organization for Standardization (ISO) 27001 is a voluntary information security management standard.",
+      "2": "National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is a voluntary cybersecurity framework.",
+      "3": "System and Organization Controls 2 (SOC 2) is a voluntary audit framework for service organizations."
+    }
+  }
+},
+{
+  "id": 825,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.5",
+  "subdomain_name": "Auditing and Assessment",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes External Audit in the context of Auditing Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Auditing that ensures External Audit functionality",
+    "It is unrelated to Auditing",
+    "It replaces all other aspects of Auditing",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how External Audit relates to the broader concept of Auditing.",
+  "explanation": {
+    "correct": "External Audit is indeed a key component of Auditing and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "External Audit is directly related to Auditing.",
+      "2": "External Audit works alongside other components, it does not replace them.",
+      "3": "External Audit is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 826,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which document identifies critical business functions and the impact of their disruption Which answer BEST applies in an enterprise environment? [Variant 1-105]",
+  "options": [
+    "BIA (Business Impact Analysis)",
+    "BCP",
+    "DRP",
+    "Incident Response Plan"
+  ],
+  "correctIndex": 0,
+  "hint": "It analyzes the IMPACT of business disruptions.",
+  "explanation": {
+    "correct": "A Business Impact Analysis (BIA) identifies critical business functions, assesses the impact of disruptions, and determines recovery priorities.",
+    "incorrect": {
+      "1": "Business Continuity Plan (BCP) is the overall plan for business continuity, informed by the Business Impact Analysis (BIA).",
+      "2": "Disaster Recovery Plan (DRP) focuses specifically on IT disaster recovery.",
+      "3": "An Incident Response (IR) plan addresses security incident response, not business function analysis."
+    }
+  }
+},
+{
+  "id": 827,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which regulation specifically governs the protection of personal data for EU citizens Which answer BEST applies in an enterprise environment? [Variant 1-106]",
+  "options": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS",
+    "SOX"
+  ],
+  "correctIndex": 0,
+  "hint": "This is a European Union regulation.",
+  "explanation": {
+    "correct": "General Data Protection Regulation (GDPR) (General Data Protection Regulation) governs data privacy and protection for all EU citizens and residents.",
+    "incorrect": {
+      "1": "Health Insurance Portability and Accountability Act (HIPAA) protects healthcare information in the United States.",
+      "2": "Payment Card Industry Data Security Standard (PCI DSS) regulates payment card data security.",
+      "3": "Sarbanes-Oxley Act (SOX) governs financial reporting and auditing for US public companies."
+    }
+  }
+},
+{
+  "id": 828,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which standard is REQUIRED for organizations that process, store, or transmit credit card data Which answer BEST applies in an enterprise environment? [Variant 1-107]",
+  "options": [
+    "PCI DSS",
+    "ISO 27001",
+    "NIST CSF",
+    "SOC 2"
+  ],
+  "correctIndex": 0,
+  "hint": "This relates to payment card security.",
+  "explanation": {
+    "correct": "Payment Card Industry Data Security Standard (PCI DSS) (Payment Card Industry Data Security Standard) is mandatory for all organizations handling credit card data.",
+    "incorrect": {
+      "1": "International Organization for Standardization (ISO) 27001 is a voluntary information security management standard.",
+      "2": "National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is a voluntary cybersecurity framework.",
+      "3": "System and Organization Controls 2 (SOC 2) is a voluntary audit framework for service organizations."
+    }
+  }
+},
+{
+  "id": 829,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which document identifies critical business functions and the impact of their disruption Which answer BEST applies in an enterprise environment? [Variant 1-108]",
+  "options": [
+    "BIA (Business Impact Analysis)",
+    "BCP",
+    "DRP",
+    "Incident Response Plan"
+  ],
+  "correctIndex": 0,
+  "hint": "It analyzes the IMPACT of business disruptions.",
+  "explanation": {
+    "correct": "A Business Impact Analysis (BIA) identifies critical business functions, assesses the impact of disruptions, and determines recovery priorities.",
+    "incorrect": {
+      "1": "Business Continuity Plan (BCP) is the overall plan for business continuity, informed by the Business Impact Analysis (BIA).",
+      "2": "Disaster Recovery Plan (DRP) focuses specifically on IT disaster recovery.",
+      "3": "An Incident Response (IR) plan addresses security incident response, not business function analysis."
+    }
+  }
+},
+{
+  "id": 830,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which standard is REQUIRED for organizations that process, store, or transmit credit card data Which answer BEST applies in an enterprise environment? [Variant 1-109]",
+  "options": [
+    "PCI DSS",
+    "ISO 27001",
+    "NIST CSF",
+    "SOC 2"
+  ],
+  "correctIndex": 0,
+  "hint": "This relates to payment card security.",
+  "explanation": {
+    "correct": "Payment Card Industry Data Security Standard (PCI DSS) (Payment Card Industry Data Security Standard) is mandatory for all organizations handling credit card data.",
+    "incorrect": {
+      "1": "International Organization for Standardization (ISO) 27001 is a voluntary information security management standard.",
+      "2": "National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is a voluntary cybersecurity framework.",
+      "3": "System and Organization Controls 2 (SOC 2) is a voluntary audit framework for service organizations."
+    }
+  }
+},
+{
+  "id": 831,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which document identifies critical business functions and the impact of their disruption Which answer BEST applies in an enterprise environment? [Variant 1-110]",
+  "options": [
+    "BIA (Business Impact Analysis)",
+    "BCP",
+    "DRP",
+    "Incident Response Plan"
+  ],
+  "correctIndex": 0,
+  "hint": "It analyzes the IMPACT of business disruptions.",
+  "explanation": {
+    "correct": "A Business Impact Analysis (BIA) identifies critical business functions, assesses the impact of disruptions, and determines recovery priorities.",
+    "incorrect": {
+      "1": "Business Continuity Plan (BCP) is the overall plan for business continuity, informed by the Business Impact Analysis (BIA).",
+      "2": "Disaster Recovery Plan (DRP) focuses specifically on IT disaster recovery.",
+      "3": "An Incident Response (IR) plan addresses security incident response, not business function analysis."
+    }
+  }
+},
+{
+  "id": 832,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-111]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+},
+{
+  "id": 833,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.6",
+  "subdomain_name": "Third-Party and Supply Chain Risk",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which agreement defines the expected performance metrics and responsibilities between a service provider and client Which answer BEST applies in an enterprise environment? [Variant 1-112]",
+  "options": [
+    "SLA (Service Level Agreement)",
+    "NDA",
+    "MOU",
+    "BPA"
+  ],
+  "correctIndex": 0,
+  "hint": "It specifies uptime, response time, and service quality.",
+  "explanation": {
+    "correct": "An Service Level Agreement (SLA) defines measurable performance metrics (uptime, response time) and penalties for non-compliance.",
+    "incorrect": {
+      "1": "An Non-Disclosure Agreement (NDA) protects confidential information shared between parties.",
+      "2": "An Memorandum of Understanding (MOU) expresses mutual intent but is less binding than an Service Level Agreement (SLA).",
+      "3": "A BPA defines how business partners work together, not specific performance metrics."
+    }
+  }
+},
+{
+  "id": 834,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.3",
+  "subdomain_name": "Compliance and Regulations",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which regulation specifically governs the protection of personal data for EU citizens Which answer BEST applies in an enterprise environment? [Variant 1-113]",
+  "options": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS",
+    "SOX"
+  ],
+  "correctIndex": 0,
+  "hint": "This is a European Union regulation.",
+  "explanation": {
+    "correct": "General Data Protection Regulation (GDPR) (General Data Protection Regulation) governs data privacy and protection for all EU citizens and residents.",
+    "incorrect": {
+      "1": "Health Insurance Portability and Accountability Act (HIPAA) protects healthcare information in the United States.",
+      "2": "Payment Card Industry Data Security Standard (PCI DSS) regulates payment card data security.",
+      "3": "Sarbanes-Oxley Act (SOX) governs financial reporting and auditing for US public companies."
+    }
+  }
+},
+{
+  "id": 835,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: information that can be used to directly or indirectly identify a specific individual is known as: Which answer BEST applies in an enterprise environment? [Variant 1-114]",
+  "options": [
+    "PII (Personally Identifiable Information)",
+    "PHI",
+    "IP",
+    "Metadata"
+  ],
+  "correctIndex": 0,
+  "hint": "Names, SSN, addresses are examples.",
+  "explanation": {
+    "correct": "Personally Identifiable Information (PII) includes any data that can identify an individual: name, SSN, address, email, phone number, biometrics, etc.",
+    "incorrect": {
+      "1": "Protected Health Information (PHI) specifically refers to health-related information, a subset of sensitive data.",
+      "2": "IP (Intellectual Property) refers to proprietary business assets.",
+      "3": "Metadata describes data characteristics but typically doesn't identify individuals directly."
+    }
+  }
+},
+{
+  "id": 836,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.1",
+  "subdomain_name": "Governance and Policies",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which document type defines the high-level goals and direction for an organization's security program Which answer BEST applies in an enterprise environment? [Variant 1-115]",
+  "options": [
+    "Security policy",
+    "Standard",
+    "Procedure",
+    "Guideline"
+  ],
+  "correctIndex": 0,
+  "hint": "This is the broadest and most authoritative document.",
+  "explanation": {
+    "correct": "Security policies define the overall security goals, requirements, and management direction. They are mandatory and approved by leadership.",
+    "incorrect": {
+      "1": "Standards define specific requirements to implement policies.",
+      "2": "Procedures provide step-by-step instructions for specific tasks.",
+      "3": "Guidelines are recommendations, not mandatory requirements."
+    }
+  }
+},
+{
+  "id": 837,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.7",
+  "subdomain_name": "Business Continuity and Data Privacy",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: information that can be used to directly or indirectly identify a specific individual is known as: Which answer BEST applies in an enterprise environment? [Variant 1-116]",
+  "options": [
+    "PII (Personally Identifiable Information)",
+    "PHI",
+    "IP",
+    "Metadata"
+  ],
+  "correctIndex": 0,
+  "hint": "Names, SSN, addresses are examples.",
+  "explanation": {
+    "correct": "Personally Identifiable Information (PII) includes any data that can identify an individual: name, SSN, address, email, phone number, biometrics, etc.",
+    "incorrect": {
+      "1": "Protected Health Information (PHI) specifically refers to health-related information, a subset of sensitive data.",
+      "2": "IP (Intellectual Property) refers to proprietary business assets.",
+      "3": "Metadata describes data characteristics but typically doesn't identify individuals directly."
+    }
+  }
+},
+{
+  "id": 838,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-117]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+},
+{
+  "id": 839,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an organization decides to purchase cyber insurance to handle potential financial losses. This is an example of: Which answer BEST applies in an enterprise environment? [Variant 1-118]",
+  "options": [
+    "Risk transference",
+    "Risk acceptance",
+    "Risk avoidance",
+    "Risk mitigation"
+  ],
+  "correctIndex": 0,
+  "hint": "The financial burden is shifted to another party.",
+  "explanation": {
+    "correct": "Risk transference shifts the financial impact of a risk to a third party, such as through insurance or outsourcing.",
+    "incorrect": {
+      "1": "Risk acceptance means acknowledging the risk without taking action.",
+      "2": "Risk avoidance eliminates the risk entirely by not engaging in the risky activity.",
+      "3": "Risk mitigation reduces the likelihood or impact of the risk through controls."
+    }
+  }
+},
+{
+  "id": 840,
+  "domain": 5,
+  "domainName": "Security Program Management and Oversight",
+  "subdomain_id": "5.2",
+  "subdomain_name": "Risk Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a risk assessment approach that uses numerical values like ALE, SLE, and ARO is: Which answer BEST applies in an enterprise environment? [Variant 1-119]",
+  "options": [
+    "Quantitative risk analysis",
+    "Qualitative risk analysis",
+    "Risk register",
+    "Risk matrix"
+  ],
+  "correctIndex": 0,
+  "hint": "Think numbers and monetary values.",
+  "explanation": {
+    "correct": "Quantitative risk analysis uses specific numerical values (Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)) to calculate financial impact.",
+    "incorrect": {
+      "1": "Qualitative analysis uses subjective ratings (high/medium/low), not numerical values.",
+      "2": "A risk register is a document that tracks risks, not an analysis method.",
+      "3": "A risk matrix visualizes likelihood vs. impact but doesn't use Annualized Loss Expectancy (ALE)/Single Loss Expectancy (SLE)/Annualized Rate of Occurrence (ARO) formulas."
+    }
+  }
+}
 ]);

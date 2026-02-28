@@ -1,4 +1,4 @@
-const CACHE_NAME = 'security-plus-v2';
+const CACHE_NAME = 'security-plus-v4';
 const ASSETS = [
     './',
     './index.html',
@@ -7,6 +7,15 @@ const ASSETS = [
     './manifest.json',
     './icon-192.png',
     './icon-512.png',
+    // New modules
+    './domains.js',
+    './subdomains.js',
+    './acronyms.js',
+    './storage.js',
+    './testGenerator.js',
+    './analytics.js',
+    './dashboardView.js',
+    './reinforcement.js',
     // Question blocks
     './questions/block01.js',
     './questions/block02.js',

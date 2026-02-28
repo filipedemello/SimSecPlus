@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 31 to 60
+// Security+ SY0-701 - Questions 31 to 60
 // Block 2 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":31,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: a hacker modifies financial records in a database without authorization. Which element of the CIA triad has been compromised?","options":["Integrity","Accountability","Availability","Confidentiality"],"correctIndex":0,"hint":"This involves unauthorized modification of data.","explanation":{"correct":"Integrity ensures data remains accurate and unaltered. Unauthorized modification directly violates this principle.","incorrect":{"2":"Availability relates to system uptime.","1":"Accountability tracks user actions but is not a CIA triad element.","3":"Confidentiality involves unauthorized viewing, not modification."}}},
-{"id":32,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which of the following BEST ensures data integrity during transmission?","options":["Access control lists","Hashing algorithms","VPN tunnels","Firewalls"],"correctIndex":1,"hint":"Think about verifying data has not been tampered with.","explanation":{"correct":"Hashing algorithms like SHA-256 create a digest that can verify data has not been modified during transit.","incorrect":{"2":"VPNs encrypt data in transit but do not inherently verify integrity.","3":"Firewalls filter network traffic but do not verify data integrity.","0":"ACLs control access permissions, not data integrity."}}},
-{"id":33,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: a DDoS attack brings down a company\u0027s web server. Which CIA triad element is primarily affected?","options":["Non-repudiation","Confidentiality","Integrity","Availability"],"correctIndex":3,"hint":"The server is unable to serve legitimate requests.","explanation":{"correct":"Availability is compromised when systems become inaccessible to legitimate users.","incorrect":{"2":"Integrity involves unauthorized data modification.","1":"Confidentiality involves unauthorized data access.","0":"Non-repudiation is about proving actions occurred."}}},
-{"id":34,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: which AAA component verifies a user\u0027s identity before granting system access?","options":["Authorization","Authentication","Auditing","Accounting"],"correctIndex":1,"hint":"This is the first step in the AAA process.","explanation":{"correct":"Authentication verifies identity using credentials like passwords, biometrics, or tokens.","incorrect":{"2":"Auditing reviews logs but is not a core AAA component.","0":"Authorization determines what resources a user can access.","3":"Accounting tracks and logs user activities."}}},
-{"id":35,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: after a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible?","options":["Authentication","Accounting","Identification","Authorization"],"correctIndex":3,"hint":"This determines permissions after identity verification.","explanation":{"correct":"Authorization determines what actions and resources a user is permitted to access after authentication.","incorrect":{"2":"Identification is providing a username.","1":"Accounting tracks what users do.","0":"Authentication only verifies identity."}}},
-{"id":36,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: which AAA component tracks and records user activities for audit purposes?","options":["Access control","Accounting","Authentication","Authorization"],"correctIndex":1,"hint":"Think about logging and monitoring user actions.","explanation":{"correct":"Accounting records user activities including login times, resources accessed, and actions taken for auditing.","incorrect":{"2":"Authentication verifies identity.","3":"Authorization assigns permissions.","0":"Access control is a broader concept."}}},
-{"id":37,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control?","options":["Managerial detective","Operational corrective","Physical deterrent","Technical preventive"],"correctIndex":2,"hint":"Consider both the category and function of this control.","explanation":{"correct":"A security guard is a physical control that also serves as a deterrent by discouraging unauthorized entry.","incorrect":{"3":"Technical controls involve technology like firewalls.","1":"Operational corrective controls fix issues after they occur.","0":"Managerial controls are policies and procedures."}}},
-{"id":38,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control?","options":["Technical preventive","Physical compensating","Technical detective","Operational deterrent"],"correctIndex":2,"hint":"IDS detects threats but does not automatically block them.","explanation":{"correct":"An IDS is a technical control that serves a detective function by identifying threats after they occur.","incorrect":{"0":"Preventive controls stop threats before they happen.","1":"Physical controls involve tangible barriers.","3":"Deterrent controls discourage actions."}}},
-{"id":39,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: a company policy requiring employees to change passwords every 90 days is an example of which control type?","options":["Managerial preventive","Technical detective","Physical deterrent","Operational corrective"],"correctIndex":0,"hint":"Policies are administrative documents.","explanation":{"correct":"Password policies are managerial/administrative controls designed to prevent unauthorized access.","incorrect":{"2":"Physical controls are tangible barriers.","1":"Technical controls are implemented through technology.","3":"Corrective controls fix issues after they occur."}}},
-{"id":40,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies?","options":["Implicit Trust Zone","Policy Enforcement Point","Data Plane","Policy Engine"],"correctIndex":3,"hint":"This component evaluates policies before granting access.","explanation":{"correct":"The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.","incorrect":{"2":"The Data Plane carries the actual traffic.","1":"The Policy Enforcement Point enforces the decision but does not make it.","0":"Implicit Trust Zones contradict Zero Trust principles."}}},
-{"id":41,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: zero Trust architecture operates on which fundamental principle?","options":["Never trust, always verify","Trust but verify","Verify only external traffic","Trust internal networks"],"correctIndex":0,"hint":"No entity is inherently trusted.","explanation":{"correct":"Zero Trust assumes no implicit trust for any entity, requiring continuous verification regardless of location.","incorrect":{"2":"Zero Trust verifies ALL traffic, not just external.","1":"Trust but verify still implies initial trust, which Zero Trust rejects.","3":"Zero Trust does NOT trust internal networks."}}},
-{"id":42,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption?","options":["Hashing","Asymmetric encryption","Symmetric encryption","Digital signatures"],"correctIndex":2,"hint":"One key serves dual purposes.","explanation":{"correct":"Symmetric encryption (e.g., AES) uses a single shared key for both encryption and decryption.","incorrect":{"3":"Digital signatures use asymmetric keys.","1":"Asymmetric encryption uses a key pair (public/private).","0":"Hashing is one-way and does not use keys for decryption."}}},
-{"id":43,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A security analyst needs to determine: which algorithm provides a fixed-length output regardless of input size and is NOT reversible?","options":["Diffie-Hellman","SHA-256","AES-256","RSA"],"correctIndex":1,"hint":"This produces a digest or fingerprint of data.","explanation":{"correct":"SHA-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed.","incorrect":{"2":"AES-256 is a symmetric encryption algorithm that is reversible.","3":"RSA is an asymmetric encryption algorithm.","0":"Diffie-Hellman is a key exchange protocol."}}},
-{"id":44,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: in PKI, which entity issues and manages digital certificates?","options":["Key escrow","CRL","Certificate Authority (CA)","Registration Authority"],"correctIndex":2,"hint":"This is the trusted third party in PKI.","explanation":{"correct":"A Certificate Authority issues, manages, and revokes digital certificates, establishing trust in PKI.","incorrect":{"3":"A Registration Authority verifies identities but does not issue certificates.","1":"A CRL lists revoked certificates but does not issue them.","0":"Key escrow stores backup copies of keys."}}},
-{"id":45,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which key is used to encrypt data so that only the intended recipient can decrypt it?","options":["Recipient\u0027s public key","Sender\u0027s private key","Sender\u0027s public key","Recipient\u0027s private key"],"correctIndex":0,"hint":"The recipient needs their secret key to decrypt.","explanation":{"correct":"Data is encrypted with the recipient\u0027s public key. Only their corresponding private key can decrypt it.","incorrect":{"2":"The sender\u0027s public key would mean anyone with the sender\u0027s private key could decrypt.","1":"The sender\u0027s private key is used for digital signatures, not encrypting for others.","3":"The recipient\u0027s private key is used for decryption, not encryption by others."}}},
-{"id":46,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: a change management process requires approval before modifications to production systems. Which group typically reviews and approves changes?","options":["Board of Directors","Help Desk","Change Advisory Board (CAB)","Security Operations Center (SOC)"],"correctIndex":2,"hint":"This group evaluates the risk and impact of changes.","explanation":{"correct":"The CAB reviews proposed changes, assesses risks, and approves or rejects them before implementation.","incorrect":{"3":"The SOC monitors for security incidents, not change approval.","1":"Help Desk handles user support tickets.","0":"The Board sets strategy but does not review individual changes."}}},
-{"id":47,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: what is the primary purpose of a gap analysis in security?","options":["Monitor user activity","Test network vulnerabilities","Encrypt sensitive data","Identify differences between current state and desired security posture"],"correctIndex":3,"hint":"It compares where you are to where you need to be.","explanation":{"correct":"Gap analysis identifies the differences between an organization\u0027s current security state and its desired/required security posture.","incorrect":{"2":"Encrypting data is a security control, not an analysis.","1":"Testing network vulnerabilities is vulnerability assessment.","0":"Monitoring user activity is part of security operations."}}},
-{"id":48,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which of the following BEST describes non-repudiation?","options":["Ensuring data remains unchanged","Maintaining system uptime","Preventing unauthorized access to data","Ensuring an action cannot be denied by the party who performed it"],"correctIndex":3,"hint":"Think about proving someone did something.","explanation":{"correct":"Non-repudiation provides proof of the origin and integrity of data, ensuring that the sender cannot deny having sent a message.","incorrect":{"2":"Preventing unauthorized access is confidentiality.","1":"Maintaining uptime is availability.","0":"Ensuring data remains unchanged is integrity."}}},
-{"id":49,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which type of cryptographic key should NEVER be shared with anyone?","options":["Private key","Shared key","Session key","Public key"],"correctIndex":0,"hint":"This key must remain secret to maintain security.","explanation":{"correct":"A private key must never be shared. It is used for decryption and digital signatures, and its secrecy is fundamental to asymmetric cryptography.","incorrect":{"2":"Session keys are shared between communicating parties during a session.","1":"Shared keys are exchanged between authorized parties in symmetric encryption.","3":"Public keys are designed to be shared openly."}}},
-{"id":50,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which security control is implemented to fix or restore systems after a security incident?","options":["Deterrent control","Detective control","Preventive control","Corrective control"],"correctIndex":3,"hint":"Think about what happens AFTER an incident.","explanation":{"correct":"Corrective controls restore systems to normal operation after an incident, such as patching, restoring from backup, or reimaging.","incorrect":{"2":"Preventive controls stop incidents before they occur.","1":"Detective controls identify incidents as they happen.","0":"Deterrent controls discourage potential attackers."}}},
-{"id":51,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A security analyst needs to determine: an organization deploys security cameras around its perimeter. These cameras PRIMARILY function as which two types of controls?","options":["Physical and detective","Technical and preventive","Operational and compensating","Managerial and corrective"],"correctIndex":0,"hint":"Cameras are tangible and they record/identify events.","explanation":{"correct":"Security cameras are physical controls (tangible devices) that serve a detective function (recording events for later review).","incorrect":{"2":"Cameras are physical devices, not operational procedures.","1":"Cameras are physical, not purely technical. They detect, not prevent.","3":"Cameras are not policies (managerial) and they do not correct issues."}}},
-{"id":52,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: diffie-Hellman is BEST described as a:","options":["Symmetric encryption algorithm","Hashing algorithm","Digital signature algorithm","Key exchange protocol"],"correctIndex":3,"hint":"It allows two parties to establish a shared secret.","explanation":{"correct":"Diffie-Hellman enables two parties to securely establish a shared secret key over an insecure channel without transmitting the key itself.","incorrect":{"2":"Digital signatures use asymmetric keys for verification; DH exchanges keys.","1":"Hashing produces a digest; DH establishes shared keys.","0":"Symmetric encryption uses a shared key but DH is not encryption itself."}}},
-{"id":53,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A security analyst needs to determine: which of the following is an example of something you ARE in multi-factor authentication?","options":["PIN","Smart card","Fingerprint scan","Password"],"correctIndex":2,"hint":"Think biometrics.","explanation":{"correct":"A fingerprint scan is a biometric factor (something you are) used in multi-factor authentication.","incorrect":{"3":"A password is something you know.","1":"A smart card is something you have.","0":"A PIN is something you know."}}},
-{"id":54,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A security analyst needs to determine: what process ensures that all changes to a system are documented, reviewed, and approved before implementation?","options":["Risk assessment","Incident response","Change management","Vulnerability management"],"correctIndex":2,"hint":"This formalizes how modifications are handled.","explanation":{"correct":"Change management provides a structured process to evaluate, approve, implement, and document changes to minimize risk.","incorrect":{"3":"Vulnerability management identifies and remediates weaknesses.","1":"Incident response handles security events after they occur.","0":"Risk assessment evaluates threats and their potential impact."}}},
-{"id":55,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: a company wants to ensure that only authorized personnel can access sensitive customer data. Which element of the CIA triad is the company primarily addressing?","options":["Availability","Integrity","Confidentiality","Non-repudiation"],"correctIndex":2,"hint":"This element focuses on preventing unauthorized access to data.","explanation":{"correct":"Confidentiality ensures that data is accessible only to authorized individuals through mechanisms like encryption and access controls.","incorrect":{"3":"Non-repudiation is not part of the CIA triad.","1":"Integrity focuses on data accuracy and preventing unauthorized modifications.","0":"Availability ensures systems and data are accessible when needed."}}},
-{"id":56,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: which of the following technologies BEST supports confidentiality?","options":["RAID arrays","Load balancers","UPS systems","AES-256 encryption"],"correctIndex":3,"hint":"Think about what prevents unauthorized data access.","explanation":{"correct":"AES-256 encryption protects data confidentiality by making it unreadable without the proper key.","incorrect":{"2":"UPS systems provide power backup for availability.","1":"Load balancers distribute traffic for availability.","0":"RAID arrays provide data redundancy for availability."}}},
-{"id":57,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: an employee accidentally sends a file containing PII to an unauthorized recipient. Which CIA principle was violated?","options":["Confidentiality","Availability","Integrity","Authentication"],"correctIndex":0,"hint":"Unauthorized access to data relates to which principle?","explanation":{"correct":"Confidentiality was violated because PII was disclosed to an unauthorized person.","incorrect":{"2":"Integrity would be violated if the data was modified.","1":"Availability relates to system uptime.","3":"Authentication is about verifying identity."}}},
-{"id":58,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: a hacker modifies financial records in a database without authorization. Which element of the CIA triad has been compromised?","options":["Integrity","Confidentiality","Availability","Accountability"],"correctIndex":0,"hint":"This involves unauthorized modification of data.","explanation":{"correct":"Integrity ensures data remains accurate and unaltered. Unauthorized modification directly violates this principle.","incorrect":{"2":"Availability relates to system uptime.","1":"Confidentiality involves unauthorized viewing, not modification.","3":"Accountability tracks user actions but is not a CIA triad element."}}},
-{"id":59,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: which of the following BEST ensures data integrity during transmission?","options":["Access control lists","Hashing algorithms","Firewalls","VPN tunnels"],"correctIndex":1,"hint":"Think about verifying data has not been tampered with.","explanation":{"correct":"Hashing algorithms like SHA-256 create a digest that can verify data has not been modified during transit.","incorrect":{"2":"Firewalls filter network traffic but do not verify data integrity.","3":"VPNs encrypt data in transit but do not inherently verify integrity.","0":"ACLs control access permissions, not data integrity."}}},
-{"id":60,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: a DDoS attack brings down a company\u0027s web server. Which CIA triad element is primarily affected?","options":["Integrity","Availability","Non-repudiation","Confidentiality"],"correctIndex":1,"hint":"The server is unable to serve legitimate requests.","explanation":{"correct":"Availability is compromised when systems become inaccessible to legitimate users.","incorrect":{"2":"Non-repudiation is about proving actions occurred.","3":"Confidentiality involves unauthorized data access.","0":"Integrity involves unauthorized data modification."}}}
+{
+  "id": 31,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which encryption type uses the SAME key for both encryption and decryption? [Variant 0-30]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 32,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-31]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 33,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Rollback Plan in the context of Change Management?",
+  "options": [
+    "It is a primary component of Change Management that ensures Rollback Plan functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Rollback Plan relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Rollback Plan is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Rollback Plan is directly related to Change Management.",
+      "2": "Rollback Plan works alongside other components, it does not replace them.",
+      "3": "Rollback Plan is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 34,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST ensures data integrity during transmission?",
+  "options": [
+    "Hashing algorithms",
+    "Firewalls",
+    "VPN tunnels",
+    "Access control lists"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about verifying data has not been tampered with.",
+  "explanation": {
+    "correct": "Hashing algorithms like Secure Hash Algorithm (SHA)-256 create a digest that can verify data has not been modified during transit.",
+    "incorrect": {
+      "1": "Firewalls filter network traffic but do not verify data integrity.",
+      "2": "VPNs encrypt data in transit (confidentiality) but do not inherently verify integrity.",
+      "3": "ACLs control access permissions, not data integrity verification."
+    }
+  }
+},
+{
+  "id": 35,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which Zero Trust component is responsible for making access decisions based on policies? [Variant 0-34]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 36,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.6",
+  "subdomain_name": "Gap Analysis",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Business Gap in the context of Gap Analysis?",
+  "options": [
+    "It is a primary component of Gap Analysis that ensures Business Gap functionality",
+    "It is unrelated to Gap Analysis",
+    "It replaces all other aspects of Gap Analysis",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Business Gap relates to the broader concept of Gap Analysis.",
+  "explanation": {
+    "correct": "Business Gap is indeed a key component of Gap Analysis and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Business Gap is directly related to Gap Analysis.",
+      "2": "Business Gap works alongside other components, it does not replace them.",
+      "3": "Business Gap is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 37,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which Zero Trust component is responsible for making access decisions based on policies? [Variant 0-36]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 38,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An IDS that alerts administrators of suspicious network activity is BEST classified as which type of control? [Variant 0-37]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 39,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security guard stationed at a building entrance is an example of which type of security control? [Variant 0-38]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 40,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An IDS that alerts administrators of suspicious network activity is BEST classified as which type of control? [Variant 0-39]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 41,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which encryption type uses the SAME key for both encryption and decryption? [Variant 0-40]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 42,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-41]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 43,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Impact Analysis in the context of Change Management?",
+  "options": [
+    "It is a primary component of Change Management that ensures Impact Analysis functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Impact Analysis relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Impact Analysis is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Impact Analysis is directly related to Change Management.",
+      "2": "Impact Analysis works alongside other components, it does not replace them.",
+      "3": "Impact Analysis is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 44,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which Zero Trust component is responsible for making access decisions based on policies? [Variant 0-43]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 45,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "After a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible? [Variant 0-44]",
+  "options": [
+    "Authorization",
+    "Authentication",
+    "Accounting",
+    "Identification"
+  ],
+  "correctIndex": 0,
+  "hint": "This determines permissions after identity verification.",
+  "explanation": {
+    "correct": "Authorization determines what actions and resources a user is permitted to access after authentication.",
+    "incorrect": {
+      "1": "Authentication only verifies identity; it does not assign permissions.",
+      "2": "Accounting tracks what users do; it does not assign permissions.",
+      "3": "Identification is providing a username; it does not assign permissions."
+    }
+  }
+},
+{
+  "id": 46,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.6",
+  "subdomain_name": "Gap Analysis",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Technical Gap in the context of Gap Analysis?",
+  "options": [
+    "It is a primary component of Gap Analysis that ensures Technical Gap functionality",
+    "It is unrelated to Gap Analysis",
+    "It replaces all other aspects of Gap Analysis",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Technical Gap relates to the broader concept of Gap Analysis.",
+  "explanation": {
+    "correct": "Technical Gap is indeed a key component of Gap Analysis and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Technical Gap is directly related to Gap Analysis.",
+      "2": "Technical Gap works alongside other components, it does not replace them.",
+      "3": "Technical Gap is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 47,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A hacker modifies financial records in a database without authorization. Which element of the CIA triad has been compromised?",
+  "options": [
+    "Integrity",
+    "Confidentiality",
+    "Availability",
+    "Accountability"
+  ],
+  "correctIndex": 0,
+  "hint": "This involves unauthorized modification of data.",
+  "explanation": {
+    "correct": "Integrity ensures data remains accurate and unaltered. Unauthorized modification directly violates this principle.",
+    "incorrect": {
+      "1": "Confidentiality involves unauthorized viewing of data, not modification.",
+      "2": "Availability relates to system uptime.",
+      "3": "Accountability tracks user actions but is not a CIA triad element."
+    }
+  }
+},
+{
+  "id": 48,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-47]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 49,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security guard stationed at a building entrance is an example of which type of security control? [Variant 0-48]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 50,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which encryption type uses the SAME key for both encryption and decryption? [Variant 0-49]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 51,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-50]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 52,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "After a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible? [Variant 0-51]",
+  "options": [
+    "Authorization",
+    "Authentication",
+    "Accounting",
+    "Identification"
+  ],
+  "correctIndex": 0,
+  "hint": "This determines permissions after identity verification.",
+  "explanation": {
+    "correct": "Authorization determines what actions and resources a user is permitted to access after authentication.",
+    "incorrect": {
+      "1": "Authentication only verifies identity; it does not assign permissions.",
+      "2": "Accounting tracks what users do; it does not assign permissions.",
+      "3": "Identification is providing a username; it does not assign permissions."
+    }
+  }
+},
+{
+  "id": 53,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A DDoS attack brings down a company's web server. Which CIA triad element is primarily affected?",
+  "options": [
+    "Availability",
+    "Confidentiality",
+    "Integrity",
+    "Non-repudiation"
+  ],
+  "correctIndex": 0,
+  "hint": "The server is unable to serve legitimate requests.",
+  "explanation": {
+    "correct": "Availability is compromised when systems become inaccessible to legitimate users, which is the primary goal of Distributed Denial of Service (DDoS) attacks.",
+    "incorrect": {
+      "1": "Confidentiality involves unauthorized data access, not service disruption.",
+      "2": "Integrity involves unauthorized data modification.",
+      "3": "Non-repudiation is about proving actions occurred."
+    }
+  }
+},
+{
+  "id": 54,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-53]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 55,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An IDS that alerts administrators of suspicious network activity is BEST classified as which type of control? [Variant 0-54]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 56,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which encryption type uses the SAME key for both encryption and decryption? [Variant 0-55]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 57,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which encryption type uses the SAME key for both encryption and decryption? [Variant 0-56]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 58,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-57]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 59,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which algorithm provides a fixed-length output regardless of input size and is NOT reversible? [Variant 0-58]",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 60,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A company wants to ensure that only authorized personnel can access sensitive customer data. Which element of the CIA triad is the company primarily addressing?",
+  "options": [
+    "Confidentiality",
+    "Integrity",
+    "Availability",
+    "Non-repudiation"
+  ],
+  "correctIndex": 0,
+  "hint": "This element focuses on preventing unauthorized access to data.",
+  "explanation": {
+    "correct": "Confidentiality ensures that data is accessible only to authorized individuals through mechanisms like encryption and access controls.",
+    "incorrect": {
+      "1": "Integrity focuses on data accuracy and preventing unauthorized modifications.",
+      "2": "Availability ensures systems and data are accessible when needed.",
+      "3": "Non-repudiation is not part of the CIA triad; it prevents denial of actions."
+    }
+  }
+}
 ]);

@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 151 to 180
+// Security+ SY0-701 - Questions 151 to 180
 // Block 6 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":151,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"A security analyst needs to determine: which type of attack tries a single common password against many different user accounts?","options":["Credential stuffing","Password spraying","Brute force","Dictionary attack"],"correctIndex":1,"hint":"One password, many accounts.","explanation":{"correct":"Password spraying avoids account lockout by trying one common password across many accounts before moving to the next.","incorrect":{"2":"Brute force tries many passwords against one account.","3":"Dictionary attacks use wordlists against one account.","0":"Credential stuffing uses stolen credentials from data breaches."}}},
-{"id":152,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"A security analyst needs to determine: an attacker exploits a race condition in a program. What type of vulnerability is this?","options":["Social engineering","Physical vulnerability","Application vulnerability","Network vulnerability"],"correctIndex":2,"hint":"The flaw exists in the application\u0027s code logic.","explanation":{"correct":"Race conditions are application vulnerabilities where the program\u0027s behavior depends on the timing of events.","incorrect":{"3":"Network vulnerabilities affect network infrastructure.","1":"Physical vulnerabilities relate to tangible security.","0":"Social engineering exploits human behavior."}}},
-{"id":153,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A security analyst needs to determine: which indicator of compromise (IoC) suggests an account has been accessed from two distant locations within minutes?","options":["Unusual traffic","Resource consumption","Blocked content","Impossible travel"],"correctIndex":3,"hint":"A person cannot physically travel that fast.","explanation":{"correct":"Impossible travel flags login attempts from geographically distant locations within an impossibly short timeframe.","incorrect":{"2":"Blocked content involves access control triggers.","1":"Resource consumption involves CPU/memory spikes.","0":"Unusual traffic relates to network patterns."}}},
-{"id":154,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A security analyst needs to determine: an attacker uses stolen username/password combinations from a data breach to try logging into other sites. This is:","options":["Brute force","Password spraying","Rainbow table attack","Credential stuffing"],"correctIndex":3,"hint":"Reusing compromised credentials across services.","explanation":{"correct":"Credential stuffing uses previously breached username/password pairs against other services, exploiting password reuse.","incorrect":{"2":"Rainbow tables use precomputed hashes.","1":"Password spraying tries common passwords across accounts.","0":"Brute force exhaustively tries all combinations."}}},
-{"id":155,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: a well-funded group sponsored by a foreign government conducts a prolonged cyber espionage campaign. What type of threat actor is this?","options":["Script kiddie","Hacktivist","Nation-state","Insider threat"],"correctIndex":2,"hint":"Government backing and espionage are key indicators.","explanation":{"correct":"Nation-state actors are government-sponsored, well-funded, and conduct sophisticated, long-term campaigns.","incorrect":{"3":"Insider threats originate from within the organization.","1":"Hacktivists are motivated by ideology.","0":"Script kiddies lack sophistication."}}},
-{"id":156,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an employee who is unhappy with their employer deliberately leaks sensitive documents. This is an example of:","options":["Insider threat","Organized crime","Hacktivist","Nation-state actor"],"correctIndex":0,"hint":"The threat comes from within the organization.","explanation":{"correct":"Insider threats originate from current or former employees who misuse their authorized access.","incorrect":{"2":"Hacktivists are external actors with political motivations.","1":"Organized crime groups are external and financially motivated.","3":"Nation-state actors are government-sponsored external attackers."}}},
-{"id":157,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: an attacker with limited technical skills uses pre-made tools downloaded from the internet to launch attacks. This describes a:","options":["Nation-state actor","Script kiddie","APT group","Insider threat"],"correctIndex":1,"hint":"They rely on others\u0027 tools without deep understanding.","explanation":{"correct":"Script kiddies use existing tools and scripts without fully understanding them, typically causing less sophisticated attacks.","incorrect":{"2":"APT groups are highly skilled and persistent.","3":"Insider threats originate from within the organization.","0":"Nation-state actors are sophisticated and well-funded."}}},
-{"id":158,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: an attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is:","options":["Phishing","Whaling","Smishing","Vishing"],"correctIndex":1,"hint":"This targets a high-profile executive specifically.","explanation":{"correct":"Whaling is spear phishing specifically targeting high-profile individuals like executives.","incorrect":{"2":"Smishing uses SMS text messages.","0":"Phishing is a general untargeted email attack.","3":"Vishing uses voice/phone calls."}}},
-{"id":159,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: an attacker compromises a website frequently visited by employees of a target company. This is a:","options":["Spear phishing","Pretexting","Watering hole attack","Tailgating"],"correctIndex":2,"hint":"Think of where prey gathers to drink.","explanation":{"correct":"A watering hole attack compromises a website commonly used by the target group to infect visitors.","incorrect":{"0":"Spear phishing targets specific individuals via email.","1":"Pretexting creates a fabricated scenario.","3":"Tailgating is physical access by following someone."}}},
-{"id":160,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: an attacker registers \u0027g00gle.com\u0027 hoping users will mistype the URL. This is:","options":["Session hijacking","Typosquatting","Pharming","DNS poisoning"],"correctIndex":1,"hint":"The domain closely resembles the legitimate one.","explanation":{"correct":"Typosquatting registers domains similar to legitimate ones, exploiting common typing errors.","incorrect":{"2":"Pharming redirects at the DNS level.","3":"DNS poisoning corrupts DNS cache entries.","0":"Session hijacking steals active session tokens."}}},
-{"id":161,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: an attacker calls an employee pretending to be IT support and asks for their password. This is:","options":["Whaling","Smishing","Phishing","Vishing"],"correctIndex":3,"hint":"This attack uses voice/phone communication.","explanation":{"correct":"Vishing (voice phishing) uses phone calls to manipulate victims into revealing sensitive information.","incorrect":{"2":"Phishing uses email.","1":"Smishing uses SMS text messages.","0":"Whaling targets executives via email."}}},
-{"id":162,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"medium","question":"During a security audit, the team is asked: a user downloads a free game that secretly installs a keylogger. This malware is a:","options":["Ransomware","Rootkit","Trojan","Worm"],"correctIndex":2,"hint":"It disguises itself as something legitimate.","explanation":{"correct":"A Trojan disguises itself as legitimate software while carrying a hidden malicious payload.","incorrect":{"3":"Worms self-replicate without user interaction.","1":"Rootkits hide deep in the system for persistent access.","0":"Ransomware encrypts files and demands payment."}}},
-{"id":163,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: malware that encrypts all files on a system and demands cryptocurrency payment is:","options":["Ransomware","Logic bomb","Spyware","Rootkit"],"correctIndex":0,"hint":"The attacker demands payment to restore access.","explanation":{"correct":"Ransomware encrypts victim files and demands a ransom for the decryption key.","incorrect":{"2":"Spyware silently monitors activity.","1":"Logic bombs trigger on specific conditions.","3":"Rootkits provide hidden persistent access."}}},
-{"id":164,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: malware that self-replicates and spreads across networks WITHOUT user interaction is a:","options":["Spyware","Trojan","Worm","Virus"],"correctIndex":2,"hint":"It propagates independently through networks.","explanation":{"correct":"Worms self-replicate and spread automatically across networks without requiring user action.","incorrect":{"3":"Viruses require a host file and user action to spread.","1":"Trojans require user interaction to install.","0":"Spyware monitors activity but does not self-replicate."}}},
-{"id":165,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: an attacker floods a web server with SYN packets without completing the TCP handshake. This is a:","options":["Replay attack","ARP spoofing","SYN flood (DDoS)","DNS poisoning"],"correctIndex":2,"hint":"The TCP three-way handshake is left incomplete.","explanation":{"correct":"A SYN flood overwhelms a server by sending many SYN packets without completing the handshake.","incorrect":{"3":"DNS poisoning corrupts DNS records.","1":"ARP spoofing associates the attacker\u0027s MAC with a legitimate IP.","0":"Replay attacks retransmit captured valid data."}}},
-{"id":166,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an attacker intercepts communication between two parties, secretly relaying messages. This describes:","options":["Replay attack","DDoS attack","Password spraying","On-path (Man-in-the-Middle) attack"],"correctIndex":3,"hint":"The attacker sits between two communicating parties.","explanation":{"correct":"An on-path attack allows the attacker to intercept, read, and modify communications between two parties.","incorrect":{"2":"Password spraying tries common passwords against many accounts.","1":"DDoS attacks overwhelm services with traffic.","0":"Replay attacks retransmit previously captured data."}}},
-{"id":167,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: an attacker inputs \u0027 OR 1=1 -- into a login form. This is:","options":["SQL injection","Buffer overflow","CSRF","Cross-site scripting"],"correctIndex":0,"hint":"The input manipulates a database query.","explanation":{"correct":"SQL injection inserts malicious SQL code into input fields to manipulate database queries.","incorrect":{"2":"CSRF tricks users into performing unwanted actions.","1":"Buffer overflow writes beyond allocated memory.","3":"XSS injects scripts into web pages."}}},
-{"id":168,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an attacker injects JavaScript into a forum post that executes in other users\u0027 browsers. This is:","options":["Stored XSS","Directory traversal","CSRF","SQL injection"],"correctIndex":0,"hint":"The malicious script is stored on the server.","explanation":{"correct":"Stored XSS permanently injects malicious scripts that execute in every visitor\u0027s browser.","incorrect":{"2":"CSRF forces users to perform actions.","1":"Directory traversal accesses unauthorized files.","3":"SQL injection targets databases."}}},
-{"id":169,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: a newly discovered vulnerability with no available patch is known as:","options":["Misconfiguration","Legacy vulnerability","Default credential exposure","Zero-day vulnerability"],"correctIndex":3,"hint":"No fix exists yet.","explanation":{"correct":"A zero-day vulnerability is unknown to the vendor and has no patch available.","incorrect":{"2":"Default credentials are preventable.","1":"Legacy vulnerabilities exist in old systems.","0":"Misconfiguration is a known setup issue."}}},
-{"id":170,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: which mitigation technique divides a network into isolated segments to limit lateral movement?","options":["Input validation","Patching","Encryption","Network segmentation"],"correctIndex":3,"hint":"This creates boundaries within the network.","explanation":{"correct":"Network segmentation isolates parts of the network, preventing lateral movement.","incorrect":{"2":"Encryption protects data confidentiality.","1":"Patching fixes known vulnerabilities.","0":"Input validation prevents injection attacks."}}},
-{"id":171,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an attacker captures a valid authentication token and reuses it later. This is a:","options":["Brute force attack","DDoS attack","Phishing attack","Replay attack"],"correctIndex":3,"hint":"A previously valid communication is retransmitted.","explanation":{"correct":"A replay attack captures and retransmits valid authentication data to gain unauthorized access.","incorrect":{"2":"Phishing uses deceptive communications.","1":"DDoS overwhelms services with traffic.","0":"Brute force tries many password combinations."}}},
-{"id":172,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: malware that activates only when a specific condition is met (e.g., a date) is called:","options":["Adware","Worm","Ransomware","Logic bomb"],"correctIndex":3,"hint":"It lies dormant until triggered.","explanation":{"correct":"A logic bomb is malicious code that executes when a predefined condition is met, such as a specific date.","incorrect":{"2":"Ransomware activates immediately to encrypt files.","1":"Worms self-replicate continuously.","0":"Adware displays unwanted advertisements."}}},
-{"id":173,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an attacker creates a fake Wi-Fi hotspot mimicking a legitimate one to capture user data. This is:","options":["War driving","Bluesnarfing","Bluejacking","Evil twin attack"],"correctIndex":3,"hint":"The fake access point looks identical to the real one.","explanation":{"correct":"An evil twin attack sets up a rogue WiFi access point that mimics a legitimate one to intercept traffic.","incorrect":{"2":"Bluejacking sends unsolicited messages via Bluetooth.","1":"Bluesnarfing steals data via Bluetooth.","0":"War driving searches for WiFi networks while driving."}}},
-{"id":174,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: which type of attack tries a single common password against many different user accounts?","options":["Credential stuffing","Password spraying","Dictionary attack","Brute force"],"correctIndex":1,"hint":"One password, many accounts.","explanation":{"correct":"Password spraying avoids account lockout by trying one common password across many accounts before moving to the next.","incorrect":{"2":"Dictionary attacks use wordlists against one account.","3":"Brute force tries many passwords against one account.","0":"Credential stuffing uses stolen credentials from data breaches."}}},
-{"id":175,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: an attacker exploits a race condition in a program. What type of vulnerability is this?","options":["Network vulnerability","Physical vulnerability","Social engineering","Application vulnerability"],"correctIndex":3,"hint":"The flaw exists in the application\u0027s code logic.","explanation":{"correct":"Race conditions are application vulnerabilities where the program\u0027s behavior depends on the timing of events.","incorrect":{"2":"Social engineering exploits human behavior.","1":"Physical vulnerabilities relate to tangible security.","0":"Network vulnerabilities affect network infrastructure."}}},
-{"id":176,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"hard","question":"During a security audit, the team is asked: which indicator of compromise (IoC) suggests an account has been accessed from two distant locations within minutes?","options":["Resource consumption","Blocked content","Impossible travel","Unusual traffic"],"correctIndex":2,"hint":"A person cannot physically travel that fast.","explanation":{"correct":"Impossible travel flags login attempts from geographically distant locations within an impossibly short timeframe.","incorrect":{"3":"Unusual traffic relates to network patterns.","1":"Blocked content involves access control triggers.","0":"Resource consumption involves CPU/memory spikes."}}},
-{"id":177,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"During a security audit, the team is asked: an attacker uses stolen username/password combinations from a data breach to try logging into other sites. This is:","options":["Password spraying","Rainbow table attack","Brute force","Credential stuffing"],"correctIndex":3,"hint":"Reusing compromised credentials across services.","explanation":{"correct":"Credential stuffing uses previously breached username/password pairs against other services, exploiting password reuse.","incorrect":{"2":"Brute force exhaustively tries all combinations.","1":"Rainbow tables use precomputed hashes.","0":"Password spraying tries common passwords across accounts."}}},
-{"id":178,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A company is reviewing its security posture. a well-funded group sponsored by a foreign government conducts a prolonged cyber espionage campaign. What type of threat actor is this?","options":["Insider threat","Hacktivist","Script kiddie","Nation-state"],"correctIndex":3,"hint":"Government backing and espionage are key indicators.","explanation":{"correct":"Nation-state actors are government-sponsored, well-funded, and conduct sophisticated, long-term campaigns.","incorrect":{"2":"Script kiddies lack sophistication.","1":"Hacktivists are motivated by ideology.","0":"Insider threats originate from within the organization."}}},
-{"id":179,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A company is reviewing its security posture. an employee who is unhappy with their employer deliberately leaks sensitive documents. This is an example of:","options":["Insider threat","Organized crime","Hacktivist","Nation-state actor"],"correctIndex":0,"hint":"The threat comes from within the organization.","explanation":{"correct":"Insider threats originate from current or former employees who misuse their authorized access.","incorrect":{"2":"Hacktivists are external actors with political motivations.","1":"Organized crime groups are external and financially motivated.","3":"Nation-state actors are government-sponsored external attackers."}}},
-{"id":180,"domain":2,"domainName":"Threats, Vulnerabilities, and Mitigations","difficulty":"easy","question":"A company is reviewing its security posture. an attacker with limited technical skills uses pre-made tools downloaded from the internet to launch attacks. This describes a:","options":["APT group","Nation-state actor","Script kiddie","Insider threat"],"correctIndex":2,"hint":"They rely on others\u0027 tools without deep understanding.","explanation":{"correct":"Script kiddies use existing tools and scripts without fully understanding them, typically causing less sophisticated attacks.","incorrect":{"0":"APT groups are highly skilled and persistent.","1":"Nation-state actors are sophisticated and well-funded.","3":"Insider threats originate from within the organization."}}}
+{
+  "id": 151,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as: [Variant 0-42]",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 152,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is BEST described as: [Variant 0-43]",
+  "options": [
+    "Whaling",
+    "Phishing",
+    "Vishing",
+    "Smishing"
+  ],
+  "correctIndex": 0,
+  "hint": "This targets a high-profile executive specifically.",
+  "explanation": {
+    "correct": "Whaling is a form of spear phishing specifically targeting high-profile individuals like executives (the \"big fish\").",
+    "incorrect": {
+      "1": "Phishing is a general untargeted email attack.",
+      "2": "Vishing uses voice/phone calls, not email.",
+      "3": "Smishing uses SMS text messages, not email."
+    }
+  }
+},
+{
+  "id": 153,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker intercepts communication between two parties, secretly relaying and possibly altering messages. This describes: [Variant 0-44]",
+  "options": [
+    "Man-in-the-Middle (On-path) attack",
+    "Replay attack",
+    "DDoS attack",
+    "Password spraying"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker sits between two communicating parties.",
+  "explanation": {
+    "correct": "A Man-in-the-Middle (on-path) attack allows the attacker to intercept, read, and modify communications between two parties.",
+    "incorrect": {
+      "1": "Replay attacks retransmit previously captured data without real-time interception.",
+      "2": "Distributed Denial of Service (DDoS) attacks overwhelm services with traffic, they don't intercept communications.",
+      "3": "Password spraying tries common passwords against many accounts."
+    }
+  }
+},
+{
+  "id": 154,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker compromises a website frequently visited by employees of a target company. What type of attack is this? [Variant 0-45]",
+  "options": [
+    "Watering hole",
+    "Phishing",
+    "Pretexting",
+    "Tailgating"
+  ],
+  "correctIndex": 0,
+  "hint": "Think of where prey gathers to drink.",
+  "explanation": {
+    "correct": "A watering hole attack compromises a website commonly used by the target group, infecting visitors with malware.",
+    "incorrect": {
+      "1": "Phishing uses fraudulent emails, not compromised websites.",
+      "2": "Pretexting creates a fabricated scenario to extract information.",
+      "3": "Tailgating is physical access by following an authorized person."
+    }
+  }
+},
+{
+  "id": 155,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker floods a web server with thousands of SYN packets without completing the TCP handshake. This is a: [Variant 0-46]",
+  "options": [
+    "SYN flood (DDoS)",
+    "DNS poisoning",
+    "ARP spoofing",
+    "Replay attack"
+  ],
+  "correctIndex": 0,
+  "hint": "The TCP three-way handshake is left incomplete.",
+  "explanation": {
+    "correct": "A SYN flood overwhelms a server by sending many SYN packets without completing the handshake, exhausting server resources.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS records to redirect traffic.",
+      "2": "Address Resolution Protocol (ARP) spoofing associates the attacker's Mandatory Access Control (MAC) with a legitimate IP.",
+      "3": "Replay attacks retransmit captured valid data packets."
+    }
+  }
+},
+{
+  "id": 156,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as: [Variant 0-47]",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 157,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Malware that encrypts all files on a system and demands cryptocurrency payment is known as: [Variant 0-48]",
+  "options": [
+    "Ransomware",
+    "Spyware",
+    "Rootkit",
+    "Logic bomb"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker demands payment to restore access.",
+  "explanation": {
+    "correct": "Ransomware encrypts victim files and demands a ransom (usually in cryptocurrency) for the decryption key.",
+    "incorrect": {
+      "1": "Spyware silently monitors activity but does not encrypt files.",
+      "2": "Rootkits provide hidden persistent access but do not encrypt files.",
+      "3": "Logic bombs trigger on specific conditions but do not demand payment."
+    }
+  }
+},
+{
+  "id": 158,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker compromises a website frequently visited by employees of a target company. What type of attack is this? [Variant 0-49]",
+  "options": [
+    "Watering hole",
+    "Phishing",
+    "Pretexting",
+    "Tailgating"
+  ],
+  "correctIndex": 0,
+  "hint": "Think of where prey gathers to drink.",
+  "explanation": {
+    "correct": "A watering hole attack compromises a website commonly used by the target group, infecting visitors with malware.",
+    "incorrect": {
+      "1": "Phishing uses fraudulent emails, not compromised websites.",
+      "2": "Pretexting creates a fabricated scenario to extract information.",
+      "3": "Tailgating is physical access by following an authorized person."
+    }
+  }
+},
+{
+  "id": 159,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.6",
+  "subdomain_name": "Mitigation Techniques",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which mitigation technique divides a network into isolated segments to limit lateral movement? [Variant 0-50]",
+  "options": [
+    "Network segmentation",
+    "Encryption",
+    "Patching",
+    "Input validation"
+  ],
+  "correctIndex": 0,
+  "hint": "This creates boundaries within the network.",
+  "explanation": {
+    "correct": "Network segmentation isolates parts of the network, preventing an attacker from moving laterally across the entire infrastructure.",
+    "incorrect": {
+      "1": "Encryption protects data confidentiality but doesn't limit movement.",
+      "2": "Patching fixes known vulnerabilities but doesn't segment the network.",
+      "3": "Input validation prevents injection attacks at the application layer."
+    }
+  }
+},
+{
+  "id": 160,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker inputs ' OR 1=1 -- into a login form. This is an example of: [Variant 0-51]",
+  "options": [
+    "SQL injection",
+    "Cross-site scripting",
+    "Buffer overflow",
+    "CSRF"
+  ],
+  "correctIndex": 0,
+  "hint": "The input manipulates a database query.",
+  "explanation": {
+    "correct": "SQL injection inserts malicious SQL code into input fields to manipulate database queries, potentially bypassing authentication.",
+    "incorrect": {
+      "1": "Cross-Site Scripting (XSS) injects malicious scripts into web pages viewed by other users.",
+      "2": "Buffer overflow writes data beyond allocated memory boundaries.",
+      "3": "Cross-Site Request Forgery (CSRF) tricks users into performing unwanted actions on authenticated sites."
+    }
+  }
+},
+{
+  "id": 161,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as: [Variant 0-52]",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 162,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as: [Variant 0-53]",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 163,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.5",
+  "subdomain_name": "Vulnerability Types and Indicators",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Resource Consumption in the context of Indicators of Compromise?",
+  "options": [
+    "It is a primary component of Indicators of Compromise that ensures Resource Consumption functionality",
+    "It is unrelated to Indicators of Compromise",
+    "It replaces all other aspects of Indicators of Compromise",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Resource Consumption relates to the broader concept of Indicators of Compromise.",
+  "explanation": {
+    "correct": "Resource Consumption is indeed a key component of Indicators of Compromise and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Resource Consumption is directly related to Indicators of Compromise.",
+      "2": "Resource Consumption works alongside other components, it does not replace them.",
+      "3": "Resource Consumption is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 164,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.5",
+  "subdomain_name": "Vulnerability Types and Indicators",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Blocked Content in the context of Indicators of Compromise?",
+  "options": [
+    "It is a primary component of Indicators of Compromise that ensures Blocked Content functionality",
+    "It is unrelated to Indicators of Compromise",
+    "It replaces all other aspects of Indicators of Compromise",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Blocked Content relates to the broader concept of Indicators of Compromise.",
+  "explanation": {
+    "correct": "Blocked Content is indeed a key component of Indicators of Compromise and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Blocked Content is directly related to Indicators of Compromise.",
+      "2": "Blocked Content works alongside other components, it does not replace them.",
+      "3": "Blocked Content is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 165,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker registers \"g00gle.com\" hoping users will mistype the legitimate URL. This is known as: [Variant 0-56]",
+  "options": [
+    "Typosquatting",
+    "DNS poisoning",
+    "URL hijacking",
+    "Pharming"
+  ],
+  "correctIndex": 0,
+  "hint": "The domain name closely resembles the legitimate one with intentional typos.",
+  "explanation": {
+    "correct": "Typosquatting registers domains similar to legitimate ones, exploiting common typing errors to redirect users to malicious sites.",
+    "incorrect": {
+      "1": "Domain Name System (DNS) poisoning corrupts DNS cache entries.",
+      "2": "URL hijacking is a broader term; typosquatting is the specific technique here.",
+      "3": "Pharming redirects traffic at the Domain Name System (DNS) level, not through misspelled domains."
+    }
+  }
+},
+{
+  "id": 166,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.6",
+  "subdomain_name": "Mitigation Techniques",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which mitigation technique divides a network into isolated segments to limit lateral movement? [Variant 0-57]",
+  "options": [
+    "Network segmentation",
+    "Encryption",
+    "Patching",
+    "Input validation"
+  ],
+  "correctIndex": 0,
+  "hint": "This creates boundaries within the network.",
+  "explanation": {
+    "correct": "Network segmentation isolates parts of the network, preventing an attacker from moving laterally across the entire infrastructure.",
+    "incorrect": {
+      "1": "Encryption protects data confidentiality but doesn't limit movement.",
+      "2": "Patching fixes known vulnerabilities but doesn't segment the network.",
+      "3": "Input validation prevents injection attacks at the application layer."
+    }
+  }
+},
+{
+  "id": 167,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.1",
+  "subdomain_name": "Threat Actors and Motivations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "An employee who is unhappy with their employer deliberately leaks sensitive documents. This is an example of: [Variant 0-58]",
+  "options": [
+    "Insider threat",
+    "Nation-state actor",
+    "Hacktivist",
+    "Organized crime"
+  ],
+  "correctIndex": 0,
+  "hint": "The threat comes from within the organization.",
+  "explanation": {
+    "correct": "Insider threats originate from current or former employees who misuse their authorized access to harm the organization.",
+    "incorrect": {
+      "1": "Nation-state actors are government-sponsored external attackers.",
+      "2": "Hacktivists are external actors motivated by political or social causes.",
+      "3": "Organized crime groups are external and financially motivated."
+    }
+  }
+},
+{
+  "id": 168,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is BEST described as: [Variant 0-59]",
+  "options": [
+    "Whaling",
+    "Phishing",
+    "Vishing",
+    "Smishing"
+  ],
+  "correctIndex": 0,
+  "hint": "This targets a high-profile executive specifically.",
+  "explanation": {
+    "correct": "Whaling is a form of spear phishing specifically targeting high-profile individuals like executives (the \"big fish\").",
+    "incorrect": {
+      "1": "Phishing is a general untargeted email attack.",
+      "2": "Vishing uses voice/phone calls, not email.",
+      "3": "Smishing uses SMS text messages, not email."
+    }
+  }
+},
+{
+  "id": 169,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker compromises a website frequently visited by employees of a target company. What type of attack is this? [Variant 0-60]",
+  "options": [
+    "Watering hole",
+    "Phishing",
+    "Pretexting",
+    "Tailgating"
+  ],
+  "correctIndex": 0,
+  "hint": "Think of where prey gathers to drink.",
+  "explanation": {
+    "correct": "A watering hole attack compromises a website commonly used by the target group, infecting visitors with malware.",
+    "incorrect": {
+      "1": "Phishing uses fraudulent emails, not compromised websites.",
+      "2": "Pretexting creates a fabricated scenario to extract information.",
+      "3": "Tailgating is physical access by following an authorized person."
+    }
+  }
+},
+{
+  "id": 170,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.5",
+  "subdomain_name": "Vulnerability Types and Indicators",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Log Anomalies in the context of Indicators of Compromise?",
+  "options": [
+    "It is a primary component of Indicators of Compromise that ensures Log Anomalies functionality",
+    "It is unrelated to Indicators of Compromise",
+    "It replaces all other aspects of Indicators of Compromise",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Log Anomalies relates to the broader concept of Indicators of Compromise.",
+  "explanation": {
+    "correct": "Log Anomalies is indeed a key component of Indicators of Compromise and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Log Anomalies is directly related to Indicators of Compromise.",
+      "2": "Log Anomalies works alongside other components, it does not replace them.",
+      "3": "Log Anomalies is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 171,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Malware that encrypts all files on a system and demands cryptocurrency payment is known as: [Variant 0-62]",
+  "options": [
+    "Ransomware",
+    "Spyware",
+    "Rootkit",
+    "Logic bomb"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker demands payment to restore access.",
+  "explanation": {
+    "correct": "Ransomware encrypts victim files and demands a ransom (usually in cryptocurrency) for the decryption key.",
+    "incorrect": {
+      "1": "Spyware silently monitors activity but does not encrypt files.",
+      "2": "Rootkits provide hidden persistent access but do not encrypt files.",
+      "3": "Logic bombs trigger on specific conditions but do not demand payment."
+    }
+  }
+},
+{
+  "id": 172,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.1",
+  "subdomain_name": "Threat Actors and Motivations",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A well-funded group sponsored by a foreign government conducts a prolonged cyber espionage campaign. What type of threat actor is this? [Variant 0-63]",
+  "options": [
+    "Nation-state",
+    "Hacktivist",
+    "Script kiddie",
+    "Insider threat"
+  ],
+  "correctIndex": 0,
+  "hint": "Government backing and espionage are key indicators.",
+  "explanation": {
+    "correct": "Nation-state actors are government-sponsored, well-funded, and conduct sophisticated, long-term campaigns for espionage or disruption.",
+    "incorrect": {
+      "1": "Hacktivists are motivated by ideology, not government sponsorship.",
+      "2": "Script kiddies lack the sophistication for prolonged espionage.",
+      "3": "Insider threats originate from within the organization."
+    }
+  }
+},
+{
+  "id": 173,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.1",
+  "subdomain_name": "Threat Actors and Motivations",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A well-funded group sponsored by a foreign government conducts a prolonged cyber espionage campaign. What type of threat actor is this? [Variant 0-64]",
+  "options": [
+    "Nation-state",
+    "Hacktivist",
+    "Script kiddie",
+    "Insider threat"
+  ],
+  "correctIndex": 0,
+  "hint": "Government backing and espionage are key indicators.",
+  "explanation": {
+    "correct": "Nation-state actors are government-sponsored, well-funded, and conduct sophisticated, long-term campaigns for espionage or disruption.",
+    "incorrect": {
+      "1": "Hacktivists are motivated by ideology, not government sponsorship.",
+      "2": "Script kiddies lack the sophistication for prolonged espionage.",
+      "3": "Insider threats originate from within the organization."
+    }
+  }
+},
+{
+  "id": 174,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker inputs ' OR 1=1 -- into a login form. This is an example of: [Variant 0-65]",
+  "options": [
+    "SQL injection",
+    "Cross-site scripting",
+    "Buffer overflow",
+    "CSRF"
+  ],
+  "correctIndex": 0,
+  "hint": "The input manipulates a database query.",
+  "explanation": {
+    "correct": "SQL injection inserts malicious SQL code into input fields to manipulate database queries, potentially bypassing authentication.",
+    "incorrect": {
+      "1": "Cross-Site Scripting (XSS) injects malicious scripts into web pages viewed by other users.",
+      "2": "Buffer overflow writes data beyond allocated memory boundaries.",
+      "3": "Cross-Site Request Forgery (CSRF) tricks users into performing unwanted actions on authenticated sites."
+    }
+  }
+},
+{
+  "id": 175,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A user downloads a free game that secretly installs a keylogger. This malware is classified as a: [Variant 0-66]",
+  "options": [
+    "Trojan",
+    "Worm",
+    "Ransomware",
+    "Rootkit"
+  ],
+  "correctIndex": 0,
+  "hint": "It disguises itself as something legitimate.",
+  "explanation": {
+    "correct": "A Trojan disguises itself as legitimate software while carrying a hidden malicious payload, like the mythological Trojan horse.",
+    "incorrect": {
+      "1": "Worms self-replicate across networks without user interaction.",
+      "2": "Ransomware encrypts files and demands payment.",
+      "3": "Rootkits hide deep in the system to maintain persistent access."
+    }
+  }
+},
+{
+  "id": 176,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A user downloads a free game that secretly installs a keylogger. This malware is classified as a: [Variant 0-67]",
+  "options": [
+    "Trojan",
+    "Worm",
+    "Ransomware",
+    "Rootkit"
+  ],
+  "correctIndex": 0,
+  "hint": "It disguises itself as something legitimate.",
+  "explanation": {
+    "correct": "A Trojan disguises itself as legitimate software while carrying a hidden malicious payload, like the mythological Trojan horse.",
+    "incorrect": {
+      "1": "Worms self-replicate across networks without user interaction.",
+      "2": "Ransomware encrypts files and demands payment.",
+      "3": "Rootkits hide deep in the system to maintain persistent access."
+    }
+  }
+},
+{
+  "id": 177,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Malware that encrypts all files on a system and demands cryptocurrency payment is known as: [Variant 0-68]",
+  "options": [
+    "Ransomware",
+    "Spyware",
+    "Rootkit",
+    "Logic bomb"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker demands payment to restore access.",
+  "explanation": {
+    "correct": "Ransomware encrypts victim files and demands a ransom (usually in cryptocurrency) for the decryption key.",
+    "incorrect": {
+      "1": "Spyware silently monitors activity but does not encrypt files.",
+      "2": "Rootkits provide hidden persistent access but do not encrypt files.",
+      "3": "Logic bombs trigger on specific conditions but do not demand payment."
+    }
+  }
+},
+{
+  "id": 178,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.2",
+  "subdomain_name": "Social Engineering",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker sends a targeted email to the CEO impersonating the CFO, requesting an urgent wire transfer. This attack is BEST described as: [Variant 0-69]",
+  "options": [
+    "Whaling",
+    "Phishing",
+    "Vishing",
+    "Smishing"
+  ],
+  "correctIndex": 0,
+  "hint": "This targets a high-profile executive specifically.",
+  "explanation": {
+    "correct": "Whaling is a form of spear phishing specifically targeting high-profile individuals like executives (the \"big fish\").",
+    "incorrect": {
+      "1": "Phishing is a general untargeted email attack.",
+      "2": "Vishing uses voice/phone calls, not email.",
+      "3": "Smishing uses SMS text messages, not email."
+    }
+  }
+},
+{
+  "id": 179,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.4",
+  "subdomain_name": "Application and Network Attacks",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "An attacker intercepts communication between two parties, secretly relaying and possibly altering messages. This describes: [Variant 0-70]",
+  "options": [
+    "Man-in-the-Middle (On-path) attack",
+    "Replay attack",
+    "DDoS attack",
+    "Password spraying"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker sits between two communicating parties.",
+  "explanation": {
+    "correct": "A Man-in-the-Middle (on-path) attack allows the attacker to intercept, read, and modify communications between two parties.",
+    "incorrect": {
+      "1": "Replay attacks retransmit previously captured data without real-time interception.",
+      "2": "Distributed Denial of Service (DDoS) attacks overwhelm services with traffic, they don't intercept communications.",
+      "3": "Password spraying tries common passwords against many accounts."
+    }
+  }
+},
+{
+  "id": 180,
+  "domain": 2,
+  "domainName": "Threats, Vulnerabilities, and Mitigations",
+  "subdomain_id": "2.3",
+  "subdomain_name": "Malware and Attack Types",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Malware that encrypts all files on a system and demands cryptocurrency payment is known as: [Variant 0-71]",
+  "options": [
+    "Ransomware",
+    "Spyware",
+    "Rootkit",
+    "Logic bomb"
+  ],
+  "correctIndex": 0,
+  "hint": "The attacker demands payment to restore access.",
+  "explanation": {
+    "correct": "Ransomware encrypts victim files and demands a ransom (usually in cryptocurrency) for the decryption key.",
+    "incorrect": {
+      "1": "Spyware silently monitors activity but does not encrypt files.",
+      "2": "Rootkits provide hidden persistent access but do not encrypt files.",
+      "3": "Logic bombs trigger on specific conditions but do not demand payment."
+    }
+  }
+}
 ]);

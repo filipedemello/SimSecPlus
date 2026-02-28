@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 451 to 480
+// Security+ SY0-701 - Questions 451 to 480
 // Block 16 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":451,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: a network zone between the internal network and internet hosting public-facing servers is called a:","options":["DMZ (Demilitarized Zone)","VPN","VLAN","Air gap"],"correctIndex":0,"hint":"This zone provides a buffer between trusted and untrusted networks.","explanation":{"correct":"A DMZ is a perimeter network that hosts public-facing services while protecting the internal network.","incorrect":{"2":"VLANs segment traffic logically.","1":"VPNs encrypt connections.","3":"An air gap is complete physical isolation."}}},
-{"id":452,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: which technique provides the MOST complete isolation between two networks?","options":["ACL","Firewall rules","Air gap","VLAN"],"correctIndex":2,"hint":"No physical or logical connection exists.","explanation":{"correct":"An air gap provides complete physical isolation between networks with no connectivity.","incorrect":{"3":"VLANs share physical infrastructure.","1":"Firewall rules still maintain connectivity.","0":"ACLs restrict access but networks remain connected."}}},
-{"id":453,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A security consultant recommends understanding: in which cloud model is the customer responsible for managing the OS and applications?","options":["FaaS","PaaS","SaaS","IaaS"],"correctIndex":3,"hint":"The provider manages only the underlying infrastructure.","explanation":{"correct":"In IaaS, the customer manages OS, middleware, runtime, and applications.","incorrect":{"2":"In SaaS, the provider manages everything.","1":"In PaaS, the provider manages the OS and runtime.","0":"FaaS abstracts even more from the customer."}}},
-{"id":454,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A security consultant recommends understanding: which cloud security solution acts as an intermediary between users and cloud services?","options":["DLP","WAF","SIEM","CASB"],"correctIndex":3,"hint":"It brokers the connection to cloud applications.","explanation":{"correct":"A CASB sits between users and cloud services to enforce security policies and provide visibility.","incorrect":{"2":"A SIEM collects and analyzes logs.","1":"A WAF protects web applications.","0":"DLP prevents data loss."}}},
-{"id":455,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: which device inspects incoming web traffic and blocks attacks like SQL injection?","options":["WAF","IDS","NAC","Network firewall"],"correctIndex":0,"hint":"This specifically protects web applications.","explanation":{"correct":"A WAF inspects HTTP/HTTPS traffic and blocks web application attacks.","incorrect":{"2":"NAC controls network access.","1":"An IDS only detects, does not block.","3":"Network firewalls filter at layers 3-4."}}},
-{"id":456,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: what is the PRIMARY difference between an IDS and an IPS?","options":["IPS is passive; IDS is active","IPS actively blocks threats; IDS only alerts","IDS works at Layer 7; IPS at Layer 3","IDS is hardware; IPS is software"],"correctIndex":1,"hint":"One takes action, the other only reports.","explanation":{"correct":"An IPS actively blocks threats while an IDS only generates alerts.","incorrect":{"2":"Both operate at multiple layers.","3":"Both can be hardware or software.","0":"IPS is active, IDS is passive - answer has them reversed."}}},
-{"id":457,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: which technology replaces sensitive data with non-sensitive placeholder values?","options":["Tokenization","Hashing","Encryption","Data masking"],"correctIndex":0,"hint":"The original data is stored separately.","explanation":{"correct":"Tokenization replaces sensitive data with non-sensitive tokens. Original data is in a secure vault.","incorrect":{"2":"Encryption transforms data using keys.","1":"Hashing is one-way and irreversible.","3":"Data masking partially hides data."}}},
-{"id":458,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A security consultant recommends understanding: which RAID level provides disk mirroring for redundancy?","options":["RAID 10","RAID 5","RAID 0","RAID 1"],"correctIndex":3,"hint":"Data is written identically to two drives.","explanation":{"correct":"RAID 1 mirrors data across two drives, providing full redundancy.","incorrect":{"2":"RAID 0 uses striping with NO redundancy.","1":"RAID 5 uses striping with parity.","0":"RAID 10 combines striping and mirroring."}}},
-{"id":459,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A security consultant recommends understanding: the maximum acceptable data loss measured in time is known as:","options":["RTO","MTTR","MTBF","RPO"],"correctIndex":3,"hint":"How far back can you lose data?","explanation":{"correct":"RPO (Recovery Point Objective) defines the maximum acceptable data loss measured in time.","incorrect":{"2":"MTBF is average time between failures.","1":"MTTR is average time to repair.","0":"RTO is maximum acceptable downtime."}}},
-{"id":460,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: the maximum acceptable downtime after a disaster is known as:","options":["RTO","MTBF","RPO","MTTR"],"correctIndex":0,"hint":"How quickly must systems be restored?","explanation":{"correct":"RTO (Recovery Time Objective) defines the maximum tolerable downtime after a disaster.","incorrect":{"2":"RPO is maximum acceptable data loss.","1":"MTBF is average time between system failures.","3":"MTTR is average repair time for components."}}},
-{"id":461,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: which network device distributes incoming traffic across multiple servers?","options":["Switch","IDS","Load balancer","Firewall"],"correctIndex":2,"hint":"It ensures no single server is overwhelmed.","explanation":{"correct":"A load balancer distributes incoming network traffic across multiple backend servers for availability and performance.","incorrect":{"3":"A firewall filters traffic based on rules.","1":"An IDS detects threats.","0":"A switch connects devices within a LAN."}}},
-{"id":462,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A security consultant recommends understanding: which backup type copies ONLY the data that has changed since the last FULL backup?","options":["Differential backup","Full backup","Snapshot","Incremental backup"],"correctIndex":0,"hint":"It grows larger over time until the next full backup.","explanation":{"correct":"A differential backup copies all data changed since the last full backup, growing larger each day.","incorrect":{"2":"A snapshot captures the state at a point in time.","1":"Full backup copies everything.","3":"Incremental backup copies data changed since the last backup of any type."}}},
-{"id":463,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: which cloud deployment model combines both on-premises and cloud resources?","options":["Private cloud","Community cloud","Hybrid cloud","Public cloud"],"correctIndex":2,"hint":"It uses both internal and external infrastructure.","explanation":{"correct":"A hybrid cloud combines on-premises infrastructure with public or private cloud resources.","incorrect":{"3":"Public cloud is entirely hosted by a third party.","1":"Community cloud is shared among organizations with common concerns.","0":"Private cloud is dedicated to a single organization."}}},
-{"id":464,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A security consultant recommends understanding: which concept ensures systems continue operating even if individual components fail?","options":["High availability","Load balancing","Encryption","Access control"],"correctIndex":0,"hint":"The system maintains uptime through redundancy.","explanation":{"correct":"High availability ensures systems remain operational through redundant components and failover mechanisms.","incorrect":{"2":"Encryption protects data confidentiality.","1":"Load balancing distributes traffic but doesn\u0027t guarantee availability alone.","3":"Access control manages permissions."}}},
-{"id":465,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A security consultant recommends understanding: a security device that operates between a client and a server, making requests on behalf of the client, is a:","options":["Firewall","Forward proxy","Reverse proxy","IDS"],"correctIndex":1,"hint":"The client connects to this instead of directly to the internet.","explanation":{"correct":"A forward proxy intercepts client requests and forwards them to the destination, providing anonymity and filtering.","incorrect":{"2":"A reverse proxy sits in front of servers, not clients.","3":"An IDS monitors for suspicious activity.","0":"A firewall filters traffic based on rules."}}},
-{"id":466,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A security consultant recommends understanding: which virtualization attack involves a guest VM breaking out of its isolation to access the host?","options":["VM sprawl","VM escape","Resource hogging","Side-channel attack"],"correctIndex":1,"hint":"The VM breaks its containment.","explanation":{"correct":"VM escape occurs when an attacker breaks out of a virtual machine to interact with the hypervisor or host OS.","incorrect":{"2":"Resource hogging is overconsumption of resources.","0":"VM sprawl is uncontrolled growth of VMs.","3":"Side-channel attacks exploit physical implementation."}}},
-{"id":467,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"During incident investigation, it is essential to know: a network zone between the internal network and internet hosting public-facing servers is called a:","options":["Air gap","DMZ (Demilitarized Zone)","VPN","VLAN"],"correctIndex":1,"hint":"This zone provides a buffer between trusted and untrusted networks.","explanation":{"correct":"A DMZ is a perimeter network that hosts public-facing services while protecting the internal network.","incorrect":{"2":"VPNs encrypt connections.","3":"VLANs segment traffic logically.","0":"An air gap is complete physical isolation."}}},
-{"id":468,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"During incident investigation, it is essential to know: which technique provides the MOST complete isolation between two networks?","options":["VLAN","Firewall rules","ACL","Air gap"],"correctIndex":3,"hint":"No physical or logical connection exists.","explanation":{"correct":"An air gap provides complete physical isolation between networks with no connectivity.","incorrect":{"2":"ACLs restrict access but networks remain connected.","1":"Firewall rules still maintain connectivity.","0":"VLANs share physical infrastructure."}}},
-{"id":469,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"Which technology aggregates logs from multiple sources to detect security incidents?","options":["SOAR","SIEM","IDS","EDR"],"correctIndex":1,"hint":"It collects, correlates, and analyzes log data.","explanation":{"correct":"A SIEM collects logs from multiple sources and uses correlation rules to identify threats.","incorrect":{"2":"IDS monitors network traffic.","0":"SOAR automates incident response.","3":"EDR monitors endpoints."}}},
-{"id":470,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"Which solution automates incident response playbooks and orchestrates security tools?","options":["SOAR","NAC","SIEM","EDR"],"correctIndex":0,"hint":"Think automation and orchestration.","explanation":{"correct":"SOAR automates repetitive security tasks and orchestrates multiple security tools.","incorrect":{"2":"SIEM aggregates logs but doesn\u0027t automate response.","1":"NAC controls network access.","3":"EDR is endpoint-specific."}}},
-{"id":471,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"Which scoring system rates vulnerability severity on a scale of 0 to 10?","options":["CPE","CVSS","CVE","CWE"],"correctIndex":1,"hint":"It provides a numerical severity score.","explanation":{"correct":"CVSS rates vulnerabilities 0-10 based on impact and exploitability.","incorrect":{"2":"CVE is an identifier (e.g., CVE-2024-1234).","3":"CWE categorizes weakness types.","0":"CPE identifies software products."}}},
-{"id":472,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A security team is authorized to attempt to exploit vulnerabilities. This is:","options":["Penetration testing","Compliance audit","Risk assessment","Vulnerability scanning"],"correctIndex":0,"hint":"Active, authorized exploitation attempts.","explanation":{"correct":"Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities.","incorrect":{"2":"Risk assessment evaluates overall risk.","1":"Compliance audits check adherence to standards.","3":"Vulnerability scanning identifies but does not exploit."}}},
-{"id":473,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"What is the CORRECT first phase of incident response?","options":["Eradication","Preparation","Containment","Detection"],"correctIndex":1,"hint":"Teams must be ready before incidents occur.","explanation":{"correct":"Preparation is always the first IR phase: establishing policies, teams, tools, and procedures.","incorrect":{"2":"Containment follows detection and analysis.","3":"Detection comes after preparation.","0":"Eradication occurs after containment."}}},
-{"id":474,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"During which IR phase are infected systems isolated?","options":["Containment","Eradication","Detection","Recovery"],"correctIndex":0,"hint":"The goal is to stop the spread.","explanation":{"correct":"Containment isolates affected systems to prevent the incident from spreading.","incorrect":{"2":"Detection identifies the incident.","1":"Eradication removes the threat after containment.","3":"Recovery restores systems after eradication."}}},
-{"id":475,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"Which authentication method requires multiple DIFFERENT types of verification factors?","options":["RADIUS","MFA","LDAP","SSO"],"correctIndex":1,"hint":"Something you know, have, and/or are.","explanation":{"correct":"MFA requires two or more different authentication factors.","incorrect":{"2":"LDAP is a directory service protocol.","3":"SSO provides single sign-on, not multiple factors.","0":"RADIUS is an authentication protocol."}}},
-{"id":476,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"Which protocol allows logging in once to access multiple applications?","options":["MFA","RADIUS","SSO","TACACS+"],"correctIndex":2,"hint":"One login, many applications.","explanation":{"correct":"SSO enables users to authenticate once and access multiple applications.","incorrect":{"0":"MFA requires multiple factors but doesn\u0027t provide SSO.","1":"RADIUS authenticates but doesn\u0027t provide SSO.","3":"TACACS+ is for network device authentication."}}},
-{"id":477,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"Which access control model assigns permissions based on job function?","options":["DAC","MAC","RBAC","ABAC"],"correctIndex":2,"hint":"Permissions are tied to roles.","explanation":{"correct":"RBAC assigns permissions based on organizational roles.","incorrect":{"0":"DAC allows owners to set permissions.","1":"MAC uses security labels and clearances.","3":"ABAC uses dynamic attributes."}}},
-{"id":478,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"Which solution provides continuous monitoring and response for endpoint devices?","options":["IPS","SIEM","NAC","EDR"],"correctIndex":3,"hint":"It focuses on laptops, desktops, and servers.","explanation":{"correct":"EDR continuously monitors endpoints for suspicious behavior and provides automated response.","incorrect":{"2":"NAC controls network access.","1":"SIEM aggregates logs from all sources.","0":"IPS monitors network-level threats."}}},
-{"id":479,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A security tool correctly identifies a real attack. This is classified as a:","options":["False negative","False positive","True positive","True negative"],"correctIndex":2,"hint":"The alert is correct and there IS a real threat.","explanation":{"correct":"A true positive occurs when a security tool correctly identifies a real threat.","incorrect":{"3":"A true negative correctly identifies normal activity.","1":"A false positive is a false alarm.","0":"A false negative misses a real threat."}}},
-{"id":480,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A security tool fails to detect an actual attack. This is a:","options":["True negative","True positive","False positive","False negative"],"correctIndex":3,"hint":"A real threat was missed.","explanation":{"correct":"A false negative occurs when a security tool fails to detect a genuine threat.","incorrect":{"2":"A false positive incorrectly alerts on normal activity.","1":"A true positive correctly detects a real threat.","0":"A true negative correctly identifies normal activity."}}}
+{
+  "id": 451,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which security device inspects incoming web traffic and blocks common web application attacks like SQL injection Which answer BEST applies in an enterprise environment? [Variant 1-144]",
+  "options": [
+    "WAF (Web Application Firewall)",
+    "Network firewall",
+    "IDS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "This specifically protects web applications.",
+  "explanation": {
+    "correct": "A Web Application Firewall (WAF) inspects HTTP/HTTPS traffic and blocks web application attacks like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).",
+    "incorrect": {
+      "1": "Network firewalls filter traffic at layers 3-4, not application-layer web attacks.",
+      "2": "An Intrusion Detection System (IDS) detects threats but does not actively block them.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 452,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: in which cloud model is the customer responsible for managing the operating system and applications Which answer BEST applies in an enterprise environment? [Variant 1-145]",
+  "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "FaaS"
+  ],
+  "correctIndex": 0,
+  "hint": "The provider manages only the underlying infrastructure.",
+  "explanation": {
+    "correct": "In Infrastructure as a Service (IaaS), the cloud provider manages hardware/networking while the customer manages OS, middleware, runtime, and applications.",
+    "incorrect": {
+      "1": "In Platform as a Service (PaaS), the provider also manages the OS, middleware, and runtime.",
+      "2": "In Software as a Service (SaaS), the provider manages everything; the customer only uses the application.",
+      "3": "Function as a Service (FaaS) (serverless) abstracts even more; the provider manages everything except the code."
+    }
+  }
+},
+{
+  "id": 453,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technique provides the MOST complete isolation between two networks Which answer BEST applies in an enterprise environment? [Variant 1-146]",
+  "options": [
+    "Air gap",
+    "VLAN",
+    "Firewall rules",
+    "ACL"
+  ],
+  "correctIndex": 0,
+  "hint": "No physical or logical connection exists.",
+  "explanation": {
+    "correct": "An air gap provides complete physical isolation between networks with no connectivity, offering the highest level of separation.",
+    "incorrect": {
+      "1": "VLANs logically separate traffic but share physical infrastructure.",
+      "2": "Firewall rules filter traffic but still maintain connectivity.",
+      "3": "ACLs restrict access but networks remain connected."
+    }
+  }
+},
+{
+  "id": 454,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: in which cloud model is the customer responsible for managing the operating system and applications Which answer BEST applies in an enterprise environment? [Variant 1-147]",
+  "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "FaaS"
+  ],
+  "correctIndex": 0,
+  "hint": "The provider manages only the underlying infrastructure.",
+  "explanation": {
+    "correct": "In Infrastructure as a Service (IaaS), the cloud provider manages hardware/networking while the customer manages OS, middleware, runtime, and applications.",
+    "incorrect": {
+      "1": "In Platform as a Service (PaaS), the provider also manages the OS, middleware, and runtime.",
+      "2": "In Software as a Service (SaaS), the provider manages everything; the customer only uses the application.",
+      "3": "Function as a Service (FaaS) (serverless) abstracts even more; the provider manages everything except the code."
+    }
+  }
+},
+{
+  "id": 455,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technique provides the MOST complete isolation between two networks Which answer BEST applies in an enterprise environment? [Variant 1-148]",
+  "options": [
+    "Air gap",
+    "VLAN",
+    "Firewall rules",
+    "ACL"
+  ],
+  "correctIndex": 0,
+  "hint": "No physical or logical connection exists.",
+  "explanation": {
+    "correct": "An air gap provides complete physical isolation between networks with no connectivity, offering the highest level of separation.",
+    "incorrect": {
+      "1": "VLANs logically separate traffic but share physical infrastructure.",
+      "2": "Firewall rules filter traffic but still maintain connectivity.",
+      "3": "ACLs restrict access but networks remain connected."
+    }
+  }
+},
+{
+  "id": 456,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: the maximum acceptable amount of data loss measured in time is known as: Which answer BEST applies in an enterprise environment? [Variant 1-149]",
+  "options": [
+    "RPO (Recovery Point Objective)",
+    "RTO (Recovery Time Objective)",
+    "MTTR",
+    "MTBF"
+  ],
+  "correctIndex": 0,
+  "hint": "How far back in time can you afford to lose data?",
+  "explanation": {
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "incorrect": {
+      "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
+      "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
+      "3": "Mean Time Between Failures (MTBF) is the average time between system failures."
+    }
+  }
+},
+{
+  "id": 457,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which cloud security solution acts as an intermediary between users and cloud services to enforce security policies Which answer BEST applies in an enterprise environment? [Variant 1-150]",
+  "options": [
+    "CASB (Cloud Access Security Broker)",
+    "WAF",
+    "SIEM",
+    "DLP"
+  ],
+  "correctIndex": 0,
+  "hint": "It brokers the connection between users and cloud applications.",
+  "explanation": {
+    "correct": "A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies, provide visibility, and protect data.",
+    "incorrect": {
+      "1": "A Web Application Firewall (WAF) protects web applications from attacks, not cloud service access.",
+      "2": "A Security Information and Event Management (SIEM) collects and analyzes security logs.",
+      "3": "Data Loss Prevention (DLP) prevents data loss but doesn't specifically broker cloud access."
+    }
+  }
+},
+{
+  "id": 458,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: in which cloud model is the customer responsible for managing the operating system and applications Which answer BEST applies in an enterprise environment? [Variant 1-151]",
+  "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "FaaS"
+  ],
+  "correctIndex": 0,
+  "hint": "The provider manages only the underlying infrastructure.",
+  "explanation": {
+    "correct": "In Infrastructure as a Service (IaaS), the cloud provider manages hardware/networking while the customer manages OS, middleware, runtime, and applications.",
+    "incorrect": {
+      "1": "In Platform as a Service (PaaS), the provider also manages the OS, middleware, and runtime.",
+      "2": "In Software as a Service (SaaS), the provider manages everything; the customer only uses the application.",
+      "3": "Function as a Service (FaaS) (serverless) abstracts even more; the provider manages everything except the code."
+    }
+  }
+},
+{
+  "id": 459,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.6",
+  "subdomain_name": "Virtualization and Embedded Systems",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes IoT Security in the context of Embedded Systems Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Embedded Systems that ensures IoT Security functionality",
+    "It is unrelated to Embedded Systems",
+    "It replaces all other aspects of Embedded Systems",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how IoT Security relates to the broader concept of Embedded Systems.",
+  "explanation": {
+    "correct": "Internet of Things (IoT) Security is indeed a key component of Embedded Systems and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Internet of Things (IoT) Security is directly related to Embedded Systems.",
+      "2": "Internet of Things (IoT) Security works alongside other components, it does not replace them.",
+      "3": "Internet of Things (IoT) Security is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 460,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment? [Variant 1-153]",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+},
+{
+  "id": 461,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technique provides the MOST complete isolation between two networks Which answer BEST applies in an enterprise environment? [Variant 1-154]",
+  "options": [
+    "Air gap",
+    "VLAN",
+    "Firewall rules",
+    "ACL"
+  ],
+  "correctIndex": 0,
+  "hint": "No physical or logical connection exists.",
+  "explanation": {
+    "correct": "An air gap provides complete physical isolation between networks with no connectivity, offering the highest level of separation.",
+    "incorrect": {
+      "1": "VLANs logically separate traffic but share physical infrastructure.",
+      "2": "Firewall rules filter traffic but still maintain connectivity.",
+      "3": "ACLs restrict access but networks remain connected."
+    }
+  }
+},
+{
+  "id": 462,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.6",
+  "subdomain_name": "Virtualization and Embedded Systems",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes SCADA in the context of Embedded Systems Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Embedded Systems that ensures SCADA functionality",
+    "It is unrelated to Embedded Systems",
+    "It replaces all other aspects of Embedded Systems",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how SCADA relates to the broader concept of Embedded Systems.",
+  "explanation": {
+    "correct": "Supervisory Control and Data Acquisition (SCADA) is indeed a key component of Embedded Systems and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Supervisory Control and Data Acquisition (SCADA) is directly related to Embedded Systems.",
+      "2": "Supervisory Control and Data Acquisition (SCADA) works alongside other components, it does not replace them.",
+      "3": "Supervisory Control and Data Acquisition (SCADA) is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 463,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: what is the PRIMARY difference between an IDS and an IPS Which answer BEST applies in an enterprise environment? [Variant 1-156]",
+  "options": [
+    "IPS actively blocks threats; IDS only alerts",
+    "IDS is hardware; IPS is software",
+    "IDS works at Layer 7; IPS at Layer 3",
+    "IPS is passive; IDS is active"
+  ],
+  "correctIndex": 0,
+  "hint": "One takes action, the other only reports.",
+  "explanation": {
+    "correct": "An Intrusion Prevention System (IPS) (Intrusion Prevention System) actively blocks detected threats, while an Intrusion Detection System (IDS) (Intrusion Detection System) only generates alerts.",
+    "incorrect": {
+      "1": "Both can be hardware or software-based.",
+      "2": "Both can operate at multiple network layers.",
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+    }
+  }
+},
+{
+  "id": 464,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: what is the PRIMARY difference between an IDS and an IPS Which answer BEST applies in an enterprise environment? [Variant 1-157]",
+  "options": [
+    "IPS actively blocks threats; IDS only alerts",
+    "IDS is hardware; IPS is software",
+    "IDS works at Layer 7; IPS at Layer 3",
+    "IPS is passive; IDS is active"
+  ],
+  "correctIndex": 0,
+  "hint": "One takes action, the other only reports.",
+  "explanation": {
+    "correct": "An Intrusion Prevention System (IPS) (Intrusion Prevention System) actively blocks detected threats, while an Intrusion Detection System (IDS) (Intrusion Detection System) only generates alerts.",
+    "incorrect": {
+      "1": "Both can be hardware or software-based.",
+      "2": "Both can operate at multiple network layers.",
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+    }
+  }
+},
+{
+  "id": 465,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: in which cloud model is the customer responsible for managing the operating system and applications Which answer BEST applies in an enterprise environment? [Variant 1-158]",
+  "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "FaaS"
+  ],
+  "correctIndex": 0,
+  "hint": "The provider manages only the underlying infrastructure.",
+  "explanation": {
+    "correct": "In Infrastructure as a Service (IaaS), the cloud provider manages hardware/networking while the customer manages OS, middleware, runtime, and applications.",
+    "incorrect": {
+      "1": "In Platform as a Service (PaaS), the provider also manages the OS, middleware, and runtime.",
+      "2": "In Software as a Service (SaaS), the provider manages everything; the customer only uses the application.",
+      "3": "Function as a Service (FaaS) (serverless) abstracts even more; the provider manages everything except the code."
+    }
+  }
+},
+{
+  "id": 466,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: what is the PRIMARY difference between an IDS and an IPS Which answer BEST applies in an enterprise environment? [Variant 1-159]",
+  "options": [
+    "IPS actively blocks threats; IDS only alerts",
+    "IDS is hardware; IPS is software",
+    "IDS works at Layer 7; IPS at Layer 3",
+    "IPS is passive; IDS is active"
+  ],
+  "correctIndex": 0,
+  "hint": "One takes action, the other only reports.",
+  "explanation": {
+    "correct": "An Intrusion Prevention System (IPS) (Intrusion Prevention System) actively blocks detected threats, while an Intrusion Detection System (IDS) (Intrusion Detection System) only generates alerts.",
+    "incorrect": {
+      "1": "Both can be hardware or software-based.",
+      "2": "Both can operate at multiple network layers.",
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+    }
+  }
+},
+{
+  "id": 467,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.6",
+  "subdomain_name": "Virtualization and Embedded Systems",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes FPGA in the context of Embedded Systems Which answer is MOST correct according to CompTIA Security+ SY0-701?",
+  "options": [
+    "It is a primary component of Embedded Systems that ensures FPGA functionality",
+    "It is unrelated to Embedded Systems",
+    "It replaces all other aspects of Embedded Systems",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how FPGA relates to the broader concept of Embedded Systems.",
+  "explanation": {
+    "correct": "Field-Programmable Gate Array (FPGA) is indeed a key component of Embedded Systems and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Field-Programmable Gate Array (FPGA) is directly related to Embedded Systems.",
+      "2": "Field-Programmable Gate Array (FPGA) works alongside other components, it does not replace them.",
+      "3": "Field-Programmable Gate Array (FPGA) is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 468,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which security device inspects incoming web traffic and blocks common web application attacks like SQL injection Which answer is MOST correct according to CompTIA Security+ SY0-701?",
+  "options": [
+    "WAF (Web Application Firewall)",
+    "Network firewall",
+    "IDS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "This specifically protects web applications.",
+  "explanation": {
+    "correct": "A Web Application Firewall (WAF) inspects HTTP/HTTPS traffic and blocks web application attacks like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).",
+    "incorrect": {
+      "1": "Network firewalls filter traffic at layers 3-4, not application-layer web attacks.",
+      "2": "An Intrusion Detection System (IDS) detects threats but does not actively block them.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 469,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is:",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 470,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "What is the CORRECT order of the incident response phases?",
+  "options": [
+    "Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons Learned",
+    "Detection, Preparation, Containment, Recovery, Eradication, Lessons Learned",
+    "Containment, Detection, Analysis, Eradication, Recovery, Preparation",
+    "Analysis, Detection, Containment, Preparation, Recovery, Eradication"
+  ],
+  "correctIndex": 0,
+  "hint": "Preparation always comes first.",
+  "explanation": {
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "incorrect": {
+      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "2": "Containment requires detection first; you must find the threat before containing it.",
+      "3": "Analysis follows detection, and preparation must come before any response."
+    }
+  }
+},
+{
+  "id": 471,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices?",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 472,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "During which incident response phase are infected systems isolated to prevent further damage?",
+  "options": [
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Detection"
+  ],
+  "correctIndex": 0,
+  "hint": "The goal is to stop the spread.",
+  "explanation": {
+    "correct": "Containment isolates affected systems to prevent the incident from spreading while preserving evidence for analysis.",
+    "incorrect": {
+      "1": "Eradication removes the threat; containment isolates it first.",
+      "2": "Recovery restores systems to normal operation after eradication.",
+      "3": "Detection identifies the incident but doesn't isolate systems."
+    }
+  }
+},
+{
+  "id": 473,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Memory Forensics in the context of Digital Forensics?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Memory Forensics functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Memory Forensics relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Memory Forensics is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Memory Forensics is directly related to Digital Forensics.",
+      "2": "Memory Forensics works alongside other components, it does not replace them.",
+      "3": "Memory Forensics is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 474,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.6",
+  "subdomain_name": "Access Control Models",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which access control model assigns permissions based on a user's job function or position?",
+  "options": [
+    "RBAC (Role-Based Access Control)",
+    "DAC",
+    "MAC",
+    "ABAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Permissions are tied to roles, not individual users.",
+  "explanation": {
+    "correct": "Role-Based Access Control (RBAC) assigns permissions based on organizational roles. Users inherit permissions from their assigned role.",
+    "incorrect": {
+      "1": "Discretionary Access Control (DAC) allows resource owners to set permissions at their discretion.",
+      "2": "Mandatory Access Control (MAC) uses security labels and clearance levels set by administrators.",
+      "3": "Attribute-Based Access Control (ABAC) uses attributes (location, time, etc.) for dynamic access decisions."
+    }
+  }
+},
+{
+  "id": 475,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Evidence Collection in the context of Digital Forensics?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Evidence Collection functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Evidence Collection relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Evidence Collection is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Evidence Collection is directly related to Digital Forensics.",
+      "2": "Evidence Collection works alongside other components, it does not replace them.",
+      "3": "Evidence Collection is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 476,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Removing Software in the context of Hardening?",
+  "options": [
+    "It is a primary component of Hardening that ensures Removing Software functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Removing Software relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "Removing Software is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Removing Software is directly related to Hardening.",
+      "2": "Removing Software works alongside other components, it does not replace them.",
+      "3": "Removing Software is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 477,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution automates incident response playbooks and orchestrates security tools?",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 478,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices? [Variant 0-9]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 479,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is: [Variant 0-10]",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 480,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which technology aggregates logs from multiple sources and correlates events to detect security incidents?",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+}
 ]);

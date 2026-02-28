@@ -1,65 +1,68 @@
 const fs = require('fs');
 const path = require('path');
+const { DOMAINS: DOMAIN_CONFIG, TOTAL_QUESTIONS } = require('./domains');
+const { SUBDOMAINS, isValidSubdomain } = require('./subdomains');
+const { expandAcronyms } = require('./acronyms');
 
 const DOMAINS = {
     1: {
         name: 'General Security Concepts', count: 108, topics: [
-            { t: 'CIA Triad', sub: ['Confidentiality', 'Integrity', 'Availability'] },
-            { t: 'AAA Framework', sub: ['Authentication', 'Authorization', 'Accounting'] },
-            { t: 'Security Controls', sub: ['Technical', 'Managerial', 'Operational', 'Physical', 'Preventive', 'Detective', 'Corrective', 'Compensating', 'Deterrent'] },
-            { t: 'Zero Trust', sub: ['Control Plane', 'Data Plane', 'Adaptive Identity', 'Threat Scope Reduction', 'Policy Engine', 'Policy Administrator', 'Policy Enforcement Point'] },
-            { t: 'Cryptography Concepts', sub: ['Symmetric', 'Asymmetric', 'Hashing', 'Digital Signatures', 'Key Exchange', 'PKI', 'Certificates', 'Certificate Authorities'] },
-            { t: 'Gap Analysis', sub: ['Technical Gap', 'Business Gap', 'Security Baseline'] },
-            { t: 'Change Management', sub: ['Change Advisory Board', 'Impact Analysis', 'Rollback Plan', 'Version Control'] },
+            { t: 'CIA Triad', sub: ['Confidentiality', 'Integrity', 'Availability'], subdomainId: '1.1' },
+            { t: 'AAA Framework', sub: ['Authentication', 'Authorization', 'Accounting'], subdomainId: '1.3' },
+            { t: 'Security Controls', sub: ['Technical', 'Managerial', 'Operational', 'Physical', 'Preventive', 'Detective', 'Corrective', 'Compensating', 'Deterrent'], subdomainId: '1.1' },
+            { t: 'Zero Trust', sub: ['Control Plane', 'Data Plane', 'Adaptive Identity', 'Threat Scope Reduction', 'Policy Engine', 'Policy Administrator', 'Policy Enforcement Point'], subdomainId: '1.4' },
+            { t: 'Cryptography Concepts', sub: ['Symmetric', 'Asymmetric', 'Hashing', 'Digital Signatures', 'Key Exchange', 'PKI', 'Certificates', 'Certificate Authorities'], subdomainId: '1.2' },
+            { t: 'Gap Analysis', sub: ['Technical Gap', 'Business Gap', 'Security Baseline'], subdomainId: '1.6' },
+            { t: 'Change Management', sub: ['Change Advisory Board', 'Impact Analysis', 'Rollback Plan', 'Version Control'], subdomainId: '1.5' },
         ]
     },
     2: {
         name: 'Threats, Vulnerabilities, and Mitigations', count: 198, topics: [
-            { t: 'Threat Actors', sub: ['Nation-state', 'Hacktivists', 'Insider Threats', 'Organized Crime', 'Script Kiddies', 'Shadow IT', 'APT'] },
-            { t: 'Social Engineering', sub: ['Phishing', 'Spear Phishing', 'Whaling', 'Vishing', 'Smishing', 'Pretexting', 'Watering Hole', 'Typosquatting', 'Business Email Compromise'] },
-            { t: 'Malware Types', sub: ['Ransomware', 'Trojans', 'Worms', 'Rootkits', 'Spyware', 'Keyloggers', 'Logic Bombs', 'Fileless Malware', 'Bloatware', 'Cryptominers'] },
-            { t: 'Network Attacks', sub: ['DDoS', 'DNS Poisoning', 'ARP Spoofing', 'Man-in-the-Middle', 'Replay Attack', 'SSL Stripping', 'Credential Harvesting', 'On-path Attack'] },
-            { t: 'Application Attacks', sub: ['SQL Injection', 'XSS', 'CSRF', 'Buffer Overflow', 'Race Condition', 'Directory Traversal', 'Privilege Escalation', 'API Attacks'] },
-            { t: 'Vulnerability Types', sub: ['Zero-day', 'Misconfiguration', 'Default Credentials', 'Unpatched Software', 'Open Permissions', 'Insecure Protocols'] },
-            { t: 'Indicators of Compromise', sub: ['Unusual Traffic', 'Impossible Travel', 'Blocked Content', 'Resource Consumption', 'Log Anomalies'] },
-            { t: 'Mitigation Techniques', sub: ['Patching', 'Segmentation', 'Encryption', 'Access Control', 'Hardening', 'Input Validation', 'Least Privilege'] },
+            { t: 'Threat Actors', sub: ['Nation-state', 'Hacktivists', 'Insider Threats', 'Organized Crime', 'Script Kiddies', 'Shadow IT', 'APT'], subdomainId: '2.1' },
+            { t: 'Social Engineering', sub: ['Phishing', 'Spear Phishing', 'Whaling', 'Vishing', 'Smishing', 'Pretexting', 'Watering Hole', 'Typosquatting', 'Business Email Compromise'], subdomainId: '2.2' },
+            { t: 'Malware Types', sub: ['Ransomware', 'Trojans', 'Worms', 'Rootkits', 'Spyware', 'Keyloggers', 'Logic Bombs', 'Fileless Malware', 'Bloatware', 'Cryptominers'], subdomainId: '2.3' },
+            { t: 'Network Attacks', sub: ['DDoS', 'DNS Poisoning', 'ARP Spoofing', 'Man-in-the-Middle', 'Replay Attack', 'SSL Stripping', 'Credential Harvesting', 'On-path Attack'], subdomainId: '2.4' },
+            { t: 'Application Attacks', sub: ['SQL Injection', 'XSS', 'CSRF', 'Buffer Overflow', 'Race Condition', 'Directory Traversal', 'Privilege Escalation', 'API Attacks'], subdomainId: '2.4' },
+            { t: 'Vulnerability Types', sub: ['Zero-day', 'Misconfiguration', 'Default Credentials', 'Unpatched Software', 'Open Permissions', 'Insecure Protocols'], subdomainId: '2.5' },
+            { t: 'Indicators of Compromise', sub: ['Unusual Traffic', 'Impossible Travel', 'Blocked Content', 'Resource Consumption', 'Log Anomalies'], subdomainId: '2.5' },
+            { t: 'Mitigation Techniques', sub: ['Patching', 'Segmentation', 'Encryption', 'Access Control', 'Hardening', 'Input Validation', 'Least Privilege'], subdomainId: '2.6' },
         ]
     },
     3: {
         name: 'Security Architecture', count: 162, topics: [
-            { t: 'Network Architecture', sub: ['DMZ', 'VLAN', 'Micro-segmentation', 'SDN', 'East-West Traffic', 'North-South Traffic', 'Air Gap', 'Jump Server'] },
-            { t: 'Cloud Security', sub: ['IaaS', 'PaaS', 'SaaS', 'Shared Responsibility', 'Cloud Access Security Broker', 'Serverless', 'Containerization'] },
-            { t: 'Secure Infrastructure', sub: ['Load Balancer', 'Reverse Proxy', 'WAF', 'IDS/IPS', 'Firewall Types', 'NAC', 'VPN', 'SD-WAN'] },
-            { t: 'Data Protection', sub: ['Data at Rest', 'Data in Transit', 'Data in Use', 'DLP', 'Data Classification', 'Data Masking', 'Tokenization', 'Rights Management'] },
-            { t: 'Resilience', sub: ['High Availability', 'RAID', 'Clustering', 'Redundancy', 'Backup Types', 'Replication', 'Disaster Recovery', 'RPO/RTO'] },
-            { t: 'Virtualization', sub: ['Hypervisor Types', 'VM Sprawl', 'VM Escape', 'Container Security', 'Infrastructure as Code'] },
-            { t: 'Embedded Systems', sub: ['IoT Security', 'SCADA', 'RTOS', 'SoC', 'FPGA'] },
+            { t: 'Network Architecture', sub: ['DMZ', 'VLAN', 'Micro-segmentation', 'SDN', 'East-West Traffic', 'North-South Traffic', 'Air Gap', 'Jump Server'], subdomainId: '3.1' },
+            { t: 'Cloud Security', sub: ['IaaS', 'PaaS', 'SaaS', 'Shared Responsibility', 'Cloud Access Security Broker', 'Serverless', 'Containerization'], subdomainId: '3.2' },
+            { t: 'Secure Infrastructure', sub: ['Load Balancer', 'Reverse Proxy', 'WAF', 'IDS/IPS', 'Firewall Types', 'NAC', 'VPN', 'SD-WAN'], subdomainId: '3.3' },
+            { t: 'Data Protection', sub: ['Data at Rest', 'Data in Transit', 'Data in Use', 'DLP', 'Data Classification', 'Data Masking', 'Tokenization', 'Rights Management'], subdomainId: '3.4' },
+            { t: 'Resilience', sub: ['High Availability', 'RAID', 'Clustering', 'Redundancy', 'Backup Types', 'Replication', 'Disaster Recovery', 'RPO/RTO'], subdomainId: '3.5' },
+            { t: 'Virtualization', sub: ['Hypervisor Types', 'VM Sprawl', 'VM Escape', 'Container Security', 'Infrastructure as Code'], subdomainId: '3.6' },
+            { t: 'Embedded Systems', sub: ['IoT Security', 'SCADA', 'RTOS', 'SoC', 'FPGA'], subdomainId: '3.6' },
         ]
     },
     4: {
         name: 'Security Operations', count: 252, topics: [
-            { t: 'Monitoring', sub: ['SIEM', 'SOAR', 'Log Aggregation', 'NetFlow', 'sFlow', 'Protocol Analyzers', 'Packet Capture', 'Baseline Deviation'] },
-            { t: 'Vulnerability Management', sub: ['Vulnerability Scanning', 'Penetration Testing', 'CVE', 'CVSS', 'Remediation', 'Exception Management', 'Bug Bounty'] },
-            { t: 'Incident Response', sub: ['Preparation', 'Detection', 'Analysis', 'Containment', 'Eradication', 'Recovery', 'Lessons Learned', 'Chain of Custody'] },
-            { t: 'Digital Forensics', sub: ['Evidence Collection', 'Disk Imaging', 'Memory Forensics', 'Network Forensics', 'Legal Hold', 'Timeline Analysis', 'Write Blockers'] },
-            { t: 'Identity Management', sub: ['MFA', 'SSO', 'LDAP', 'RADIUS', 'SAML', 'OAuth', 'OpenID Connect', 'Federation', 'PAM'] },
-            { t: 'Access Control', sub: ['RBAC', 'ABAC', 'MAC', 'DAC', 'Rule-based', 'Conditional Access', 'Permission Assignment'] },
-            { t: 'Endpoint Security', sub: ['EDR', 'XDR', 'Antivirus', 'Host Firewall', 'DLP Agent', 'Application Whitelisting', 'Boot Integrity'] },
-            { t: 'Hardening', sub: ['CIS Benchmarks', 'Group Policy', 'Registry', 'Disk Encryption', 'Firmware Updates', 'Disabling Services', 'Removing Software'] },
-            { t: 'Automation', sub: ['Scripting', 'Playbooks', 'Runbooks', 'API Integration', 'CI/CD Security', 'DevSecOps'] },
-            { t: 'Alert Management', sub: ['True Positive', 'False Positive', 'True Negative', 'False Negative', 'Alert Tuning', 'Enrichment', 'Triage'] },
+            { t: 'Monitoring', sub: ['SIEM', 'SOAR', 'Log Aggregation', 'NetFlow', 'sFlow', 'Protocol Analyzers', 'Packet Capture', 'Baseline Deviation'], subdomainId: '4.1' },
+            { t: 'Vulnerability Management', sub: ['Vulnerability Scanning', 'Penetration Testing', 'CVE', 'CVSS', 'Remediation', 'Exception Management', 'Bug Bounty'], subdomainId: '4.2' },
+            { t: 'Incident Response', sub: ['Preparation', 'Detection', 'Analysis', 'Containment', 'Eradication', 'Recovery', 'Lessons Learned', 'Chain of Custody'], subdomainId: '4.3' },
+            { t: 'Digital Forensics', sub: ['Evidence Collection', 'Disk Imaging', 'Memory Forensics', 'Network Forensics', 'Legal Hold', 'Timeline Analysis', 'Write Blockers'], subdomainId: '4.4' },
+            { t: 'Identity Management', sub: ['MFA', 'SSO', 'LDAP', 'RADIUS', 'SAML', 'OAuth', 'OpenID Connect', 'Federation', 'PAM'], subdomainId: '4.5' },
+            { t: 'Access Control', sub: ['RBAC', 'ABAC', 'MAC', 'DAC', 'Rule-based', 'Conditional Access', 'Permission Assignment'], subdomainId: '4.6' },
+            { t: 'Endpoint Security', sub: ['EDR', 'XDR', 'Antivirus', 'Host Firewall', 'DLP Agent', 'Application Whitelisting', 'Boot Integrity'], subdomainId: '4.7' },
+            { t: 'Hardening', sub: ['CIS Benchmarks', 'Group Policy', 'Registry', 'Disk Encryption', 'Firmware Updates', 'Disabling Services', 'Removing Software'], subdomainId: '4.8' },
+            { t: 'Automation', sub: ['Scripting', 'Playbooks', 'Runbooks', 'API Integration', 'CI/CD Security', 'DevSecOps'], subdomainId: '4.8' },
+            { t: 'Alert Management', sub: ['True Positive', 'False Positive', 'True Negative', 'False Negative', 'Alert Tuning', 'Enrichment', 'Triage'], subdomainId: '4.1' },
         ]
     },
     5: {
         name: 'Security Program Management and Oversight', count: 180, topics: [
-            { t: 'Governance', sub: ['Security Policies', 'Standards', 'Procedures', 'Guidelines', 'AUP', 'Data Ownership', 'Data Stewardship'] },
-            { t: 'Risk Management', sub: ['Risk Assessment', 'Qualitative Analysis', 'Quantitative Analysis', 'Risk Register', 'Risk Matrix', 'Risk Appetite', 'Risk Tolerance', 'Risk Acceptance', 'Risk Avoidance', 'Risk Transference', 'Risk Mitigation'] },
-            { t: 'Compliance', sub: ['GDPR', 'HIPAA', 'PCI DSS', 'SOX', 'FISMA', 'ISO 27001', 'NIST CSF', 'SOC 2'] },
-            { t: 'Security Awareness', sub: ['Phishing Campaigns', 'Training Programs', 'Role-based Training', 'Gamification', 'Social Engineering Tests'] },
-            { t: 'Auditing', sub: ['Internal Audit', 'External Audit', 'Penetration Test Report', 'Compliance Scan', 'Attestation'] },
-            { t: 'Third-Party Risk', sub: ['Vendor Assessment', 'SLA', 'MOU', 'MSA', 'NDA', 'Supply Chain Risk', 'Right to Audit'] },
-            { t: 'Business Continuity', sub: ['BIA', 'BCP', 'DRP', 'Tabletop Exercise', 'Failover', 'Succession Planning', 'COOP'] },
-            { t: 'Data Privacy', sub: ['PII', 'PHI', 'Data Inventory', 'Privacy Impact Assessment', 'Data Subject Rights', 'Data Breach Notification', 'Consent Management'] },
+            { t: 'Governance', sub: ['Security Policies', 'Standards', 'Procedures', 'Guidelines', 'AUP', 'Data Ownership', 'Data Stewardship'], subdomainId: '5.1' },
+            { t: 'Risk Management', sub: ['Risk Assessment', 'Qualitative Analysis', 'Quantitative Analysis', 'Risk Register', 'Risk Matrix', 'Risk Appetite', 'Risk Tolerance', 'Risk Acceptance', 'Risk Avoidance', 'Risk Transference', 'Risk Mitigation'], subdomainId: '5.2' },
+            { t: 'Compliance', sub: ['GDPR', 'HIPAA', 'PCI DSS', 'SOX', 'FISMA', 'ISO 27001', 'NIST CSF', 'SOC 2'], subdomainId: '5.3' },
+            { t: 'Security Awareness', sub: ['Phishing Campaigns', 'Training Programs', 'Role-based Training', 'Gamification', 'Social Engineering Tests'], subdomainId: '5.4' },
+            { t: 'Auditing', sub: ['Internal Audit', 'External Audit', 'Penetration Test Report', 'Compliance Scan', 'Attestation'], subdomainId: '5.5' },
+            { t: 'Third-Party Risk', sub: ['Vendor Assessment', 'SLA', 'MOU', 'MSA', 'NDA', 'Supply Chain Risk', 'Right to Audit'], subdomainId: '5.6' },
+            { t: 'Business Continuity', sub: ['BIA', 'BCP', 'DRP', 'Tabletop Exercise', 'Failover', 'Succession Planning', 'COOP'], subdomainId: '5.7' },
+            { t: 'Data Privacy', sub: ['PII', 'PHI', 'Data Inventory', 'Privacy Impact Assessment', 'Data Subject Rights', 'Data Breach Notification', 'Consent Management'], subdomainId: '5.7' },
         ]
     }
 };
@@ -72,14 +75,25 @@ function generateQuestion(id, domain, topic, sub) {
     const d = DOMAINS[domain];
     const templates = getTemplates(domain, topic, sub);
     const tmpl = pick(templates);
+    const subdomainId = topic.subdomainId || null;
+    const subdomainInfo = subdomainId && SUBDOMAINS[subdomainId] ? SUBDOMAINS[subdomainId] : { id: subdomainId, name: topic };
     return {
         id, domain, domainName: d.name,
+        subdomain_id: subdomainInfo.id,
+        subdomain_name: subdomainInfo.name,
         difficulty: pick(difficulties),
+        weight: 1.0,
+        status: 'active',
         question: tmpl.q,
         options: tmpl.o,
         correctIndex: tmpl.ci,
         hint: tmpl.hint,
-        explanation: { correct: tmpl.ec, incorrect: tmpl.ei }
+        explanation: {
+            correct: expandAcronyms(tmpl.ec),
+            incorrect: tmpl.ei ? Object.fromEntries(
+                Object.entries(tmpl.ei).map(([k, v]) => [k, expandAcronyms(v)])
+            ) : {}
+        }
     };
 }
 
@@ -282,48 +296,109 @@ for (const [domainNum, domainInfo] of Object.entries(DOMAINS)) {
         for (const sub of topicObj.sub) {
             const templates = getTemplates(dom, topicObj.t, sub);
             templates.forEach(t => {
-                allTemplates.push({ ...t, topic: topicObj.t, sub });
+                allTemplates.push({ ...t, topic: topicObj.t, sub, subdomainId: topicObj.subdomainId });
             });
         }
     }
 
-    // Fill questions - cycle through templates and create variations
+    // Shuffle templates for better distribution across runs
+    for (let i = allTemplates.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allTemplates[i], allTemplates[j]] = [allTemplates[j], allTemplates[i]];
+    }
+
+    // Deterministic prefix pool — 10 distinct contexts
+    const PREFIXES = [
+        'A security analyst needs to determine: ',
+        'During a security audit, the team is asked: ',
+        'A company is reviewing its security posture. ',
+        'In a security assessment scenario, ',
+        'An organization is implementing new security measures. ',
+        'A junior technician asks: ',
+        'For the Security+ exam, you should know: ',
+        'A CTO asks: ',
+        'A security consultant is evaluating controls. ',
+        'During incident investigation, the team must understand: ',
+    ];
+
+    // Deterministic suffix pool — 8 distinct trailing scenarios
+    const SUFFIXES = [
+        ' Which answer BEST applies in an enterprise environment?',
+        ' Which answer is MOST correct according to CompTIA Security+ SY0-701?',
+        ' Which answer applies to a cloud-based deployment?',
+        ' Which answer applies in a regulated industry context?',
+        ' Which answer is MOST relevant for a small business?',
+        ' Which answer aligns with zero-trust principles?',
+        ' Which answer is preferred in a high-availability setup?',
+        ' Which answer applies to an on-premises environment?',
+    ];
+
+    // Track by base template text to prevent semantic duplicates
+    // Key = normalized tmpl.q (all variations of the same template share the same key)
+    const seen_base = new Set();
+
     let templateIdx = 0;
     for (let i = 0; i < domainInfo.count; i++) {
-        const tmpl = allTemplates[templateIdx % allTemplates.length];
+        const tmplBaseIdx = templateIdx % allTemplates.length;
+        const tmpl = allTemplates[tmplBaseIdx];
+        const cycle = Math.floor(templateIdx / allTemplates.length); // 0,1,2,...
         templateIdx++;
 
-        // Create question from template with slight variations for repeats
-        const variation = Math.floor(templateIdx / allTemplates.length);
+        const subdomainId = tmpl.subdomainId || null;
+        const subdomainInfo = subdomainId && require('./subdomains').SUBDOMAINS[subdomainId]
+            ? require('./subdomains').SUBDOMAINS[subdomainId]
+            : { id: subdomainId, name: tmpl.topic };
+
+        // Build a unique key for this (template_text, cycle) pair
+        // Using tmpl.q directly (not index) so shuffle doesn't cause false misses
+        const fullKey = `${cycle}::${tmpl.q}`;
+
+        let questionText;
+
+        if (cycle === 0) {
+            questionText = tmpl.q;
+        } else {
+            // Use deterministic (prefix_idx, suffix_idx) from cycle — guaranteed unique per (template, cycle)
+            const totalCombos = PREFIXES.length * SUFFIXES.length;
+            const comboIdx = (cycle - 1) % totalCombos;
+            const prefixIdx = Math.floor(comboIdx / SUFFIXES.length);
+            const suffixIdx = comboIdx % SUFFIXES.length;
+
+            const prefix = PREFIXES[prefixIdx];
+            const suffix = SUFFIXES[suffixIdx];
+
+            // Lowercase first char of base, strip trailing ? before adding suffix
+            const lowered = tmpl.q.charAt(0).toLowerCase() + tmpl.q.slice(1);
+            const base = lowered.replace(/\?$/, '');
+            questionText = prefix + base + suffix;
+        }
+
+        // Semantic dedup guard: if this (template_text, cycle) was already used, add a variant tag
+        if (seen_base.has(fullKey)) {
+            questionText += ` [Variant ${cycle}-${i}]`;
+        }
+        seen_base.add(fullKey);
+
         let q = {
             id: globalId++,
             domain: dom,
             domainName: domainInfo.name,
+            subdomain_id: subdomainInfo.id,
+            subdomain_name: subdomainInfo.name,
             difficulty: pick(difficulties),
-            question: tmpl.q,
+            weight: 1.0,
+            status: 'active',
+            question: questionText,
             options: [...tmpl.o],
             correctIndex: tmpl.ci,
             hint: tmpl.hint,
-            explanation: { correct: tmpl.ec, incorrect: { ...tmpl.ei } }
+            explanation: {
+                correct: expandAcronyms(tmpl.ec),
+                incorrect: tmpl.ei ? Object.fromEntries(
+                    Object.entries(tmpl.ei).map(([k, v]) => [k, expandAcronyms(v)])
+                ) : {}
+            }
         };
-
-        // For variations beyond first cycle, modify the question slightly
-        if (variation > 0) {
-            const prefixes = [
-                'A security analyst needs to determine: ',
-                'During a security audit, the team is asked: ',
-                'A company is reviewing its security posture. ',
-                'In a security assessment scenario, ',
-                'An organization is implementing new security measures. ',
-                'A junior technician asks: ',
-                'For the Security+ exam, you should know: ',
-                'Which statement is TRUE? ',
-                'A security consultant is asked: ',
-                'During incident investigation, the team must understand: '
-            ];
-            q.question = pick(prefixes) + q.question.charAt(0).toLowerCase() + q.question.slice(1);
-            q.difficulty = pick(difficulties);
-        }
 
         domainQuestions.push(q);
     }

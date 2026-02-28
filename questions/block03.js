@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 61 to 90
+// Security+ SY0-701 - Questions 61 to 90
 // Block 3 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":61,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: which AAA component verifies a user\u0027s identity before granting system access?","options":["Authentication","Accounting","Authorization","Auditing"],"correctIndex":0,"hint":"This is the first step in the AAA process.","explanation":{"correct":"Authentication verifies identity using credentials like passwords, biometrics, or tokens.","incorrect":{"2":"Authorization determines what resources a user can access.","1":"Accounting tracks and logs user activities.","3":"Auditing reviews logs but is not a core AAA component."}}},
-{"id":62,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: after a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible?","options":["Authentication","Authorization","Accounting","Identification"],"correctIndex":1,"hint":"This determines permissions after identity verification.","explanation":{"correct":"Authorization determines what actions and resources a user is permitted to access after authentication.","incorrect":{"2":"Accounting tracks what users do.","0":"Authentication only verifies identity.","3":"Identification is providing a username."}}},
-{"id":63,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: which AAA component tracks and records user activities for audit purposes?","options":["Authorization","Authentication","Access control","Accounting"],"correctIndex":3,"hint":"Think about logging and monitoring user actions.","explanation":{"correct":"Accounting records user activities including login times, resources accessed, and actions taken for auditing.","incorrect":{"2":"Access control is a broader concept.","1":"Authentication verifies identity.","0":"Authorization assigns permissions."}}},
-{"id":64,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: a security guard stationed at a building entrance is an example of which type of security control?","options":["Physical deterrent","Operational corrective","Managerial detective","Technical preventive"],"correctIndex":0,"hint":"Consider both the category and function of this control.","explanation":{"correct":"A security guard is a physical control that also serves as a deterrent by discouraging unauthorized entry.","incorrect":{"2":"Managerial controls are policies and procedures.","1":"Operational corrective controls fix issues after they occur.","3":"Technical controls involve technology like firewalls."}}},
-{"id":65,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control?","options":["Operational deterrent","Physical compensating","Technical preventive","Technical detective"],"correctIndex":3,"hint":"IDS detects threats but does not automatically block them.","explanation":{"correct":"An IDS is a technical control that serves a detective function by identifying threats after they occur.","incorrect":{"2":"Preventive controls stop threats before they happen.","1":"Physical controls involve tangible barriers.","0":"Deterrent controls discourage actions."}}},
-{"id":66,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: a company policy requiring employees to change passwords every 90 days is an example of which control type?","options":["Technical detective","Operational corrective","Managerial preventive","Physical deterrent"],"correctIndex":2,"hint":"Policies are administrative documents.","explanation":{"correct":"Password policies are managerial/administrative controls designed to prevent unauthorized access.","incorrect":{"0":"Technical controls are implemented through technology.","1":"Corrective controls fix issues after they occur.","3":"Physical controls are tangible barriers."}}},
-{"id":67,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: which Zero Trust component is responsible for making access decisions based on policies?","options":["Data Plane","Policy Enforcement Point","Policy Engine","Implicit Trust Zone"],"correctIndex":2,"hint":"This component evaluates policies before granting access.","explanation":{"correct":"The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.","incorrect":{"3":"Implicit Trust Zones contradict Zero Trust principles.","1":"The Policy Enforcement Point enforces the decision but does not make it.","0":"The Data Plane carries the actual traffic."}}},
-{"id":68,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: zero Trust architecture operates on which fundamental principle?","options":["Never trust, always verify","Verify only external traffic","Trust internal networks","Trust but verify"],"correctIndex":0,"hint":"No entity is inherently trusted.","explanation":{"correct":"Zero Trust assumes no implicit trust for any entity, requiring continuous verification regardless of location.","incorrect":{"2":"Zero Trust does NOT trust internal networks.","1":"Zero Trust verifies ALL traffic, not just external.","3":"Trust but verify still implies initial trust, which Zero Trust rejects."}}},
-{"id":69,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: which encryption type uses the SAME key for both encryption and decryption?","options":["Digital signatures","Hashing","Symmetric encryption","Asymmetric encryption"],"correctIndex":2,"hint":"One key serves dual purposes.","explanation":{"correct":"Symmetric encryption (e.g., AES) uses a single shared key for both encryption and decryption.","incorrect":{"3":"Asymmetric encryption uses a key pair (public/private).","1":"Hashing is one-way and does not use keys for decryption.","0":"Digital signatures use asymmetric keys."}}},
-{"id":70,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: which algorithm provides a fixed-length output regardless of input size and is NOT reversible?","options":["Diffie-Hellman","RSA","AES-256","SHA-256"],"correctIndex":3,"hint":"This produces a digest or fingerprint of data.","explanation":{"correct":"SHA-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed.","incorrect":{"2":"AES-256 is a symmetric encryption algorithm that is reversible.","1":"RSA is an asymmetric encryption algorithm.","0":"Diffie-Hellman is a key exchange protocol."}}},
-{"id":71,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: in PKI, which entity issues and manages digital certificates?","options":["CRL","Key escrow","Certificate Authority (CA)","Registration Authority"],"correctIndex":2,"hint":"This is the trusted third party in PKI.","explanation":{"correct":"A Certificate Authority issues, manages, and revokes digital certificates, establishing trust in PKI.","incorrect":{"3":"A Registration Authority verifies identities but does not issue certificates.","1":"Key escrow stores backup copies of keys.","0":"A CRL lists revoked certificates but does not issue them."}}},
-{"id":72,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: which key is used to encrypt data so that only the intended recipient can decrypt it?","options":["Sender\u0027s private key","Recipient\u0027s public key","Recipient\u0027s private key","Sender\u0027s public key"],"correctIndex":1,"hint":"The recipient needs their secret key to decrypt.","explanation":{"correct":"Data is encrypted with the recipient\u0027s public key. Only their corresponding private key can decrypt it.","incorrect":{"2":"The recipient\u0027s private key is used for decryption, not encryption by others.","3":"The sender\u0027s public key would mean anyone with the sender\u0027s private key could decrypt.","0":"The sender\u0027s private key is used for digital signatures, not encrypting for others."}}},
-{"id":73,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: a change management process requires approval before modifications to production systems. Which group typically reviews and approves changes?","options":["Board of Directors","Change Advisory Board (CAB)","Security Operations Center (SOC)","Help Desk"],"correctIndex":1,"hint":"This group evaluates the risk and impact of changes.","explanation":{"correct":"The CAB reviews proposed changes, assesses risks, and approves or rejects them before implementation.","incorrect":{"2":"The SOC monitors for security incidents, not change approval.","3":"Help Desk handles user support tickets.","0":"The Board sets strategy but does not review individual changes."}}},
-{"id":74,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: what is the primary purpose of a gap analysis in security?","options":["Monitor user activity","Encrypt sensitive data","Identify differences between current state and desired security posture","Test network vulnerabilities"],"correctIndex":2,"hint":"It compares where you are to where you need to be.","explanation":{"correct":"Gap analysis identifies the differences between an organization\u0027s current security state and its desired/required security posture.","incorrect":{"3":"Testing network vulnerabilities is vulnerability assessment.","1":"Encrypting data is a security control, not an analysis.","0":"Monitoring user activity is part of security operations."}}},
-{"id":75,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: which of the following BEST describes non-repudiation?","options":["Maintaining system uptime","Ensuring an action cannot be denied by the party who performed it","Preventing unauthorized access to data","Ensuring data remains unchanged"],"correctIndex":1,"hint":"Think about proving someone did something.","explanation":{"correct":"Non-repudiation provides proof of the origin and integrity of data, ensuring that the sender cannot deny having sent a message.","incorrect":{"2":"Preventing unauthorized access is confidentiality.","3":"Ensuring data remains unchanged is integrity.","0":"Maintaining uptime is availability."}}},
-{"id":76,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: which type of cryptographic key should NEVER be shared with anyone?","options":["Private key","Shared key","Session key","Public key"],"correctIndex":0,"hint":"This key must remain secret to maintain security.","explanation":{"correct":"A private key must never be shared. It is used for decryption and digital signatures, and its secrecy is fundamental to asymmetric cryptography.","incorrect":{"2":"Session keys are shared between communicating parties during a session.","1":"Shared keys are exchanged between authorized parties in symmetric encryption.","3":"Public keys are designed to be shared openly."}}},
-{"id":77,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: which security control is implemented to fix or restore systems after a security incident?","options":["Detective control","Preventive control","Corrective control","Deterrent control"],"correctIndex":2,"hint":"Think about what happens AFTER an incident.","explanation":{"correct":"Corrective controls restore systems to normal operation after an incident, such as patching, restoring from backup, or reimaging.","incorrect":{"3":"Deterrent controls discourage potential attackers.","1":"Preventive controls stop incidents before they occur.","0":"Detective controls identify incidents as they happen."}}},
-{"id":78,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: an organization deploys security cameras around its perimeter. These cameras PRIMARILY function as which two types of controls?","options":["Managerial and corrective","Technical and preventive","Operational and compensating","Physical and detective"],"correctIndex":3,"hint":"Cameras are tangible and they record/identify events.","explanation":{"correct":"Security cameras are physical controls (tangible devices) that serve a detective function (recording events for later review).","incorrect":{"2":"Cameras are physical devices, not operational procedures.","1":"Cameras are physical, not purely technical. They detect, not prevent.","0":"Cameras are not policies (managerial) and they do not correct issues."}}},
-{"id":79,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"During a security audit, the team is asked: diffie-Hellman is BEST described as a:","options":["Digital signature algorithm","Symmetric encryption algorithm","Key exchange protocol","Hashing algorithm"],"correctIndex":2,"hint":"It allows two parties to establish a shared secret.","explanation":{"correct":"Diffie-Hellman enables two parties to securely establish a shared secret key over an insecure channel without transmitting the key itself.","incorrect":{"3":"Hashing produces a digest; DH establishes shared keys.","1":"Symmetric encryption uses a shared key but DH is not encryption itself.","0":"Digital signatures use asymmetric keys for verification; DH exchanges keys."}}},
-{"id":80,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"During a security audit, the team is asked: which of the following is an example of something you ARE in multi-factor authentication?","options":["Fingerprint scan","Password","Smart card","PIN"],"correctIndex":0,"hint":"Think biometrics.","explanation":{"correct":"A fingerprint scan is a biometric factor (something you are) used in multi-factor authentication.","incorrect":{"2":"A smart card is something you have.","1":"A password is something you know.","3":"A PIN is something you know."}}},
-{"id":81,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"During a security audit, the team is asked: what process ensures that all changes to a system are documented, reviewed, and approved before implementation?","options":["Vulnerability management","Incident response","Change management","Risk assessment"],"correctIndex":2,"hint":"This formalizes how modifications are handled.","explanation":{"correct":"Change management provides a structured process to evaluate, approve, implement, and document changes to minimize risk.","incorrect":{"3":"Risk assessment evaluates threats and their potential impact.","1":"Incident response handles security events after they occur.","0":"Vulnerability management identifies and remediates weaknesses."}}},
-{"id":82,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A company is reviewing its security posture. a company wants to ensure that only authorized personnel can access sensitive customer data. Which element of the CIA triad is the company primarily addressing?","options":["Non-repudiation","Integrity","Availability","Confidentiality"],"correctIndex":3,"hint":"This element focuses on preventing unauthorized access to data.","explanation":{"correct":"Confidentiality ensures that data is accessible only to authorized individuals through mechanisms like encryption and access controls.","incorrect":{"2":"Availability ensures systems and data are accessible when needed.","1":"Integrity focuses on data accuracy and preventing unauthorized modifications.","0":"Non-repudiation is not part of the CIA triad."}}},
-{"id":83,"domain":1,"domainName":"General Security Concepts","difficulty":"hard","question":"A company is reviewing its security posture. which of the following technologies BEST supports confidentiality?","options":["AES-256 encryption","RAID arrays","UPS systems","Load balancers"],"correctIndex":0,"hint":"Think about what prevents unauthorized data access.","explanation":{"correct":"AES-256 encryption protects data confidentiality by making it unreadable without the proper key.","incorrect":{"2":"UPS systems provide power backup for availability.","1":"RAID arrays provide data redundancy for availability.","3":"Load balancers distribute traffic for availability."}}},
-{"id":84,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. an employee accidentally sends a file containing PII to an unauthorized recipient. Which CIA principle was violated?","options":["Authentication","Integrity","Availability","Confidentiality"],"correctIndex":3,"hint":"Unauthorized access to data relates to which principle?","explanation":{"correct":"Confidentiality was violated because PII was disclosed to an unauthorized person.","incorrect":{"2":"Availability relates to system uptime.","1":"Integrity would be violated if the data was modified.","0":"Authentication is about verifying identity."}}},
-{"id":85,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. a hacker modifies financial records in a database without authorization. Which element of the CIA triad has been compromised?","options":["Accountability","Availability","Confidentiality","Integrity"],"correctIndex":3,"hint":"This involves unauthorized modification of data.","explanation":{"correct":"Integrity ensures data remains accurate and unaltered. Unauthorized modification directly violates this principle.","incorrect":{"2":"Confidentiality involves unauthorized viewing, not modification.","1":"Availability relates to system uptime.","0":"Accountability tracks user actions but is not a CIA triad element."}}},
-{"id":86,"domain":1,"domainName":"General Security Concepts","difficulty":"medium","question":"A company is reviewing its security posture. which of the following BEST ensures data integrity during transmission?","options":["Firewalls","Hashing algorithms","Access control lists","VPN tunnels"],"correctIndex":1,"hint":"Think about verifying data has not been tampered with.","explanation":{"correct":"Hashing algorithms like SHA-256 create a digest that can verify data has not been modified during transit.","incorrect":{"2":"ACLs control access permissions, not data integrity.","0":"Firewalls filter network traffic but do not verify data integrity.","3":"VPNs encrypt data in transit but do not inherently verify integrity."}}},
-{"id":87,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. a DDoS attack brings down a company\u0027s web server. Which CIA triad element is primarily affected?","options":["Confidentiality","Availability","Integrity","Non-repudiation"],"correctIndex":1,"hint":"The server is unable to serve legitimate requests.","explanation":{"correct":"Availability is compromised when systems become inaccessible to legitimate users.","incorrect":{"2":"Integrity involves unauthorized data modification.","0":"Confidentiality involves unauthorized data access.","3":"Non-repudiation is about proving actions occurred."}}},
-{"id":88,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. which AAA component verifies a user\u0027s identity before granting system access?","options":["Auditing","Accounting","Authentication","Authorization"],"correctIndex":2,"hint":"This is the first step in the AAA process.","explanation":{"correct":"Authentication verifies identity using credentials like passwords, biometrics, or tokens.","incorrect":{"3":"Authorization determines what resources a user can access.","1":"Accounting tracks and logs user activities.","0":"Auditing reviews logs but is not a core AAA component."}}},
-{"id":89,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. after a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible?","options":["Authentication","Identification","Authorization","Accounting"],"correctIndex":2,"hint":"This determines permissions after identity verification.","explanation":{"correct":"Authorization determines what actions and resources a user is permitted to access after authentication.","incorrect":{"0":"Authentication only verifies identity.","1":"Identification is providing a username.","3":"Accounting tracks what users do."}}},
-{"id":90,"domain":1,"domainName":"General Security Concepts","difficulty":"easy","question":"A company is reviewing its security posture. which AAA component tracks and records user activities for audit purposes?","options":["Accounting","Authentication","Access control","Authorization"],"correctIndex":0,"hint":"Think about logging and monitoring user actions.","explanation":{"correct":"Accounting records user activities including login times, resources accessed, and actions taken for auditing.","incorrect":{"2":"Access control is a broader concept.","1":"Authentication verifies identity.","3":"Authorization assigns permissions."}}}
+{
+  "id": 61,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 62,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 63,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Version Control in the context of Change Management Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Change Management that ensures Version Control functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Version Control relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Version Control is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Version Control is directly related to Change Management.",
+      "2": "Version Control works alongside other components, it does not replace them.",
+      "3": "Version Control is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 64,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which algorithm provides a fixed-length output regardless of input size and is NOT reversible Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "SHA-256",
+    "AES-256",
+    "RSA",
+    "Diffie-Hellman"
+  ],
+  "correctIndex": 0,
+  "hint": "This produces a digest or fingerprint of data.",
+  "explanation": {
+    "correct": "Secure Hash Algorithm (SHA)-256 is a hashing algorithm that produces a fixed 256-bit output and cannot be reversed to obtain the original input.",
+    "incorrect": {
+      "1": "Advanced Encryption Standard (AES)-256 is a symmetric encryption algorithm that is reversible with the key.",
+      "2": "Rivest–Shamir–Adleman (RSA) is an asymmetric encryption algorithm used for encryption and signatures.",
+      "3": "Diffie-Hellman is a key exchange protocol, not a hashing algorithm."
+    }
+  }
+},
+{
+  "id": 65,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 66,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 67,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption Which answer BEST applies in an enterprise environment? [Variant 1-66]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 68,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-67]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 69,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-68]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 70,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following technologies BEST supports confidentiality Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "AES-256 encryption",
+    "RAID arrays",
+    "Load balancers",
+    "UPS systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about what prevents unauthorized data access.",
+  "explanation": {
+    "correct": "Advanced Encryption Standard (AES)-256 encryption protects data confidentiality by making it unreadable without the proper key.",
+    "incorrect": {
+      "1": "Redundant Array of Independent Disks (RAID) arrays provide data redundancy for availability.",
+      "2": "Load balancers distribute traffic for availability.",
+      "3": "UPS systems provide power backup for availability."
+    }
+  }
+},
+{
+  "id": 71,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-70]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 72,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.5",
+  "subdomain_name": "Change Management Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Change Advisory Board in the context of Change Management Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Change Management that ensures Change Advisory Board functionality",
+    "It is unrelated to Change Management",
+    "It replaces all other aspects of Change Management",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Change Advisory Board relates to the broader concept of Change Management.",
+  "explanation": {
+    "correct": "Change Advisory Board is indeed a key component of Change Management and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Change Advisory Board is directly related to Change Management.",
+      "2": "Change Advisory Board works alongside other components, it does not replace them.",
+      "3": "Change Advisory Board is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 73,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-72]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 74,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-73]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 75,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-74]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 76,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-75]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 77,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: an employee accidentally sends a file containing PII to an unauthorized recipient. Which CIA principle was violated Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Confidentiality",
+    "Integrity",
+    "Availability",
+    "Authentication"
+  ],
+  "correctIndex": 0,
+  "hint": "Unauthorized access to data relates to which principle?",
+  "explanation": {
+    "correct": "Confidentiality was violated because Personally Identifiable Information (PII) was disclosed to an unauthorized person.",
+    "incorrect": {
+      "1": "Integrity would be violated if the data was modified.",
+      "2": "Availability relates to system uptime, not data disclosure.",
+      "3": "Authentication is about verifying identity, not data exposure."
+    }
+  }
+},
+{
+  "id": 78,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-77]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 79,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.6",
+  "subdomain_name": "Gap Analysis",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Security Baseline in the context of Gap Analysis Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Gap Analysis that ensures Security Baseline functionality",
+    "It is unrelated to Gap Analysis",
+    "It replaces all other aspects of Gap Analysis",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Security Baseline relates to the broader concept of Gap Analysis.",
+  "explanation": {
+    "correct": "Security Baseline is indeed a key component of Gap Analysis and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Security Baseline is directly related to Gap Analysis.",
+      "2": "Security Baseline works alongside other components, it does not replace them.",
+      "3": "Security Baseline is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 80,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-79]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 81,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-80]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+},
+{
+  "id": 82,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which AAA component verifies a user's identity before granting system access Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Authentication",
+    "Authorization",
+    "Accounting",
+    "Auditing"
+  ],
+  "correctIndex": 0,
+  "hint": "This is the first step in the AAA process.",
+  "explanation": {
+    "correct": "Authentication verifies identity using credentials like passwords, biometrics, or tokens before any access is granted.",
+    "incorrect": {
+      "1": "Authorization determines what resources an authenticated user can access.",
+      "2": "Accounting tracks and logs user activities after authentication.",
+      "3": "Auditing reviews logs but is not a core Authentication, Authorization, and Accounting (AAA) component."
+    }
+  }
+},
+{
+  "id": 83,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which AAA component verifies a user's identity before granting system access Which answer BEST applies in an enterprise environment? [Variant 1-82]",
+  "options": [
+    "Authentication",
+    "Authorization",
+    "Accounting",
+    "Auditing"
+  ],
+  "correctIndex": 0,
+  "hint": "This is the first step in the AAA process.",
+  "explanation": {
+    "correct": "Authentication verifies identity using credentials like passwords, biometrics, or tokens before any access is granted.",
+    "incorrect": {
+      "1": "Authorization determines what resources an authenticated user can access.",
+      "2": "Accounting tracks and logs user activities after authentication.",
+      "3": "Auditing reviews logs but is not a core Authentication, Authorization, and Accounting (AAA) component."
+    }
+  }
+},
+{
+  "id": 84,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.4",
+  "subdomain_name": "Zero Trust Architecture",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which Zero Trust component is responsible for making access decisions based on policies Which answer BEST applies in an enterprise environment? [Variant 1-83]",
+  "options": [
+    "Policy Engine",
+    "Policy Enforcement Point",
+    "Data Plane",
+    "Control Plane"
+  ],
+  "correctIndex": 0,
+  "hint": "This component evaluates policies before granting access.",
+  "explanation": {
+    "correct": "The Policy Engine evaluates access requests against defined security policies to make allow/deny decisions.",
+    "incorrect": {
+      "1": "The Policy Enforcement Point enforces the decision but doesn't make it.",
+      "2": "The Data Plane carries the actual traffic.",
+      "3": "The Control Plane is the overall framework, not the specific decision maker."
+    }
+  }
+},
+{
+  "id": 85,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: after a user logs in, the system determines they can only read files but not modify them. Which AAA component is responsible Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Authorization",
+    "Authentication",
+    "Accounting",
+    "Identification"
+  ],
+  "correctIndex": 0,
+  "hint": "This determines permissions after identity verification.",
+  "explanation": {
+    "correct": "Authorization determines what actions and resources a user is permitted to access after authentication.",
+    "incorrect": {
+      "1": "Authentication only verifies identity; it does not assign permissions.",
+      "2": "Accounting tracks what users do; it does not assign permissions.",
+      "3": "Identification is providing a username; it does not assign permissions."
+    }
+  }
+},
+{
+  "id": 86,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.2",
+  "subdomain_name": "Cryptography Concepts",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which encryption type uses the SAME key for both encryption and decryption Which answer BEST applies in an enterprise environment? [Variant 1-85]",
+  "options": [
+    "Symmetric encryption",
+    "Asymmetric encryption",
+    "Hashing",
+    "Digital signatures"
+  ],
+  "correctIndex": 0,
+  "hint": "One key serves dual purposes.",
+  "explanation": {
+    "correct": "Symmetric encryption (e.g., Advanced Encryption Standard (AES)) uses a single shared key for both encryption and decryption, making it fast but requiring secure key distribution.",
+    "incorrect": {
+      "1": "Asymmetric encryption uses a key pair (public/private).",
+      "2": "Hashing is one-way and does not use keys for decryption.",
+      "3": "Digital signatures use asymmetric keys for verification, not shared keys."
+    }
+  }
+},
+{
+  "id": 87,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-86]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 88,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security guard stationed at a building entrance is an example of which type of security control Which answer BEST applies in an enterprise environment? [Variant 1-87]",
+  "options": [
+    "Physical deterrent",
+    "Technical preventive",
+    "Managerial detective",
+    "Operational corrective"
+  ],
+  "correctIndex": 0,
+  "hint": "Consider both the category and function of this control.",
+  "explanation": {
+    "correct": "A security guard is a physical control (tangible) that also serves as a deterrent by discouraging unauthorized entry.",
+    "incorrect": {
+      "1": "Technical controls involve technology like firewalls and encryption.",
+      "2": "Managerial controls are policies and procedures, not physical presence.",
+      "3": "Operational corrective controls fix issues after they occur."
+    }
+  }
+},
+{
+  "id": 89,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.3",
+  "subdomain_name": "AAA Framework",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which AAA component verifies a user's identity before granting system access Which answer BEST applies in an enterprise environment? [Variant 1-88]",
+  "options": [
+    "Authentication",
+    "Authorization",
+    "Accounting",
+    "Auditing"
+  ],
+  "correctIndex": 0,
+  "hint": "This is the first step in the AAA process.",
+  "explanation": {
+    "correct": "Authentication verifies identity using credentials like passwords, biometrics, or tokens before any access is granted.",
+    "incorrect": {
+      "1": "Authorization determines what resources an authenticated user can access.",
+      "2": "Accounting tracks and logs user activities after authentication.",
+      "3": "Auditing reviews logs but is not a core Authentication, Authorization, and Accounting (AAA) component."
+    }
+  }
+},
+{
+  "id": 90,
+  "domain": 1,
+  "domainName": "General Security Concepts",
+  "subdomain_id": "1.1",
+  "subdomain_name": "Security Controls",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: an IDS that alerts administrators of suspicious network activity is BEST classified as which type of control Which answer BEST applies in an enterprise environment? [Variant 1-89]",
+  "options": [
+    "Technical detective",
+    "Technical preventive",
+    "Operational deterrent",
+    "Physical compensating"
+  ],
+  "correctIndex": 0,
+  "hint": "IDS detects threats but does not automatically block them.",
+  "explanation": {
+    "correct": "An Intrusion Detection System (IDS) is a technical control (uses technology) that serves a detective function (identifies threats after they occur).",
+    "incorrect": {
+      "1": "Preventive controls stop threats before they happen; an Intrusion Detection System (IDS) only detects.",
+      "2": "Deterrent controls discourage actions; an Intrusion Detection System (IDS) detects them.",
+      "3": "Physical controls involve tangible barriers, not software."
+    }
+  }
+}
 ]);

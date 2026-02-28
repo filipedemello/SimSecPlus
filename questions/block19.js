@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 541 to 570
+// Security+ SY0-701 - Questions 541 to 570
 // Block 19 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":541,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A company is reviewing its security posture. which solution provides continuous monitoring and response for endpoint devices?","options":["EDR","IPS","SIEM","NAC"],"correctIndex":0,"hint":"It focuses on laptops, desktops, and servers.","explanation":{"correct":"EDR continuously monitors endpoints for suspicious behavior and provides automated response.","incorrect":{"2":"SIEM aggregates logs from all sources.","1":"IPS monitors network-level threats.","3":"NAC controls network access."}}},
-{"id":542,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A company is reviewing its security posture. a security tool correctly identifies a real attack. This is classified as a:","options":["False negative","True positive","False positive","True negative"],"correctIndex":1,"hint":"The alert is correct and there IS a real threat.","explanation":{"correct":"A true positive occurs when a security tool correctly identifies a real threat.","incorrect":{"2":"A false positive is a false alarm.","3":"A true negative correctly identifies normal activity.","0":"A false negative misses a real threat."}}},
-{"id":543,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A company is reviewing its security posture. a security tool fails to detect an actual attack. This is a:","options":["True positive","False negative","False positive","True negative"],"correctIndex":1,"hint":"A real threat was missed.","explanation":{"correct":"A false negative occurs when a security tool fails to detect a genuine threat.","incorrect":{"2":"A false positive incorrectly alerts on normal activity.","3":"A true negative correctly identifies normal activity.","0":"A true positive correctly detects a real threat."}}},
-{"id":544,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A company is reviewing its security posture. the process of creating an exact bit-for-bit copy of a hard drive for forensic analysis is:","options":["Log analysis","Memory dump","Disk imaging","Data carving"],"correctIndex":2,"hint":"An exact replica of the entire disk.","explanation":{"correct":"Disk imaging creates an exact forensic copy preserving all data including deleted files and slack space.","incorrect":{"3":"Data carving extracts files from unallocated space.","1":"Memory dump captures RAM contents.","0":"Log analysis reviews event records."}}},
-{"id":545,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A company is reviewing its security posture. in digital forensics, which practice ensures evidence has not been tampered with?","options":["Write blocker","Legal hold","Disk imaging","Chain of custody"],"correctIndex":3,"hint":"It tracks who handled the evidence and when.","explanation":{"correct":"Chain of custody documents every person who handled evidence, ensuring its integrity for legal proceedings.","incorrect":{"2":"Disk imaging creates copies but doesn\u0027t track handling.","1":"Legal hold preserves data but doesn\u0027t track handling.","0":"Write blockers prevent modification but don\u0027t document handling."}}},
-{"id":546,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A company is reviewing its security posture. which device prevents modification of original evidence during forensic analysis?","options":["Write blocker","Firewall","IDS","Faraday cage"],"correctIndex":0,"hint":"It allows reading but prevents writing.","explanation":{"correct":"A write blocker allows forensic examiners to read data from a disk without accidentally modifying the evidence.","incorrect":{"2":"An IDS detects suspicious activity.","1":"A firewall filters network traffic.","3":"A Faraday cage blocks electromagnetic signals."}}},
-{"id":547,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A company is reviewing its security posture. which access control model uses security labels and clearance levels?","options":["ABAC","MAC (Mandatory Access Control)","DAC","RBAC"],"correctIndex":1,"hint":"Think military-style classification levels.","explanation":{"correct":"MAC uses security labels (Top Secret, Secret, etc.) and clearance levels assigned by administrators.","incorrect":{"2":"DAC allows owners to set permissions at their discretion.","3":"RBAC uses roles, not security labels.","0":"ABAC uses dynamic attributes for decisions."}}},
-{"id":548,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A company is reviewing its security posture. which identity federation protocol uses XML-based assertions for SSO?","options":["SAML","OAuth","OpenID Connect","LDAP"],"correctIndex":0,"hint":"It\u0027s XML-based and commonly used in enterprise SSO.","explanation":{"correct":"SAML (Security Assertion Markup Language) uses XML assertions to exchange authentication data between parties.","incorrect":{"2":"OpenID Connect uses JSON-based tokens.","1":"OAuth is an authorization framework, not authentication.","3":"LDAP is a directory service protocol."}}},
-{"id":549,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A company is reviewing its security posture. which framework is specifically designed for authorization, not authentication?","options":["LDAP","OAuth","SAML","Kerberos"],"correctIndex":1,"hint":"It grants access tokens for resources.","explanation":{"correct":"OAuth is an authorization framework that grants limited access to resources without sharing credentials.","incorrect":{"2":"SAML handles authentication and SSO.","3":"Kerberos provides ticket-based authentication.","0":"LDAP provides directory services."}}},
-{"id":550,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A company is reviewing its security posture. what is the primary purpose of a SIEM correlation rule?","options":["Encrypt sensitive data","Manage user accounts","Block malicious traffic","Identify patterns across multiple log sources that indicate threats"],"correctIndex":3,"hint":"It connects events from different sources.","explanation":{"correct":"Correlation rules analyze events from multiple sources to identify patterns that indicate a security incident.","incorrect":{"2":"Blocking traffic is done by firewalls/IPS.","1":"Account management is done by IAM systems.","0":"Encryption is a separate control."}}},
-{"id":551,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A company is reviewing its security posture. which hardening technique involves removing unnecessary services and applications?","options":["Encryption","Attack surface reduction","Log monitoring","Network segmentation"],"correctIndex":1,"hint":"Fewer services mean fewer potential vulnerabilities.","explanation":{"correct":"Removing unnecessary services reduces the attack surface by eliminating potential entry points.","incorrect":{"2":"Log monitoring detects issues but doesn\u0027t reduce attack surface.","0":"Encryption protects data but doesn\u0027t reduce the attack surface.","3":"Segmentation isolates network sections."}}},
-{"id":552,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A company is reviewing its security posture. an organization uses CIS Benchmarks to configure its servers securely. This is an example of:","options":["Risk transfer","Incident response","Vulnerability scanning","System hardening"],"correctIndex":3,"hint":"CIS provides secure configuration guidelines.","explanation":{"correct":"CIS Benchmarks provide detailed hardening guidelines for secure system configuration.","incorrect":{"2":"Vulnerability scanning identifies weaknesses.","1":"Incident response handles security events.","0":"Risk transfer shifts risk to third parties."}}},
-{"id":553,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"In a security assessment scenario, which technology aggregates logs from multiple sources to detect security incidents?","options":["EDR","SIEM","SOAR","IDS"],"correctIndex":1,"hint":"It collects, correlates, and analyzes log data.","explanation":{"correct":"A SIEM collects logs from multiple sources and uses correlation rules to identify threats.","incorrect":{"2":"SOAR automates incident response.","3":"IDS monitors network traffic.","0":"EDR monitors endpoints."}}},
-{"id":554,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"In a security assessment scenario, which solution automates incident response playbooks and orchestrates security tools?","options":["SIEM","SOAR","EDR","NAC"],"correctIndex":1,"hint":"Think automation and orchestration.","explanation":{"correct":"SOAR automates repetitive security tasks and orchestrates multiple security tools.","incorrect":{"2":"EDR is endpoint-specific.","0":"SIEM aggregates logs but doesn\u0027t automate response.","3":"NAC controls network access."}}},
-{"id":555,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, which scoring system rates vulnerability severity on a scale of 0 to 10?","options":["CVSS","CPE","CWE","CVE"],"correctIndex":0,"hint":"It provides a numerical severity score.","explanation":{"correct":"CVSS rates vulnerabilities 0-10 based on impact and exploitability.","incorrect":{"2":"CWE categorizes weakness types.","1":"CPE identifies software products.","3":"CVE is an identifier (e.g., CVE-2024-1234)."}}},
-{"id":556,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, a security team is authorized to attempt to exploit vulnerabilities. This is:","options":["Penetration testing","Vulnerability scanning","Risk assessment","Compliance audit"],"correctIndex":0,"hint":"Active, authorized exploitation attempts.","explanation":{"correct":"Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities.","incorrect":{"2":"Risk assessment evaluates overall risk.","1":"Vulnerability scanning identifies but does not exploit.","3":"Compliance audits check adherence to standards."}}},
-{"id":557,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"In a security assessment scenario, what is the CORRECT first phase of incident response?","options":["Containment","Detection","Eradication","Preparation"],"correctIndex":3,"hint":"Teams must be ready before incidents occur.","explanation":{"correct":"Preparation is always the first IR phase: establishing policies, teams, tools, and procedures.","incorrect":{"2":"Eradication occurs after containment.","1":"Detection comes after preparation.","0":"Containment follows detection and analysis."}}},
-{"id":558,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, during which IR phase are infected systems isolated?","options":["Containment","Recovery","Detection","Eradication"],"correctIndex":0,"hint":"The goal is to stop the spread.","explanation":{"correct":"Containment isolates affected systems to prevent the incident from spreading.","incorrect":{"2":"Detection identifies the incident.","1":"Recovery restores systems after eradication.","3":"Eradication removes the threat after containment."}}},
-{"id":559,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, which authentication method requires multiple DIFFERENT types of verification factors?","options":["RADIUS","SSO","MFA","LDAP"],"correctIndex":2,"hint":"Something you know, have, and/or are.","explanation":{"correct":"MFA requires two or more different authentication factors.","incorrect":{"3":"LDAP is a directory service protocol.","1":"SSO provides single sign-on, not multiple factors.","0":"RADIUS is an authentication protocol."}}},
-{"id":560,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, which protocol allows logging in once to access multiple applications?","options":["MFA","SSO","RADIUS","TACACS+"],"correctIndex":1,"hint":"One login, many applications.","explanation":{"correct":"SSO enables users to authenticate once and access multiple applications.","incorrect":{"2":"RADIUS authenticates but doesn\u0027t provide SSO.","0":"MFA requires multiple factors but doesn\u0027t provide SSO.","3":"TACACS+ is for network device authentication."}}},
-{"id":561,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, which access control model assigns permissions based on job function?","options":["ABAC","DAC","MAC","RBAC"],"correctIndex":3,"hint":"Permissions are tied to roles.","explanation":{"correct":"RBAC assigns permissions based on organizational roles.","incorrect":{"2":"MAC uses security labels and clearances.","1":"DAC allows owners to set permissions.","0":"ABAC uses dynamic attributes."}}},
-{"id":562,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, which solution provides continuous monitoring and response for endpoint devices?","options":["SIEM","NAC","IPS","EDR"],"correctIndex":3,"hint":"It focuses on laptops, desktops, and servers.","explanation":{"correct":"EDR continuously monitors endpoints for suspicious behavior and provides automated response.","incorrect":{"2":"IPS monitors network-level threats.","1":"NAC controls network access.","0":"SIEM aggregates logs from all sources."}}},
-{"id":563,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, a security tool correctly identifies a real attack. This is classified as a:","options":["False negative","False positive","True positive","True negative"],"correctIndex":2,"hint":"The alert is correct and there IS a real threat.","explanation":{"correct":"A true positive occurs when a security tool correctly identifies a real threat.","incorrect":{"3":"A true negative correctly identifies normal activity.","1":"A false positive is a false alarm.","0":"A false negative misses a real threat."}}},
-{"id":564,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, a security tool fails to detect an actual attack. This is a:","options":["False positive","True negative","True positive","False negative"],"correctIndex":3,"hint":"A real threat was missed.","explanation":{"correct":"A false negative occurs when a security tool fails to detect a genuine threat.","incorrect":{"2":"A true positive correctly detects a real threat.","1":"A true negative correctly identifies normal activity.","0":"A false positive incorrectly alerts on normal activity."}}},
-{"id":565,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, the process of creating an exact bit-for-bit copy of a hard drive for forensic analysis is:","options":["Memory dump","Data carving","Log analysis","Disk imaging"],"correctIndex":3,"hint":"An exact replica of the entire disk.","explanation":{"correct":"Disk imaging creates an exact forensic copy preserving all data including deleted files and slack space.","incorrect":{"2":"Log analysis reviews event records.","1":"Data carving extracts files from unallocated space.","0":"Memory dump captures RAM contents."}}},
-{"id":566,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, in digital forensics, which practice ensures evidence has not been tampered with?","options":["Legal hold","Write blocker","Disk imaging","Chain of custody"],"correctIndex":3,"hint":"It tracks who handled the evidence and when.","explanation":{"correct":"Chain of custody documents every person who handled evidence, ensuring its integrity for legal proceedings.","incorrect":{"2":"Disk imaging creates copies but doesn\u0027t track handling.","1":"Write blockers prevent modification but don\u0027t document handling.","0":"Legal hold preserves data but doesn\u0027t track handling."}}},
-{"id":567,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, which device prevents modification of original evidence during forensic analysis?","options":["IDS","Write blocker","Firewall","Faraday cage"],"correctIndex":1,"hint":"It allows reading but prevents writing.","explanation":{"correct":"A write blocker allows forensic examiners to read data from a disk without accidentally modifying the evidence.","incorrect":{"2":"A firewall filters network traffic.","3":"A Faraday cage blocks electromagnetic signals.","0":"An IDS detects suspicious activity."}}},
-{"id":568,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"In a security assessment scenario, which access control model uses security labels and clearance levels?","options":["DAC","RBAC","ABAC","MAC (Mandatory Access Control)"],"correctIndex":3,"hint":"Think military-style classification levels.","explanation":{"correct":"MAC uses security labels (Top Secret, Secret, etc.) and clearance levels assigned by administrators.","incorrect":{"2":"ABAC uses dynamic attributes for decisions.","1":"RBAC uses roles, not security labels.","0":"DAC allows owners to set permissions at their discretion."}}},
-{"id":569,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"In a security assessment scenario, which identity federation protocol uses XML-based assertions for SSO?","options":["OAuth","LDAP","SAML","OpenID Connect"],"correctIndex":2,"hint":"It\u0027s XML-based and commonly used in enterprise SSO.","explanation":{"correct":"SAML (Security Assertion Markup Language) uses XML assertions to exchange authentication data between parties.","incorrect":{"0":"OAuth is an authorization framework, not authentication.","1":"LDAP is a directory service protocol.","3":"OpenID Connect uses JSON-based tokens."}}},
-{"id":570,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, which framework is specifically designed for authorization, not authentication?","options":["OAuth","Kerberos","SAML","LDAP"],"correctIndex":0,"hint":"It grants access tokens for resources.","explanation":{"correct":"OAuth is an authorization framework that grants limited access to resources without sharing credentials.","incorrect":{"2":"SAML handles authentication and SSO.","1":"Kerberos provides ticket-based authentication.","3":"LDAP provides directory services."}}}
+{
+  "id": 541,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which authentication method requires MULTIPLE different types of verification factors? [Variant 0-72]",
+  "options": [
+    "MFA (Multi-Factor Authentication)",
+    "SSO",
+    "LDAP",
+    "RADIUS"
+  ],
+  "correctIndex": 0,
+  "hint": "Something you know, have, and/or are.",
+  "explanation": {
+    "correct": "Multi-Factor Authentication (MFA) requires two or more different authentication factors: something you know, something you have, and/or something you are.",
+    "incorrect": {
+      "1": "Single Sign-On (SSO) allows one login for multiple applications but doesn't require multiple factors.",
+      "2": "Lightweight Directory Access Protocol (LDAP) is a directory service protocol, not an authentication method requiring multiple factors.",
+      "3": "Remote Authentication Dial-In User Service (RADIUS) is an authentication protocol but doesn't inherently require multiple factors."
+    }
+  }
+},
+{
+  "id": 542,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which scoring system rates the severity of security vulnerabilities on a scale of 0 to 10? [Variant 0-73]",
+  "options": [
+    "CVSS",
+    "CVE",
+    "CWE",
+    "CPE"
+  ],
+  "correctIndex": 0,
+  "hint": "It provides a numerical severity score.",
+  "explanation": {
+    "correct": "Common Vulnerability Scoring System (CVSS) (Common Vulnerability Scoring System) rates vulnerabilities 0-10 based on impact, exploitability, and other factors.",
+    "incorrect": {
+      "1": "Common Vulnerabilities and Exposures (CVE) is an identifier system (e.g., CVE-2024-1234), not a scoring system.",
+      "2": "Common Weakness Enumeration (CWE) categorizes software weakness types, not severity scores.",
+      "3": "CPE identifies specific software products, not vulnerability severity."
+    }
+  }
+},
+{
+  "id": 543,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which protocol allows a user to log in once and access multiple applications without re-authenticating? [Variant 0-74]",
+  "options": [
+    "SSO (Single Sign-On)",
+    "MFA",
+    "RADIUS",
+    "TACACS+"
+  ],
+  "correctIndex": 0,
+  "hint": "One login, many applications.",
+  "explanation": {
+    "correct": "Single Sign-On (SSO) enables users to authenticate once and gain access to multiple related applications without repeated logins.",
+    "incorrect": {
+      "1": "Multi-Factor Authentication (MFA) requires multiple authentication factors but doesn't provide single sign-on.",
+      "2": "Remote Authentication Dial-In User Service (RADIUS) authenticates users but doesn't inherently provide Single Sign-On (SSO).",
+      "3": "Terminal Access Controller Access Control System (TACACS)+ provides authentication for network devices, not Single Sign-On (SSO) for applications."
+    }
+  }
+},
+{
+  "id": 544,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which protocol allows a user to log in once and access multiple applications without re-authenticating? [Variant 0-75]",
+  "options": [
+    "SSO (Single Sign-On)",
+    "MFA",
+    "RADIUS",
+    "TACACS+"
+  ],
+  "correctIndex": 0,
+  "hint": "One login, many applications.",
+  "explanation": {
+    "correct": "Single Sign-On (SSO) enables users to authenticate once and gain access to multiple related applications without repeated logins.",
+    "incorrect": {
+      "1": "Multi-Factor Authentication (MFA) requires multiple authentication factors but doesn't provide single sign-on.",
+      "2": "Remote Authentication Dial-In User Service (RADIUS) authenticates users but doesn't inherently provide Single Sign-On (SSO).",
+      "3": "Terminal Access Controller Access Control System (TACACS)+ provides authentication for network devices, not Single Sign-On (SSO) for applications."
+    }
+  }
+},
+{
+  "id": 545,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices? [Variant 0-76]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 546,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security tool generates an alert for a legitimate attack that is actually occurring. This is classified as a: [Variant 0-77]",
+  "options": [
+    "True positive",
+    "False positive",
+    "True negative",
+    "False negative"
+  ],
+  "correctIndex": 0,
+  "hint": "The alert is correct – there IS a real threat.",
+  "explanation": {
+    "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
+    "incorrect": {
+      "1": "A false positive alerts on a non-existent threat (false alarm).",
+      "2": "A true negative correctly identifies normal activity as safe.",
+      "3": "A false negative fails to detect an actual threat (missed detection)."
+    }
+  }
+},
+{
+  "id": 547,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Timeline Analysis in the context of Digital Forensics?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Timeline Analysis functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Timeline Analysis relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Timeline Analysis is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Timeline Analysis is directly related to Digital Forensics.",
+      "2": "Timeline Analysis works alongside other components, it does not replace them.",
+      "3": "Timeline Analysis is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 548,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "What is the CORRECT order of the incident response phases? [Variant 0-79]",
+  "options": [
+    "Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons Learned",
+    "Detection, Preparation, Containment, Recovery, Eradication, Lessons Learned",
+    "Containment, Detection, Analysis, Eradication, Recovery, Preparation",
+    "Analysis, Detection, Containment, Preparation, Recovery, Eradication"
+  ],
+  "correctIndex": 0,
+  "hint": "Preparation always comes first.",
+  "explanation": {
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "incorrect": {
+      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "2": "Containment requires detection first; you must find the threat before containing it.",
+      "3": "Analysis follows detection, and preparation must come before any response."
+    }
+  }
+},
+{
+  "id": 549,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "What is the CORRECT order of the incident response phases? [Variant 0-80]",
+  "options": [
+    "Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons Learned",
+    "Detection, Preparation, Containment, Recovery, Eradication, Lessons Learned",
+    "Containment, Detection, Analysis, Eradication, Recovery, Preparation",
+    "Analysis, Detection, Containment, Preparation, Recovery, Eradication"
+  ],
+  "correctIndex": 0,
+  "hint": "Preparation always comes first.",
+  "explanation": {
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "incorrect": {
+      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "2": "Containment requires detection first; you must find the threat before containing it.",
+      "3": "Analysis follows detection, and preparation must come before any response."
+    }
+  }
+},
+{
+  "id": 550,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which protocol allows a user to log in once and access multiple applications without re-authenticating? [Variant 0-81]",
+  "options": [
+    "SSO (Single Sign-On)",
+    "MFA",
+    "RADIUS",
+    "TACACS+"
+  ],
+  "correctIndex": 0,
+  "hint": "One login, many applications.",
+  "explanation": {
+    "correct": "Single Sign-On (SSO) enables users to authenticate once and gain access to multiple related applications without repeated logins.",
+    "incorrect": {
+      "1": "Multi-Factor Authentication (MFA) requires multiple authentication factors but doesn't provide single sign-on.",
+      "2": "Remote Authentication Dial-In User Service (RADIUS) authenticates users but doesn't inherently provide Single Sign-On (SSO).",
+      "3": "Terminal Access Controller Access Control System (TACACS)+ provides authentication for network devices, not Single Sign-On (SSO) for applications."
+    }
+  }
+},
+{
+  "id": 551,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "During which incident response phase are infected systems isolated to prevent further damage? [Variant 0-82]",
+  "options": [
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Detection"
+  ],
+  "correctIndex": 0,
+  "hint": "The goal is to stop the spread.",
+  "explanation": {
+    "correct": "Containment isolates affected systems to prevent the incident from spreading while preserving evidence for analysis.",
+    "incorrect": {
+      "1": "Eradication removes the threat; containment isolates it first.",
+      "2": "Recovery restores systems to normal operation after eradication.",
+      "3": "Detection identifies the incident but doesn't isolate systems."
+    }
+  }
+},
+{
+  "id": 552,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is: [Variant 0-83]",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 553,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which technology aggregates logs from multiple sources and correlates events to detect security incidents? [Variant 0-84]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 554,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security tool generates an alert for a legitimate attack that is actually occurring. This is classified as a: [Variant 0-85]",
+  "options": [
+    "True positive",
+    "False positive",
+    "True negative",
+    "False negative"
+  ],
+  "correctIndex": 0,
+  "hint": "The alert is correct – there IS a real threat.",
+  "explanation": {
+    "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
+    "incorrect": {
+      "1": "A false positive alerts on a non-existent threat (false alarm).",
+      "2": "A true negative correctly identifies normal activity as safe.",
+      "3": "A false negative fails to detect an actual threat (missed detection)."
+    }
+  }
+},
+{
+  "id": 555,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which scoring system rates the severity of security vulnerabilities on a scale of 0 to 10? [Variant 0-86]",
+  "options": [
+    "CVSS",
+    "CVE",
+    "CWE",
+    "CPE"
+  ],
+  "correctIndex": 0,
+  "hint": "It provides a numerical severity score.",
+  "explanation": {
+    "correct": "Common Vulnerability Scoring System (CVSS) (Common Vulnerability Scoring System) rates vulnerabilities 0-10 based on impact, exploitability, and other factors.",
+    "incorrect": {
+      "1": "Common Vulnerabilities and Exposures (CVE) is an identifier system (e.g., CVE-2024-1234), not a scoring system.",
+      "2": "Common Weakness Enumeration (CWE) categorizes software weakness types, not severity scores.",
+      "3": "CPE identifies specific software products, not vulnerability severity."
+    }
+  }
+},
+{
+  "id": 556,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.6",
+  "subdomain_name": "Access Control Models",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which access control model assigns permissions based on a user's job function or position? [Variant 0-87]",
+  "options": [
+    "RBAC (Role-Based Access Control)",
+    "DAC",
+    "MAC",
+    "ABAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Permissions are tied to roles, not individual users.",
+  "explanation": {
+    "correct": "Role-Based Access Control (RBAC) assigns permissions based on organizational roles. Users inherit permissions from their assigned role.",
+    "incorrect": {
+      "1": "Discretionary Access Control (DAC) allows resource owners to set permissions at their discretion.",
+      "2": "Mandatory Access Control (MAC) uses security labels and clearance levels set by administrators.",
+      "3": "Attribute-Based Access Control (ABAC) uses attributes (location, time, etc.) for dynamic access decisions."
+    }
+  }
+},
+{
+  "id": 557,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Legal Hold in the context of Digital Forensics?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Legal Hold functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Legal Hold relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Legal Hold is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Legal Hold is directly related to Digital Forensics.",
+      "2": "Legal Hold works alongside other components, it does not replace them.",
+      "3": "Legal Hold is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 558,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which authentication method requires MULTIPLE different types of verification factors? [Variant 0-89]",
+  "options": [
+    "MFA (Multi-Factor Authentication)",
+    "SSO",
+    "LDAP",
+    "RADIUS"
+  ],
+  "correctIndex": 0,
+  "hint": "Something you know, have, and/or are.",
+  "explanation": {
+    "correct": "Multi-Factor Authentication (MFA) requires two or more different authentication factors: something you know, something you have, and/or something you are.",
+    "incorrect": {
+      "1": "Single Sign-On (SSO) allows one login for multiple applications but doesn't require multiple factors.",
+      "2": "Lightweight Directory Access Protocol (LDAP) is a directory service protocol, not an authentication method requiring multiple factors.",
+      "3": "Remote Authentication Dial-In User Service (RADIUS) is an authentication protocol but doesn't inherently require multiple factors."
+    }
+  }
+},
+{
+  "id": 559,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security tool generates an alert for a legitimate attack that is actually occurring. This is classified as a: [Variant 0-90]",
+  "options": [
+    "True positive",
+    "False positive",
+    "True negative",
+    "False negative"
+  ],
+  "correctIndex": 0,
+  "hint": "The alert is correct – there IS a real threat.",
+  "explanation": {
+    "correct": "A true positive occurs when a security tool correctly identifies a real threat and generates an appropriate alert.",
+    "incorrect": {
+      "1": "A false positive alerts on a non-existent threat (false alarm).",
+      "2": "A true negative correctly identifies normal activity as safe.",
+      "3": "A false negative fails to detect an actual threat (missed detection)."
+    }
+  }
+},
+{
+  "id": 560,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which technology aggregates logs from multiple sources and correlates events to detect security incidents? [Variant 0-91]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 561,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which technology aggregates logs from multiple sources and correlates events to detect security incidents? [Variant 0-92]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 562,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices? [Variant 0-93]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 563,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Registry in the context of Hardening?",
+  "options": [
+    "It is a primary component of Hardening that ensures Registry functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Registry relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "Registry is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Registry is directly related to Hardening.",
+      "2": "Registry works alongside other components, it does not replace them.",
+      "3": "Registry is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 564,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is: [Variant 0-95]",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 565,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which technology aggregates logs from multiple sources and correlates events to detect security incidents? [Variant 0-96]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 566,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which protocol allows a user to log in once and access multiple applications without re-authenticating? [Variant 0-97]",
+  "options": [
+    "SSO (Single Sign-On)",
+    "MFA",
+    "RADIUS",
+    "TACACS+"
+  ],
+  "correctIndex": 0,
+  "hint": "One login, many applications.",
+  "explanation": {
+    "correct": "Single Sign-On (SSO) enables users to authenticate once and gain access to multiple related applications without repeated logins.",
+    "incorrect": {
+      "1": "Multi-Factor Authentication (MFA) requires multiple authentication factors but doesn't provide single sign-on.",
+      "2": "Remote Authentication Dial-In User Service (RADIUS) authenticates users but doesn't inherently provide Single Sign-On (SSO).",
+      "3": "Terminal Access Controller Access Control System (TACACS)+ provides authentication for network devices, not Single Sign-On (SSO) for applications."
+    }
+  }
+},
+{
+  "id": 567,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which protocol allows a user to log in once and access multiple applications without re-authenticating? [Variant 0-98]",
+  "options": [
+    "SSO (Single Sign-On)",
+    "MFA",
+    "RADIUS",
+    "TACACS+"
+  ],
+  "correctIndex": 0,
+  "hint": "One login, many applications.",
+  "explanation": {
+    "correct": "Single Sign-On (SSO) enables users to authenticate once and gain access to multiple related applications without repeated logins.",
+    "incorrect": {
+      "1": "Multi-Factor Authentication (MFA) requires multiple authentication factors but doesn't provide single sign-on.",
+      "2": "Remote Authentication Dial-In User Service (RADIUS) authenticates users but doesn't inherently provide Single Sign-On (SSO).",
+      "3": "Terminal Access Controller Access Control System (TACACS)+ provides authentication for network devices, not Single Sign-On (SSO) for applications."
+    }
+  }
+},
+{
+  "id": 568,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices? [Variant 0-99]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 569,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Firmware Updates in the context of Hardening?",
+  "options": [
+    "It is a primary component of Hardening that ensures Firmware Updates functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Firmware Updates relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "Firmware Updates is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Firmware Updates is directly related to Hardening.",
+      "2": "Firmware Updates works alongside other components, it does not replace them.",
+      "3": "Firmware Updates is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 570,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "Which solution automates incident response playbooks and orchestrates security tools? [Variant 0-101]",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+}
 ]);

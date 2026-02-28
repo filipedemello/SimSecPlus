@@ -20,14 +20,40 @@
 </head>
 
 <body>
+    <!-- SCREEN 0: User Selection -->
+    <section id="screen-user" class="screen active">
+        <div class="container">
+            <div class="logo-area">
+                <div class="shield-icon">🛡️</div>
+                <h1>Security<span class="accent">+</span></h1>
+                <p class="subtitle">SY0-701 Exam Simulator</p>
+            </div>
+            <div class="card">
+                <h2>Who's studying??</h2>
+                <div id="user-list" class="user-list"><!-- populated by JS --></div>
+                <div class="user-create">
+                    <button class="btn btn-outline btn-sm" id="btn-show-create-user">+ New Profile</button>
+                    <div id="create-user-form" class="create-user-form hidden">
+                        <input type="text" id="new-user-name" placeholder="Your name" maxlength="40" autocomplete="off">
+                        <input type="email" id="new-user-email" placeholder="Email (optional)" maxlength="100"
+                            autocomplete="off">
+                        <button class="btn btn-primary btn-sm" id="btn-create-user">Create</button>
+                    </div>
+                </div>
+                <button class="btn btn-ghost btn-sm" id="btn-skip-user">Continue without saving progress</button>
+            </div>
+        </div>
+    </section>
+
     <!-- SCREEN 1: Welcome -->
-    <section id="screen-welcome" class="screen active">
+    <section id="screen-welcome" class="screen">
         <div class="container">
             <div class="logo-area">
                 <div class="shield-icon">🛡️</div>
                 <h1>Security<span class="accent">+</span></h1>
                 <p class="subtitle">SY0-701 Exam Simulator</p>
                 <p class="tagline">900 questions · 5 domains · Instant feedback</p>
+                <p class="user-greeting hidden" id="user-greeting"></p>
             </div>
             <div class="card welcome-card">
                 <h2>Choose test mode</h2>
@@ -52,6 +78,27 @@
                         <small>No timer</small>
                     </span>
                 </button>
+                <div id="smart-modes" class="smart-modes hidden">
+                    <p class="section-divider">✨ Smart Modes</p>
+                    <button class="btn btn-smart btn-lg" id="btn-weakness-mode">
+                        <span class="btn-icon">⚠️</span>
+                        <span class="btn-text">
+                            <strong>Focus on Weaknesses</strong>
+                            <small>Boost your weak spots</small>
+                        </span>
+                    </button>
+                    <button class="btn btn-smart btn-lg" id="btn-adaptive-mode">
+                        <span class="btn-icon">🧠</span>
+                        <span class="btn-text">
+                            <strong>Adaptive Test</strong>
+                            <small>Personalized mix</small>
+                        </span>
+                    </button>
+                </div>
+                <div class="welcome-footer">
+                    <button class="btn btn-ghost btn-sm" id="btn-view-dashboard">📊 My Dashboard</button>
+                    <button class="btn btn-ghost btn-sm" id="btn-switch-user">👤 Switch User</button>
+                </div>
             </div>
         </div>
     </section>
@@ -146,6 +193,7 @@
                 <button class="btn-icon-only" id="btn-pause" title="Pausar">⏸️</button>
             </div>
             <div class="quiz-domain-badge" id="quiz-domain-badge">Domain 1</div>
+            <div class="quiz-mode-badge hidden" id="quiz-mode-badge"></div>
         </div>
 
         <div class="container quiz-container">
@@ -213,6 +261,19 @@
         </div>
     </section>
 
+    <!-- SCREEN 6: Dashboard -->
+    <section id="screen-dashboard" class="screen">
+        <div class="container results-container">
+            <div class="dashboard-header">
+                <h2>📊 My Dashboard</h2>
+                <button class="btn btn-ghost btn-sm" id="btn-dashboard-back">← Back</button>
+            </div>
+            <div id="dashboard-content">
+                <div class="dashboard-loading">⏳ Loading your stats...</div>
+            </div>
+        </div>
+    </section>
+
     <script src="questions/block01.js"></script>
     <script src="questions/block02.js"></script>
     <script src="questions/block03.js"></script>
@@ -243,6 +304,15 @@
     <script src="questions/block28.js"></script>
     <script src="questions/block29.js"></script>
     <script src="questions/block30.js"></script>
+    <!-- New modules (load before app.js) -->
+    <script src="domains.js"></script>
+    <script src="subdomains.js"></script>
+    <script src="acronyms.js"></script>
+    <script src="storage.js"></script>
+    <script src="testGenerator.js"></script>
+    <script src="analytics.js"></script>
+    <script src="dashboardView.js"></script>
+    <script src="reinforcement.js"></script>
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {

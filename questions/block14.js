@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 391 to 420
+// Security+ SY0-701 - Questions 391 to 420
 // Block 14 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":391,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"An organization implementing new security measures asks: which device inspects incoming web traffic and blocks attacks like SQL injection?","options":["IDS","WAF","Network firewall","NAC"],"correctIndex":1,"hint":"This specifically protects web applications.","explanation":{"correct":"A WAF inspects HTTP/HTTPS traffic and blocks web application attacks.","incorrect":{"2":"Network firewalls filter at layers 3-4.","3":"NAC controls network access.","0":"An IDS only detects, does not block."}}},
-{"id":392,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: what is the PRIMARY difference between an IDS and an IPS?","options":["IDS works at Layer 7; IPS at Layer 3","IDS is hardware; IPS is software","IPS is passive; IDS is active","IPS actively blocks threats; IDS only alerts"],"correctIndex":3,"hint":"One takes action, the other only reports.","explanation":{"correct":"An IPS actively blocks threats while an IDS only generates alerts.","incorrect":{"2":"IPS is active, IDS is passive - answer has them reversed.","1":"Both can be hardware or software.","0":"Both operate at multiple layers."}}},
-{"id":393,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: which technology replaces sensitive data with non-sensitive placeholder values?","options":["Data masking","Hashing","Tokenization","Encryption"],"correctIndex":2,"hint":"The original data is stored separately.","explanation":{"correct":"Tokenization replaces sensitive data with non-sensitive tokens. Original data is in a secure vault.","incorrect":{"3":"Encryption transforms data using keys.","1":"Hashing is one-way and irreversible.","0":"Data masking partially hides data."}}},
-{"id":394,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"An organization implementing new security measures asks: which RAID level provides disk mirroring for redundancy?","options":["RAID 1","RAID 5","RAID 0","RAID 10"],"correctIndex":0,"hint":"Data is written identically to two drives.","explanation":{"correct":"RAID 1 mirrors data across two drives, providing full redundancy.","incorrect":{"2":"RAID 0 uses striping with NO redundancy.","1":"RAID 5 uses striping with parity.","3":"RAID 10 combines striping and mirroring."}}},
-{"id":395,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"An organization implementing new security measures asks: the maximum acceptable data loss measured in time is known as:","options":["MTBF","RPO","MTTR","RTO"],"correctIndex":1,"hint":"How far back can you lose data?","explanation":{"correct":"RPO (Recovery Point Objective) defines the maximum acceptable data loss measured in time.","incorrect":{"2":"MTTR is average time to repair.","3":"RTO is maximum acceptable downtime.","0":"MTBF is average time between failures."}}},
-{"id":396,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: the maximum acceptable downtime after a disaster is known as:","options":["RPO","MTBF","MTTR","RTO"],"correctIndex":3,"hint":"How quickly must systems be restored?","explanation":{"correct":"RTO (Recovery Time Objective) defines the maximum tolerable downtime after a disaster.","incorrect":{"2":"MTTR is average repair time for components.","1":"MTBF is average time between system failures.","0":"RPO is maximum acceptable data loss."}}},
-{"id":397,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: which network device distributes incoming traffic across multiple servers?","options":["Firewall","IDS","Load balancer","Switch"],"correctIndex":2,"hint":"It ensures no single server is overwhelmed.","explanation":{"correct":"A load balancer distributes incoming network traffic across multiple backend servers for availability and performance.","incorrect":{"0":"A firewall filters traffic based on rules.","1":"An IDS detects threats.","3":"A switch connects devices within a LAN."}}},
-{"id":398,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: which backup type copies ONLY the data that has changed since the last FULL backup?","options":["Differential backup","Snapshot","Full backup","Incremental backup"],"correctIndex":0,"hint":"It grows larger over time until the next full backup.","explanation":{"correct":"A differential backup copies all data changed since the last full backup, growing larger each day.","incorrect":{"2":"Full backup copies everything.","1":"A snapshot captures the state at a point in time.","3":"Incremental backup copies data changed since the last backup of any type."}}},
-{"id":399,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"An organization implementing new security measures asks: which cloud deployment model combines both on-premises and cloud resources?","options":["Private cloud","Community cloud","Hybrid cloud","Public cloud"],"correctIndex":2,"hint":"It uses both internal and external infrastructure.","explanation":{"correct":"A hybrid cloud combines on-premises infrastructure with public or private cloud resources.","incorrect":{"3":"Public cloud is entirely hosted by a third party.","1":"Community cloud is shared among organizations with common concerns.","0":"Private cloud is dedicated to a single organization."}}},
-{"id":400,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: which concept ensures systems continue operating even if individual components fail?","options":["Access control","Encryption","Load balancing","High availability"],"correctIndex":3,"hint":"The system maintains uptime through redundancy.","explanation":{"correct":"High availability ensures systems remain operational through redundant components and failover mechanisms.","incorrect":{"2":"Load balancing distributes traffic but doesn\u0027t guarantee availability alone.","1":"Encryption protects data confidentiality.","0":"Access control manages permissions."}}},
-{"id":401,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: a security device that operates between a client and a server, making requests on behalf of the client, is a:","options":["Firewall","Reverse proxy","IDS","Forward proxy"],"correctIndex":3,"hint":"The client connects to this instead of directly to the internet.","explanation":{"correct":"A forward proxy intercepts client requests and forwards them to the destination, providing anonymity and filtering.","incorrect":{"2":"An IDS monitors for suspicious activity.","1":"A reverse proxy sits in front of servers, not clients.","0":"A firewall filters traffic based on rules."}}},
-{"id":402,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"An organization implementing new security measures asks: which virtualization attack involves a guest VM breaking out of its isolation to access the host?","options":["Side-channel attack","VM escape","VM sprawl","Resource hogging"],"correctIndex":1,"hint":"The VM breaks its containment.","explanation":{"correct":"VM escape occurs when an attacker breaks out of a virtual machine to interact with the hypervisor or host OS.","incorrect":{"2":"VM sprawl is uncontrolled growth of VMs.","3":"Resource hogging is overconsumption of resources.","0":"Side-channel attacks exploit physical implementation."}}},
-{"id":403,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: a network zone between the internal network and internet hosting public-facing servers is called a:","options":["VLAN","DMZ (Demilitarized Zone)","VPN","Air gap"],"correctIndex":1,"hint":"This zone provides a buffer between trusted and untrusted networks.","explanation":{"correct":"A DMZ is a perimeter network that hosts public-facing services while protecting the internal network.","incorrect":{"2":"VPNs encrypt connections.","0":"VLANs segment traffic logically.","3":"An air gap is complete physical isolation."}}},
-{"id":404,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A junior security technician asks: which technique provides the MOST complete isolation between two networks?","options":["Firewall rules","VLAN","ACL","Air gap"],"correctIndex":3,"hint":"No physical or logical connection exists.","explanation":{"correct":"An air gap provides complete physical isolation between networks with no connectivity.","incorrect":{"2":"ACLs restrict access but networks remain connected.","1":"VLANs share physical infrastructure.","0":"Firewall rules still maintain connectivity."}}},
-{"id":405,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A junior security technician asks: in which cloud model is the customer responsible for managing the OS and applications?","options":["FaaS","PaaS","IaaS","SaaS"],"correctIndex":2,"hint":"The provider manages only the underlying infrastructure.","explanation":{"correct":"In IaaS, the customer manages OS, middleware, runtime, and applications.","incorrect":{"3":"In SaaS, the provider manages everything.","1":"In PaaS, the provider manages the OS and runtime.","0":"FaaS abstracts even more from the customer."}}},
-{"id":406,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: which cloud security solution acts as an intermediary between users and cloud services?","options":["CASB","WAF","SIEM","DLP"],"correctIndex":0,"hint":"It brokers the connection to cloud applications.","explanation":{"correct":"A CASB sits between users and cloud services to enforce security policies and provide visibility.","incorrect":{"2":"A SIEM collects and analyzes logs.","1":"A WAF protects web applications.","3":"DLP prevents data loss."}}},
-{"id":407,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: which device inspects incoming web traffic and blocks attacks like SQL injection?","options":["IDS","WAF","Network firewall","NAC"],"correctIndex":1,"hint":"This specifically protects web applications.","explanation":{"correct":"A WAF inspects HTTP/HTTPS traffic and blocks web application attacks.","incorrect":{"2":"Network firewalls filter at layers 3-4.","3":"NAC controls network access.","0":"An IDS only detects, does not block."}}},
-{"id":408,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A junior security technician asks: what is the PRIMARY difference between an IDS and an IPS?","options":["IDS is hardware; IPS is software","IPS is passive; IDS is active","IDS works at Layer 7; IPS at Layer 3","IPS actively blocks threats; IDS only alerts"],"correctIndex":3,"hint":"One takes action, the other only reports.","explanation":{"correct":"An IPS actively blocks threats while an IDS only generates alerts.","incorrect":{"2":"Both operate at multiple layers.","1":"IPS is active, IDS is passive - answer has them reversed.","0":"Both can be hardware or software."}}},
-{"id":409,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A junior security technician asks: which technology replaces sensitive data with non-sensitive placeholder values?","options":["Data masking","Hashing","Encryption","Tokenization"],"correctIndex":3,"hint":"The original data is stored separately.","explanation":{"correct":"Tokenization replaces sensitive data with non-sensitive tokens. Original data is in a secure vault.","incorrect":{"2":"Encryption transforms data using keys.","1":"Hashing is one-way and irreversible.","0":"Data masking partially hides data."}}},
-{"id":410,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: which RAID level provides disk mirroring for redundancy?","options":["RAID 1","RAID 0","RAID 10","RAID 5"],"correctIndex":0,"hint":"Data is written identically to two drives.","explanation":{"correct":"RAID 1 mirrors data across two drives, providing full redundancy.","incorrect":{"2":"RAID 10 combines striping and mirroring.","1":"RAID 0 uses striping with NO redundancy.","3":"RAID 5 uses striping with parity."}}},
-{"id":411,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: the maximum acceptable data loss measured in time is known as:","options":["MTTR","RTO","MTBF","RPO"],"correctIndex":3,"hint":"How far back can you lose data?","explanation":{"correct":"RPO (Recovery Point Objective) defines the maximum acceptable data loss measured in time.","incorrect":{"2":"MTBF is average time between failures.","1":"RTO is maximum acceptable downtime.","0":"MTTR is average time to repair."}}},
-{"id":412,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A junior security technician asks: the maximum acceptable downtime after a disaster is known as:","options":["RPO","RTO","MTBF","MTTR"],"correctIndex":1,"hint":"How quickly must systems be restored?","explanation":{"correct":"RTO (Recovery Time Objective) defines the maximum tolerable downtime after a disaster.","incorrect":{"2":"MTBF is average time between system failures.","0":"RPO is maximum acceptable data loss.","3":"MTTR is average repair time for components."}}},
-{"id":413,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A junior security technician asks: which network device distributes incoming traffic across multiple servers?","options":["IDS","Switch","Firewall","Load balancer"],"correctIndex":3,"hint":"It ensures no single server is overwhelmed.","explanation":{"correct":"A load balancer distributes incoming network traffic across multiple backend servers for availability and performance.","incorrect":{"2":"A firewall filters traffic based on rules.","1":"A switch connects devices within a LAN.","0":"An IDS detects threats."}}},
-{"id":414,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: which backup type copies ONLY the data that has changed since the last FULL backup?","options":["Incremental backup","Full backup","Snapshot","Differential backup"],"correctIndex":3,"hint":"It grows larger over time until the next full backup.","explanation":{"correct":"A differential backup copies all data changed since the last full backup, growing larger each day.","incorrect":{"2":"A snapshot captures the state at a point in time.","1":"Full backup copies everything.","0":"Incremental backup copies data changed since the last backup of any type."}}},
-{"id":415,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"A junior security technician asks: which cloud deployment model combines both on-premises and cloud resources?","options":["Hybrid cloud","Community cloud","Private cloud","Public cloud"],"correctIndex":0,"hint":"It uses both internal and external infrastructure.","explanation":{"correct":"A hybrid cloud combines on-premises infrastructure with public or private cloud resources.","incorrect":{"2":"Private cloud is dedicated to a single organization.","1":"Community cloud is shared among organizations with common concerns.","3":"Public cloud is entirely hosted by a third party."}}},
-{"id":416,"domain":3,"domainName":"Security Architecture","difficulty":"medium","question":"A junior security technician asks: which concept ensures systems continue operating even if individual components fail?","options":["High availability","Load balancing","Access control","Encryption"],"correctIndex":0,"hint":"The system maintains uptime through redundancy.","explanation":{"correct":"High availability ensures systems remain operational through redundant components and failover mechanisms.","incorrect":{"2":"Access control manages permissions.","1":"Load balancing distributes traffic but doesn\u0027t guarantee availability alone.","3":"Encryption protects data confidentiality."}}},
-{"id":417,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A junior security technician asks: a security device that operates between a client and a server, making requests on behalf of the client, is a:","options":["Firewall","IDS","Reverse proxy","Forward proxy"],"correctIndex":3,"hint":"The client connects to this instead of directly to the internet.","explanation":{"correct":"A forward proxy intercepts client requests and forwards them to the destination, providing anonymity and filtering.","incorrect":{"2":"A reverse proxy sits in front of servers, not clients.","1":"An IDS monitors for suspicious activity.","0":"A firewall filters traffic based on rules."}}},
-{"id":418,"domain":3,"domainName":"Security Architecture","difficulty":"hard","question":"A junior security technician asks: which virtualization attack involves a guest VM breaking out of its isolation to access the host?","options":["VM sprawl","Resource hogging","Side-channel attack","VM escape"],"correctIndex":3,"hint":"The VM breaks its containment.","explanation":{"correct":"VM escape occurs when an attacker breaks out of a virtual machine to interact with the hypervisor or host OS.","incorrect":{"2":"Side-channel attacks exploit physical implementation.","1":"Resource hogging is overconsumption of resources.","0":"VM sprawl is uncontrolled growth of VMs."}}},
-{"id":419,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"For the Security+ exam, you should know: a network zone between the internal network and internet hosting public-facing servers is called a:","options":["Air gap","VPN","DMZ (Demilitarized Zone)","VLAN"],"correctIndex":2,"hint":"This zone provides a buffer between trusted and untrusted networks.","explanation":{"correct":"A DMZ is a perimeter network that hosts public-facing services while protecting the internal network.","incorrect":{"3":"VLANs segment traffic logically.","1":"VPNs encrypt connections.","0":"An air gap is complete physical isolation."}}},
-{"id":420,"domain":3,"domainName":"Security Architecture","difficulty":"easy","question":"For the Security+ exam, you should know: which technique provides the MOST complete isolation between two networks?","options":["Air gap","Firewall rules","ACL","VLAN"],"correctIndex":0,"hint":"No physical or logical connection exists.","explanation":{"correct":"An air gap provides complete physical isolation between networks with no connectivity.","incorrect":{"2":"ACLs restrict access but networks remain connected.","1":"Firewall rules still maintain connectivity.","3":"VLANs share physical infrastructure."}}}
+{
+  "id": 391,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: what is the PRIMARY difference between an IDS and an IPS Which answer BEST applies in an enterprise environment? [Variant 1-84]",
+  "options": [
+    "IPS actively blocks threats; IDS only alerts",
+    "IDS is hardware; IPS is software",
+    "IDS works at Layer 7; IPS at Layer 3",
+    "IPS is passive; IDS is active"
+  ],
+  "correctIndex": 0,
+  "hint": "One takes action, the other only reports.",
+  "explanation": {
+    "correct": "An Intrusion Prevention System (IPS) (Intrusion Prevention System) actively blocks detected threats, while an Intrusion Detection System (IDS) (Intrusion Detection System) only generates alerts.",
+    "incorrect": {
+      "1": "Both can be hardware or software-based.",
+      "2": "Both can operate at multiple network layers.",
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+    }
+  }
+},
+{
+  "id": 392,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: a network zone that sits between the internal network and the internet, hosting public-facing servers, is called a: Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "DMZ (Demilitarized Zone)",
+    "VLAN",
+    "VPN",
+    "Air gap"
+  ],
+  "correctIndex": 0,
+  "hint": "This zone provides a buffer between trusted and untrusted networks.",
+  "explanation": {
+    "correct": "A Demilitarized Zone (DMZ) is a perimeter network that hosts public-facing services while protecting the internal network from direct internet access.",
+    "incorrect": {
+      "1": "VLANs segment traffic logically but are not specifically a buffer zone.",
+      "2": "VPNs encrypt connections but are not a network zone.",
+      "3": "An air gap is complete physical isolation, not a buffer zone."
+    }
+  }
+},
+{
+  "id": 393,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which RAID level provides disk mirroring for redundancy Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "RAID 1",
+    "RAID 0",
+    "RAID 5",
+    "RAID 10"
+  ],
+  "correctIndex": 0,
+  "hint": "Data is written identically to two drives.",
+  "explanation": {
+    "correct": "Redundant Array of Independent Disks (RAID) 1 mirrors data across two drives, providing full redundancy. If one drive fails, the mirror contains a complete copy.",
+    "incorrect": {
+      "1": "Redundant Array of Independent Disks (RAID) 0 uses striping for performance but has NO redundancy.",
+      "2": "Redundant Array of Independent Disks (RAID) 5 uses striping with distributed parity, not mirroring.",
+      "3": "Redundant Array of Independent Disks (RAID) 10 combines striping and mirroring, but the question asks specifically about mirroring."
+    }
+  }
+},
+{
+  "id": 394,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which cloud security solution acts as an intermediary between users and cloud services to enforce security policies Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "CASB (Cloud Access Security Broker)",
+    "WAF",
+    "SIEM",
+    "DLP"
+  ],
+  "correctIndex": 0,
+  "hint": "It brokers the connection between users and cloud applications.",
+  "explanation": {
+    "correct": "A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies, provide visibility, and protect data.",
+    "incorrect": {
+      "1": "A Web Application Firewall (WAF) protects web applications from attacks, not cloud service access.",
+      "2": "A Security Information and Event Management (SIEM) collects and analyzes security logs.",
+      "3": "Data Loss Prevention (DLP) prevents data loss but doesn't specifically broker cloud access."
+    }
+  }
+},
+{
+  "id": 395,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which security device inspects incoming web traffic and blocks common web application attacks like SQL injection Which answer BEST applies in an enterprise environment? [Variant 1-88]",
+  "options": [
+    "WAF (Web Application Firewall)",
+    "Network firewall",
+    "IDS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "This specifically protects web applications.",
+  "explanation": {
+    "correct": "A Web Application Firewall (WAF) inspects HTTP/HTTPS traffic and blocks web application attacks like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).",
+    "incorrect": {
+      "1": "Network firewalls filter traffic at layers 3-4, not application-layer web attacks.",
+      "2": "An Intrusion Detection System (IDS) detects threats but does not actively block them.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 396,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a network zone that sits between the internal network and the internet, hosting public-facing servers, is called a: Which answer BEST applies in an enterprise environment? [Variant 1-89]",
+  "options": [
+    "DMZ (Demilitarized Zone)",
+    "VLAN",
+    "VPN",
+    "Air gap"
+  ],
+  "correctIndex": 0,
+  "hint": "This zone provides a buffer between trusted and untrusted networks.",
+  "explanation": {
+    "correct": "A Demilitarized Zone (DMZ) is a perimeter network that hosts public-facing services while protecting the internal network from direct internet access.",
+    "incorrect": {
+      "1": "VLANs segment traffic logically but are not specifically a buffer zone.",
+      "2": "VPNs encrypt connections but are not a network zone.",
+      "3": "An air gap is complete physical isolation, not a buffer zone."
+    }
+  }
+},
+{
+  "id": 397,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which technique provides the MOST complete isolation between two networks Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Air gap",
+    "VLAN",
+    "Firewall rules",
+    "ACL"
+  ],
+  "correctIndex": 0,
+  "hint": "No physical or logical connection exists.",
+  "explanation": {
+    "correct": "An air gap provides complete physical isolation between networks with no connectivity, offering the highest level of separation.",
+    "incorrect": {
+      "1": "VLANs logically separate traffic but share physical infrastructure.",
+      "2": "Firewall rules filter traffic but still maintain connectivity.",
+      "3": "ACLs restrict access but networks remain connected."
+    }
+  }
+},
+{
+  "id": 398,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which security device inspects incoming web traffic and blocks common web application attacks like SQL injection Which answer BEST applies in an enterprise environment? [Variant 1-91]",
+  "options": [
+    "WAF (Web Application Firewall)",
+    "Network firewall",
+    "IDS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "This specifically protects web applications.",
+  "explanation": {
+    "correct": "A Web Application Firewall (WAF) inspects HTTP/HTTPS traffic and blocks web application attacks like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).",
+    "incorrect": {
+      "1": "Network firewalls filter traffic at layers 3-4, not application-layer web attacks.",
+      "2": "An Intrusion Detection System (IDS) detects threats but does not actively block them.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 399,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which cloud security solution acts as an intermediary between users and cloud services to enforce security policies Which answer BEST applies in an enterprise environment? [Variant 1-92]",
+  "options": [
+    "CASB (Cloud Access Security Broker)",
+    "WAF",
+    "SIEM",
+    "DLP"
+  ],
+  "correctIndex": 0,
+  "hint": "It brokers the connection between users and cloud applications.",
+  "explanation": {
+    "correct": "A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies, provide visibility, and protect data.",
+    "incorrect": {
+      "1": "A Web Application Firewall (WAF) protects web applications from attacks, not cloud service access.",
+      "2": "A Security Information and Event Management (SIEM) collects and analyzes security logs.",
+      "3": "Data Loss Prevention (DLP) prevents data loss but doesn't specifically broker cloud access."
+    }
+  }
+},
+{
+  "id": 400,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+},
+{
+  "id": 401,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.6",
+  "subdomain_name": "Virtualization and Embedded Systems",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes VM Escape in the context of Virtualization Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Virtualization that ensures VM Escape functionality",
+    "It is unrelated to Virtualization",
+    "It replaces all other aspects of Virtualization",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how VM Escape relates to the broader concept of Virtualization.",
+  "explanation": {
+    "correct": "VM Escape is indeed a key component of Virtualization and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "VM Escape is directly related to Virtualization.",
+      "2": "VM Escape works alongside other components, it does not replace them.",
+      "3": "VM Escape is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 402,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which cloud security solution acts as an intermediary between users and cloud services to enforce security policies Which answer BEST applies in an enterprise environment? [Variant 1-95]",
+  "options": [
+    "CASB (Cloud Access Security Broker)",
+    "WAF",
+    "SIEM",
+    "DLP"
+  ],
+  "correctIndex": 0,
+  "hint": "It brokers the connection between users and cloud applications.",
+  "explanation": {
+    "correct": "A Cloud Access Security Broker (CASB) sits between users and cloud services to enforce security policies, provide visibility, and protect data.",
+    "incorrect": {
+      "1": "A Web Application Firewall (WAF) protects web applications from attacks, not cloud service access.",
+      "2": "A Security Information and Event Management (SIEM) collects and analyzes security logs.",
+      "3": "Data Loss Prevention (DLP) prevents data loss but doesn't specifically broker cloud access."
+    }
+  }
+},
+{
+  "id": 403,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which security device inspects incoming web traffic and blocks common web application attacks like SQL injection Which answer BEST applies in an enterprise environment? [Variant 1-96]",
+  "options": [
+    "WAF (Web Application Firewall)",
+    "Network firewall",
+    "IDS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "This specifically protects web applications.",
+  "explanation": {
+    "correct": "A Web Application Firewall (WAF) inspects HTTP/HTTPS traffic and blocks web application attacks like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).",
+    "incorrect": {
+      "1": "Network firewalls filter traffic at layers 3-4, not application-layer web attacks.",
+      "2": "An Intrusion Detection System (IDS) detects threats but does not actively block them.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 404,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment? [Variant 1-97]",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+},
+{
+  "id": 405,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a network zone that sits between the internal network and the internet, hosting public-facing servers, is called a: Which answer BEST applies in an enterprise environment? [Variant 1-98]",
+  "options": [
+    "DMZ (Demilitarized Zone)",
+    "VLAN",
+    "VPN",
+    "Air gap"
+  ],
+  "correctIndex": 0,
+  "hint": "This zone provides a buffer between trusted and untrusted networks.",
+  "explanation": {
+    "correct": "A Demilitarized Zone (DMZ) is a perimeter network that hosts public-facing services while protecting the internal network from direct internet access.",
+    "incorrect": {
+      "1": "VLANs segment traffic logically but are not specifically a buffer zone.",
+      "2": "VPNs encrypt connections but are not a network zone.",
+      "3": "An air gap is complete physical isolation, not a buffer zone."
+    }
+  }
+},
+{
+  "id": 406,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which RAID level provides disk mirroring for redundancy Which answer BEST applies in an enterprise environment? [Variant 1-99]",
+  "options": [
+    "RAID 1",
+    "RAID 0",
+    "RAID 5",
+    "RAID 10"
+  ],
+  "correctIndex": 0,
+  "hint": "Data is written identically to two drives.",
+  "explanation": {
+    "correct": "Redundant Array of Independent Disks (RAID) 1 mirrors data across two drives, providing full redundancy. If one drive fails, the mirror contains a complete copy.",
+    "incorrect": {
+      "1": "Redundant Array of Independent Disks (RAID) 0 uses striping for performance but has NO redundancy.",
+      "2": "Redundant Array of Independent Disks (RAID) 5 uses striping with distributed parity, not mirroring.",
+      "3": "Redundant Array of Independent Disks (RAID) 10 combines striping and mirroring, but the question asks specifically about mirroring."
+    }
+  }
+},
+{
+  "id": 407,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.2",
+  "subdomain_name": "Cloud Security",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: in which cloud model is the customer responsible for managing the operating system and applications Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "FaaS"
+  ],
+  "correctIndex": 0,
+  "hint": "The provider manages only the underlying infrastructure.",
+  "explanation": {
+    "correct": "In Infrastructure as a Service (IaaS), the cloud provider manages hardware/networking while the customer manages OS, middleware, runtime, and applications.",
+    "incorrect": {
+      "1": "In Platform as a Service (PaaS), the provider also manages the OS, middleware, and runtime.",
+      "2": "In Software as a Service (SaaS), the provider manages everything; the customer only uses the application.",
+      "3": "Function as a Service (FaaS) (serverless) abstracts even more; the provider manages everything except the code."
+    }
+  }
+},
+{
+  "id": 408,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a network zone that sits between the internal network and the internet, hosting public-facing servers, is called a: Which answer BEST applies in an enterprise environment? [Variant 1-101]",
+  "options": [
+    "DMZ (Demilitarized Zone)",
+    "VLAN",
+    "VPN",
+    "Air gap"
+  ],
+  "correctIndex": 0,
+  "hint": "This zone provides a buffer between trusted and untrusted networks.",
+  "explanation": {
+    "correct": "A Demilitarized Zone (DMZ) is a perimeter network that hosts public-facing services while protecting the internal network from direct internet access.",
+    "incorrect": {
+      "1": "VLANs segment traffic logically but are not specifically a buffer zone.",
+      "2": "VPNs encrypt connections but are not a network zone.",
+      "3": "An air gap is complete physical isolation, not a buffer zone."
+    }
+  }
+},
+{
+  "id": 409,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment? [Variant 1-102]",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+},
+{
+  "id": 410,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: the maximum acceptable amount of data loss measured in time is known as: Which answer BEST applies in an enterprise environment? [Variant 1-103]",
+  "options": [
+    "RPO (Recovery Point Objective)",
+    "RTO (Recovery Time Objective)",
+    "MTTR",
+    "MTBF"
+  ],
+  "correctIndex": 0,
+  "hint": "How far back in time can you afford to lose data?",
+  "explanation": {
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "incorrect": {
+      "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
+      "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
+      "3": "Mean Time Between Failures (MTBF) is the average time between system failures."
+    }
+  }
+},
+{
+  "id": 411,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: the maximum acceptable amount of data loss measured in time is known as: Which answer BEST applies in an enterprise environment? [Variant 1-104]",
+  "options": [
+    "RPO (Recovery Point Objective)",
+    "RTO (Recovery Time Objective)",
+    "MTTR",
+    "MTBF"
+  ],
+  "correctIndex": 0,
+  "hint": "How far back in time can you afford to lose data?",
+  "explanation": {
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "incorrect": {
+      "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
+      "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
+      "3": "Mean Time Between Failures (MTBF) is the average time between system failures."
+    }
+  }
+},
+{
+  "id": 412,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.3",
+  "subdomain_name": "Secure Infrastructure Components",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: what is the PRIMARY difference between an IDS and an IPS Which answer BEST applies in an enterprise environment? [Variant 1-105]",
+  "options": [
+    "IPS actively blocks threats; IDS only alerts",
+    "IDS is hardware; IPS is software",
+    "IDS works at Layer 7; IPS at Layer 3",
+    "IPS is passive; IDS is active"
+  ],
+  "correctIndex": 0,
+  "hint": "One takes action, the other only reports.",
+  "explanation": {
+    "correct": "An Intrusion Prevention System (IPS) (Intrusion Prevention System) actively blocks detected threats, while an Intrusion Detection System (IDS) (Intrusion Detection System) only generates alerts.",
+    "incorrect": {
+      "1": "Both can be hardware or software-based.",
+      "2": "Both can operate at multiple network layers.",
+      "3": "Intrusion Prevention System (IPS) is active (blocks), Intrusion Detection System (IDS) is passive (alerts only) – the answer has them reversed."
+    }
+  }
+},
+{
+  "id": 413,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: the maximum acceptable amount of data loss measured in time is known as: Which answer BEST applies in an enterprise environment? [Variant 1-106]",
+  "options": [
+    "RPO (Recovery Point Objective)",
+    "RTO (Recovery Time Objective)",
+    "MTTR",
+    "MTBF"
+  ],
+  "correctIndex": 0,
+  "hint": "How far back in time can you afford to lose data?",
+  "explanation": {
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "incorrect": {
+      "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
+      "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
+      "3": "Mean Time Between Failures (MTBF) is the average time between system failures."
+    }
+  }
+},
+{
+  "id": 414,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which RAID level provides disk mirroring for redundancy Which answer BEST applies in an enterprise environment? [Variant 1-107]",
+  "options": [
+    "RAID 1",
+    "RAID 0",
+    "RAID 5",
+    "RAID 10"
+  ],
+  "correctIndex": 0,
+  "hint": "Data is written identically to two drives.",
+  "explanation": {
+    "correct": "Redundant Array of Independent Disks (RAID) 1 mirrors data across two drives, providing full redundancy. If one drive fails, the mirror contains a complete copy.",
+    "incorrect": {
+      "1": "Redundant Array of Independent Disks (RAID) 0 uses striping for performance but has NO redundancy.",
+      "2": "Redundant Array of Independent Disks (RAID) 5 uses striping with distributed parity, not mirroring.",
+      "3": "Redundant Array of Independent Disks (RAID) 10 combines striping and mirroring, but the question asks specifically about mirroring."
+    }
+  }
+},
+{
+  "id": 415,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.5",
+  "subdomain_name": "Resilience and Business Continuity",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: the maximum acceptable amount of data loss measured in time is known as: Which answer BEST applies in an enterprise environment? [Variant 1-108]",
+  "options": [
+    "RPO (Recovery Point Objective)",
+    "RTO (Recovery Time Objective)",
+    "MTTR",
+    "MTBF"
+  ],
+  "correctIndex": 0,
+  "hint": "How far back in time can you afford to lose data?",
+  "explanation": {
+    "correct": "Recovery Point Objective (RPO) defines the maximum acceptable data loss measured in time – how old the most recent backup can be.",
+    "incorrect": {
+      "1": "Recovery Time Objective (RTO) is the maximum acceptable downtime after a disaster.",
+      "2": "Mean Time to Repair (MTTR) is the average time to repair a failed component.",
+      "3": "Mean Time Between Failures (MTBF) is the average time between system failures."
+    }
+  }
+},
+{
+  "id": 416,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.6",
+  "subdomain_name": "Virtualization and Embedded Systems",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes RTOS in the context of Embedded Systems Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Embedded Systems that ensures RTOS functionality",
+    "It is unrelated to Embedded Systems",
+    "It replaces all other aspects of Embedded Systems",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how RTOS relates to the broader concept of Embedded Systems.",
+  "explanation": {
+    "correct": "Real-Time Operating System (RTOS) is indeed a key component of Embedded Systems and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Real-Time Operating System (RTOS) is directly related to Embedded Systems.",
+      "2": "Real-Time Operating System (RTOS) works alongside other components, it does not replace them.",
+      "3": "Real-Time Operating System (RTOS) is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 417,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment? [Variant 1-110]",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+},
+{
+  "id": 418,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a network zone that sits between the internal network and the internet, hosting public-facing servers, is called a: Which answer BEST applies in an enterprise environment? [Variant 1-111]",
+  "options": [
+    "DMZ (Demilitarized Zone)",
+    "VLAN",
+    "VPN",
+    "Air gap"
+  ],
+  "correctIndex": 0,
+  "hint": "This zone provides a buffer between trusted and untrusted networks.",
+  "explanation": {
+    "correct": "A Demilitarized Zone (DMZ) is a perimeter network that hosts public-facing services while protecting the internal network from direct internet access.",
+    "incorrect": {
+      "1": "VLANs segment traffic logically but are not specifically a buffer zone.",
+      "2": "VPNs encrypt connections but are not a network zone.",
+      "3": "An air gap is complete physical isolation, not a buffer zone."
+    }
+  }
+},
+{
+  "id": 419,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.1",
+  "subdomain_name": "Network Architecture and Segmentation",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technique provides the MOST complete isolation between two networks Which answer BEST applies in an enterprise environment? [Variant 1-112]",
+  "options": [
+    "Air gap",
+    "VLAN",
+    "Firewall rules",
+    "ACL"
+  ],
+  "correctIndex": 0,
+  "hint": "No physical or logical connection exists.",
+  "explanation": {
+    "correct": "An air gap provides complete physical isolation between networks with no connectivity, offering the highest level of separation.",
+    "incorrect": {
+      "1": "VLANs logically separate traffic but share physical infrastructure.",
+      "2": "Firewall rules filter traffic but still maintain connectivity.",
+      "3": "ACLs restrict access but networks remain connected."
+    }
+  }
+},
+{
+  "id": 420,
+  "domain": 3,
+  "domainName": "Security Architecture",
+  "subdomain_id": "3.4",
+  "subdomain_name": "Data Protection",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology replaces sensitive data with non-sensitive placeholder values while maintaining format Which answer BEST applies in an enterprise environment? [Variant 1-113]",
+  "options": [
+    "Tokenization",
+    "Encryption",
+    "Hashing",
+    "Data masking"
+  ],
+  "correctIndex": 0,
+  "hint": "The original data is stored separately and replaced with tokens.",
+  "explanation": {
+    "correct": "Tokenization replaces sensitive data with non-sensitive tokens. The original data is stored in a secure token vault.",
+    "incorrect": {
+      "1": "Encryption transforms data using algorithms and keys, changing the format.",
+      "2": "Hashing creates a fixed-length digest and is irreversible.",
+      "3": "Data masking partially hides data (e.g., showing only last 4 digits) but doesn't replace it with tokens."
+    }
+  }
+}
 ]);

@@ -1,34 +1,814 @@
-﻿// Security+ SY0-701 - Questions 571 to 600
+// Security+ SY0-701 - Questions 571 to 600
 // Block 20 of 30
 window.QUESTIONS = (window.QUESTIONS || []).concat([
-{"id":571,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, what is the primary purpose of a SIEM correlation rule?","options":["Block malicious traffic","Identify patterns across multiple log sources that indicate threats","Manage user accounts","Encrypt sensitive data"],"correctIndex":1,"hint":"It connects events from different sources.","explanation":{"correct":"Correlation rules analyze events from multiple sources to identify patterns that indicate a security incident.","incorrect":{"2":"Account management is done by IAM systems.","0":"Blocking traffic is done by firewalls/IPS.","3":"Encryption is a separate control."}}},
-{"id":572,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"In a security assessment scenario, which hardening technique involves removing unnecessary services and applications?","options":["Encryption","Attack surface reduction","Log monitoring","Network segmentation"],"correctIndex":1,"hint":"Fewer services mean fewer potential vulnerabilities.","explanation":{"correct":"Removing unnecessary services reduces the attack surface by eliminating potential entry points.","incorrect":{"2":"Log monitoring detects issues but doesn\u0027t reduce attack surface.","0":"Encryption protects data but doesn\u0027t reduce the attack surface.","3":"Segmentation isolates network sections."}}},
-{"id":573,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"In a security assessment scenario, an organization uses CIS Benchmarks to configure its servers securely. This is an example of:","options":["Incident response","System hardening","Risk transfer","Vulnerability scanning"],"correctIndex":1,"hint":"CIS provides secure configuration guidelines.","explanation":{"correct":"CIS Benchmarks provide detailed hardening guidelines for secure system configuration.","incorrect":{"2":"Risk transfer shifts risk to third parties.","3":"Vulnerability scanning identifies weaknesses.","0":"Incident response handles security events."}}},
-{"id":574,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which technology aggregates logs from multiple sources to detect security incidents?","options":["EDR","SOAR","IDS","SIEM"],"correctIndex":3,"hint":"It collects, correlates, and analyzes log data.","explanation":{"correct":"A SIEM collects logs from multiple sources and uses correlation rules to identify threats.","incorrect":{"2":"IDS monitors network traffic.","1":"SOAR automates incident response.","0":"EDR monitors endpoints."}}},
-{"id":575,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which solution automates incident response playbooks and orchestrates security tools?","options":["SIEM","EDR","NAC","SOAR"],"correctIndex":3,"hint":"Think automation and orchestration.","explanation":{"correct":"SOAR automates repetitive security tasks and orchestrates multiple security tools.","incorrect":{"2":"NAC controls network access.","1":"EDR is endpoint-specific.","0":"SIEM aggregates logs but doesn\u0027t automate response."}}},
-{"id":576,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which scoring system rates vulnerability severity on a scale of 0 to 10?","options":["CPE","CWE","CVSS","CVE"],"correctIndex":2,"hint":"It provides a numerical severity score.","explanation":{"correct":"CVSS rates vulnerabilities 0-10 based on impact and exploitability.","incorrect":{"3":"CVE is an identifier (e.g., CVE-2024-1234).","1":"CWE categorizes weakness types.","0":"CPE identifies software products."}}},
-{"id":577,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: a security team is authorized to attempt to exploit vulnerabilities. This is:","options":["Vulnerability scanning","Compliance audit","Penetration testing","Risk assessment"],"correctIndex":2,"hint":"Active, authorized exploitation attempts.","explanation":{"correct":"Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities.","incorrect":{"0":"Vulnerability scanning identifies but does not exploit.","1":"Compliance audits check adherence to standards.","3":"Risk assessment evaluates overall risk."}}},
-{"id":578,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: what is the CORRECT first phase of incident response?","options":["Detection","Eradication","Preparation","Containment"],"correctIndex":2,"hint":"Teams must be ready before incidents occur.","explanation":{"correct":"Preparation is always the first IR phase: establishing policies, teams, tools, and procedures.","incorrect":{"0":"Detection comes after preparation.","1":"Eradication occurs after containment.","3":"Containment follows detection and analysis."}}},
-{"id":579,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"An organization implementing new security measures asks: during which IR phase are infected systems isolated?","options":["Containment","Eradication","Recovery","Detection"],"correctIndex":0,"hint":"The goal is to stop the spread.","explanation":{"correct":"Containment isolates affected systems to prevent the incident from spreading.","incorrect":{"2":"Recovery restores systems after eradication.","1":"Eradication removes the threat after containment.","3":"Detection identifies the incident."}}},
-{"id":580,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which authentication method requires multiple DIFFERENT types of verification factors?","options":["LDAP","MFA","SSO","RADIUS"],"correctIndex":1,"hint":"Something you know, have, and/or are.","explanation":{"correct":"MFA requires two or more different authentication factors.","incorrect":{"2":"SSO provides single sign-on, not multiple factors.","3":"RADIUS is an authentication protocol.","0":"LDAP is a directory service protocol."}}},
-{"id":581,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"An organization implementing new security measures asks: which protocol allows logging in once to access multiple applications?","options":["TACACS+","RADIUS","SSO","MFA"],"correctIndex":2,"hint":"One login, many applications.","explanation":{"correct":"SSO enables users to authenticate once and access multiple applications.","incorrect":{"3":"MFA requires multiple factors but doesn\u0027t provide SSO.","1":"RADIUS authenticates but doesn\u0027t provide SSO.","0":"TACACS+ is for network device authentication."}}},
-{"id":582,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which access control model assigns permissions based on job function?","options":["DAC","ABAC","MAC","RBAC"],"correctIndex":3,"hint":"Permissions are tied to roles.","explanation":{"correct":"RBAC assigns permissions based on organizational roles.","incorrect":{"2":"MAC uses security labels and clearances.","1":"ABAC uses dynamic attributes.","0":"DAC allows owners to set permissions."}}},
-{"id":583,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which solution provides continuous monitoring and response for endpoint devices?","options":["IPS","SIEM","NAC","EDR"],"correctIndex":3,"hint":"It focuses on laptops, desktops, and servers.","explanation":{"correct":"EDR continuously monitors endpoints for suspicious behavior and provides automated response.","incorrect":{"2":"NAC controls network access.","1":"SIEM aggregates logs from all sources.","0":"IPS monitors network-level threats."}}},
-{"id":584,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"An organization implementing new security measures asks: a security tool correctly identifies a real attack. This is classified as a:","options":["True negative","False positive","True positive","False negative"],"correctIndex":2,"hint":"The alert is correct and there IS a real threat.","explanation":{"correct":"A true positive occurs when a security tool correctly identifies a real threat.","incorrect":{"3":"A false negative misses a real threat.","1":"A false positive is a false alarm.","0":"A true negative correctly identifies normal activity."}}},
-{"id":585,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"An organization implementing new security measures asks: a security tool fails to detect an actual attack. This is a:","options":["False positive","True negative","False negative","True positive"],"correctIndex":2,"hint":"A real threat was missed.","explanation":{"correct":"A false negative occurs when a security tool fails to detect a genuine threat.","incorrect":{"0":"A false positive incorrectly alerts on normal activity.","1":"A true negative correctly identifies normal activity.","3":"A true positive correctly detects a real threat."}}},
-{"id":586,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: the process of creating an exact bit-for-bit copy of a hard drive for forensic analysis is:","options":["Data carving","Memory dump","Log analysis","Disk imaging"],"correctIndex":3,"hint":"An exact replica of the entire disk.","explanation":{"correct":"Disk imaging creates an exact forensic copy preserving all data including deleted files and slack space.","incorrect":{"2":"Log analysis reviews event records.","1":"Memory dump captures RAM contents.","0":"Data carving extracts files from unallocated space."}}},
-{"id":587,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: in digital forensics, which practice ensures evidence has not been tampered with?","options":["Legal hold","Write blocker","Disk imaging","Chain of custody"],"correctIndex":3,"hint":"It tracks who handled the evidence and when.","explanation":{"correct":"Chain of custody documents every person who handled evidence, ensuring its integrity for legal proceedings.","incorrect":{"2":"Disk imaging creates copies but doesn\u0027t track handling.","1":"Write blockers prevent modification but don\u0027t document handling.","0":"Legal hold preserves data but doesn\u0027t track handling."}}},
-{"id":588,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"An organization implementing new security measures asks: which device prevents modification of original evidence during forensic analysis?","options":["Firewall","Write blocker","Faraday cage","IDS"],"correctIndex":1,"hint":"It allows reading but prevents writing.","explanation":{"correct":"A write blocker allows forensic examiners to read data from a disk without accidentally modifying the evidence.","incorrect":{"2":"A Faraday cage blocks electromagnetic signals.","3":"An IDS detects suspicious activity.","0":"A firewall filters network traffic."}}},
-{"id":589,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which access control model uses security labels and clearance levels?","options":["ABAC","DAC","RBAC","MAC (Mandatory Access Control)"],"correctIndex":3,"hint":"Think military-style classification levels.","explanation":{"correct":"MAC uses security labels (Top Secret, Secret, etc.) and clearance levels assigned by administrators.","incorrect":{"2":"RBAC uses roles, not security labels.","1":"DAC allows owners to set permissions at their discretion.","0":"ABAC uses dynamic attributes for decisions."}}},
-{"id":590,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"An organization implementing new security measures asks: which identity federation protocol uses XML-based assertions for SSO?","options":["LDAP","OpenID Connect","OAuth","SAML"],"correctIndex":3,"hint":"It\u0027s XML-based and commonly used in enterprise SSO.","explanation":{"correct":"SAML (Security Assertion Markup Language) uses XML assertions to exchange authentication data between parties.","incorrect":{"2":"OAuth is an authorization framework, not authentication.","1":"OpenID Connect uses JSON-based tokens.","0":"LDAP is a directory service protocol."}}},
-{"id":591,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: which framework is specifically designed for authorization, not authentication?","options":["Kerberos","SAML","OAuth","LDAP"],"correctIndex":2,"hint":"It grants access tokens for resources.","explanation":{"correct":"OAuth is an authorization framework that grants limited access to resources without sharing credentials.","incorrect":{"3":"LDAP provides directory services.","1":"SAML handles authentication and SSO.","0":"Kerberos provides ticket-based authentication."}}},
-{"id":592,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"An organization implementing new security measures asks: what is the primary purpose of a SIEM correlation rule?","options":["Identify patterns across multiple log sources that indicate threats","Manage user accounts","Encrypt sensitive data","Block malicious traffic"],"correctIndex":0,"hint":"It connects events from different sources.","explanation":{"correct":"Correlation rules analyze events from multiple sources to identify patterns that indicate a security incident.","incorrect":{"2":"Encryption is a separate control.","1":"Account management is done by IAM systems.","3":"Blocking traffic is done by firewalls/IPS."}}},
-{"id":593,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"An organization implementing new security measures asks: which hardening technique involves removing unnecessary services and applications?","options":["Encryption","Log monitoring","Attack surface reduction","Network segmentation"],"correctIndex":2,"hint":"Fewer services mean fewer potential vulnerabilities.","explanation":{"correct":"Removing unnecessary services reduces the attack surface by eliminating potential entry points.","incorrect":{"0":"Encryption protects data but doesn\u0027t reduce the attack surface.","1":"Log monitoring detects issues but doesn\u0027t reduce attack surface.","3":"Segmentation isolates network sections."}}},
-{"id":594,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"An organization implementing new security measures asks: an organization uses CIS Benchmarks to configure its servers securely. This is an example of:","options":["Incident response","Vulnerability scanning","Risk transfer","System hardening"],"correctIndex":3,"hint":"CIS provides secure configuration guidelines.","explanation":{"correct":"CIS Benchmarks provide detailed hardening guidelines for secure system configuration.","incorrect":{"2":"Risk transfer shifts risk to third parties.","1":"Vulnerability scanning identifies weaknesses.","0":"Incident response handles security events."}}},
-{"id":595,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A junior security technician asks: which technology aggregates logs from multiple sources to detect security incidents?","options":["SIEM","EDR","SOAR","IDS"],"correctIndex":0,"hint":"It collects, correlates, and analyzes log data.","explanation":{"correct":"A SIEM collects logs from multiple sources and uses correlation rules to identify threats.","incorrect":{"2":"SOAR automates incident response.","1":"EDR monitors endpoints.","3":"IDS monitors network traffic."}}},
-{"id":596,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A junior security technician asks: which solution automates incident response playbooks and orchestrates security tools?","options":["EDR","NAC","SOAR","SIEM"],"correctIndex":2,"hint":"Think automation and orchestration.","explanation":{"correct":"SOAR automates repetitive security tasks and orchestrates multiple security tools.","incorrect":{"3":"SIEM aggregates logs but doesn\u0027t automate response.","1":"NAC controls network access.","0":"EDR is endpoint-specific."}}},
-{"id":597,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A junior security technician asks: which scoring system rates vulnerability severity on a scale of 0 to 10?","options":["CVE","CVSS","CPE","CWE"],"correctIndex":1,"hint":"It provides a numerical severity score.","explanation":{"correct":"CVSS rates vulnerabilities 0-10 based on impact and exploitability.","incorrect":{"2":"CPE identifies software products.","0":"CVE is an identifier (e.g., CVE-2024-1234).","3":"CWE categorizes weakness types."}}},
-{"id":598,"domain":4,"domainName":"Security Operations","difficulty":"medium","question":"A junior security technician asks: a security team is authorized to attempt to exploit vulnerabilities. This is:","options":["Vulnerability scanning","Compliance audit","Risk assessment","Penetration testing"],"correctIndex":3,"hint":"Active, authorized exploitation attempts.","explanation":{"correct":"Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities.","incorrect":{"2":"Risk assessment evaluates overall risk.","1":"Compliance audits check adherence to standards.","0":"Vulnerability scanning identifies but does not exploit."}}},
-{"id":599,"domain":4,"domainName":"Security Operations","difficulty":"easy","question":"A junior security technician asks: what is the CORRECT first phase of incident response?","options":["Preparation","Eradication","Detection","Containment"],"correctIndex":0,"hint":"Teams must be ready before incidents occur.","explanation":{"correct":"Preparation is always the first IR phase: establishing policies, teams, tools, and procedures.","incorrect":{"2":"Detection comes after preparation.","1":"Eradication occurs after containment.","3":"Containment follows detection and analysis."}}},
-{"id":600,"domain":4,"domainName":"Security Operations","difficulty":"hard","question":"A junior security technician asks: during which IR phase are infected systems isolated?","options":["Detection","Eradication","Recovery","Containment"],"correctIndex":3,"hint":"The goal is to stop the spread.","explanation":{"correct":"Containment isolates affected systems to prevent the incident from spreading.","incorrect":{"2":"Recovery restores systems after eradication.","1":"Eradication removes the threat after containment.","0":"Detection identifies the incident."}}}
+{
+  "id": 571,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes Group Policy in the context of Hardening?",
+  "options": [
+    "It is a primary component of Hardening that ensures Group Policy functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Group Policy relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "Group Policy is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Group Policy is directly related to Hardening.",
+      "2": "Group Policy works alongside other components, it does not replace them.",
+      "3": "Group Policy is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 572,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "Which authentication method requires MULTIPLE different types of verification factors? [Variant 0-103]",
+  "options": [
+    "MFA (Multi-Factor Authentication)",
+    "SSO",
+    "LDAP",
+    "RADIUS"
+  ],
+  "correctIndex": 0,
+  "hint": "Something you know, have, and/or are.",
+  "explanation": {
+    "correct": "Multi-Factor Authentication (MFA) requires two or more different authentication factors: something you know, something you have, and/or something you are.",
+    "incorrect": {
+      "1": "Single Sign-On (SSO) allows one login for multiple applications but doesn't require multiple factors.",
+      "2": "Lightweight Directory Access Protocol (LDAP) is a directory service protocol, not an authentication method requiring multiple factors.",
+      "3": "Remote Authentication Dial-In User Service (RADIUS) is an authentication protocol but doesn't inherently require multiple factors."
+    }
+  }
+},
+{
+  "id": 573,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "Which of the following BEST describes CIS Benchmarks in the context of Hardening?",
+  "options": [
+    "It is a primary component of Hardening that ensures CIS Benchmarks functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how CIS Benchmarks relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "CIS Benchmarks is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "CIS Benchmarks is directly related to Hardening.",
+      "2": "CIS Benchmarks works alongside other components, it does not replace them.",
+      "3": "CIS Benchmarks is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 574,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: a security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is: Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 575,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: what is the CORRECT order of the incident response phases Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons Learned",
+    "Detection, Preparation, Containment, Recovery, Eradication, Lessons Learned",
+    "Containment, Detection, Analysis, Eradication, Recovery, Preparation",
+    "Analysis, Detection, Containment, Preparation, Recovery, Eradication"
+  ],
+  "correctIndex": 0,
+  "hint": "Preparation always comes first.",
+  "explanation": {
+    "correct": "The National Institute of Standards and Technology (NIST) Incident Response (IR) lifecycle follows: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Lessons Learned.",
+    "incorrect": {
+      "1": "Detection cannot come before Preparation – teams must be prepared first.",
+      "2": "Containment requires detection first; you must find the threat before containing it.",
+      "3": "Analysis follows detection, and preparation must come before any response."
+    }
+  }
+},
+{
+  "id": 576,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 577,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: during which incident response phase are infected systems isolated to prevent further damage Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Detection"
+  ],
+  "correctIndex": 0,
+  "hint": "The goal is to stop the spread.",
+  "explanation": {
+    "correct": "Containment isolates affected systems to prevent the incident from spreading while preserving evidence for analysis.",
+    "incorrect": {
+      "1": "Eradication removes the threat; containment isolates it first.",
+      "2": "Recovery restores systems to normal operation after eradication.",
+      "3": "Detection identifies the incident but doesn't isolate systems."
+    }
+  }
+},
+{
+  "id": 578,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Memory Forensics in the context of Digital Forensics Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Memory Forensics functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Memory Forensics relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Memory Forensics is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Memory Forensics is directly related to Digital Forensics.",
+      "2": "Memory Forensics works alongside other components, it does not replace them.",
+      "3": "Memory Forensics is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 579,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.6",
+  "subdomain_name": "Access Control Models",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which access control model assigns permissions based on a user's job function or position Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "RBAC (Role-Based Access Control)",
+    "DAC",
+    "MAC",
+    "ABAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Permissions are tied to roles, not individual users.",
+  "explanation": {
+    "correct": "Role-Based Access Control (RBAC) assigns permissions based on organizational roles. Users inherit permissions from their assigned role.",
+    "incorrect": {
+      "1": "Discretionary Access Control (DAC) allows resource owners to set permissions at their discretion.",
+      "2": "Mandatory Access Control (MAC) uses security labels and clearance levels set by administrators.",
+      "3": "Attribute-Based Access Control (ABAC) uses attributes (location, time, etc.) for dynamic access decisions."
+    }
+  }
+},
+{
+  "id": 580,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Evidence Collection in the context of Digital Forensics Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Evidence Collection functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Evidence Collection relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Evidence Collection is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Evidence Collection is directly related to Digital Forensics.",
+      "2": "Evidence Collection works alongside other components, it does not replace them.",
+      "3": "Evidence Collection is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 581,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Removing Software in the context of Hardening Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Hardening that ensures Removing Software functionality",
+    "It is unrelated to Hardening",
+    "It replaces all other aspects of Hardening",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Removing Software relates to the broader concept of Hardening.",
+  "explanation": {
+    "correct": "Removing Software is indeed a key component of Hardening and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Removing Software is directly related to Hardening.",
+      "2": "Removing Software works alongside other components, it does not replace them.",
+      "3": "Removing Software is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 582,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which solution automates incident response playbooks and orchestrates security tools Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 583,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices Which answer BEST applies in an enterprise environment? [Variant 1-114]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 584,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: a security team is authorized to attempt to exploit vulnerabilities in a system to test its defenses. This is: Which answer BEST applies in an enterprise environment? [Variant 1-115]",
+  "options": [
+    "Penetration testing",
+    "Vulnerability scanning",
+    "Risk assessment",
+    "Compliance audit"
+  ],
+  "correctIndex": 0,
+  "hint": "Active, authorized exploitation attempts.",
+  "explanation": {
+    "correct": "Penetration testing involves authorized simulated attacks to identify exploitable vulnerabilities and assess security effectiveness.",
+    "incorrect": {
+      "1": "Vulnerability scanning identifies potential vulnerabilities but does not exploit them.",
+      "2": "Risk assessment evaluates overall organizational risk, not specific exploits.",
+      "3": "Compliance audits check adherence to standards, not active exploitation."
+    }
+  }
+},
+{
+  "id": 585,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which technology aggregates logs from multiple sources and correlates events to detect security incidents Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 586,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which solution automates incident response playbooks and orchestrates security tools Which answer BEST applies in an enterprise environment? [Variant 1-117]",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 587,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.7",
+  "subdomain_name": "Endpoint and Application Security",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which solution provides continuous monitoring, threat detection, and automated response specifically for endpoint devices Which answer BEST applies in an enterprise environment? [Variant 1-118]",
+  "options": [
+    "EDR (Endpoint Detection and Response)",
+    "SIEM",
+    "IPS",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "It focuses on laptops, desktops, and servers.",
+  "explanation": {
+    "correct": "Endpoint Detection and Response (EDR) continuously monitors endpoints for suspicious behavior and provides automated response capabilities.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates logs from all sources, not endpoint-specific monitoring.",
+      "2": "Intrusion Prevention System (IPS) monitors and blocks network-level threats.",
+      "3": "Network Access Control (NAC) controls network access but doesn't monitor endpoint behavior."
+    }
+  }
+},
+{
+  "id": 588,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Network Forensics in the context of Digital Forensics Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Network Forensics functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Network Forensics relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Network Forensics is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Network Forensics is directly related to Digital Forensics.",
+      "2": "Network Forensics works alongside other components, it does not replace them.",
+      "3": "Network Forensics is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 589,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Scripting in the context of Automation Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Automation that ensures Scripting functionality",
+    "It is unrelated to Automation",
+    "It replaces all other aspects of Automation",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Scripting relates to the broader concept of Automation.",
+  "explanation": {
+    "correct": "Scripting is indeed a key component of Automation and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Scripting is directly related to Automation.",
+      "2": "Scripting works alongside other components, it does not replace them.",
+      "3": "Scripting is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 590,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which solution automates incident response playbooks and orchestrates security tools Which answer BEST applies in an enterprise environment? [Variant 1-121]",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 591,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.8",
+  "subdomain_name": "Hardening and Automation",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Runbooks in the context of Automation Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Automation that ensures Runbooks functionality",
+    "It is unrelated to Automation",
+    "It replaces all other aspects of Automation",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Runbooks relates to the broader concept of Automation.",
+  "explanation": {
+    "correct": "Runbooks is indeed a key component of Automation and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Runbooks is directly related to Automation.",
+      "2": "Runbooks works alongside other components, it does not replace them.",
+      "3": "Runbooks is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 592,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which solution automates incident response playbooks and orchestrates security tools Which answer BEST applies in an enterprise environment? [Variant 1-123]",
+  "options": [
+    "SOAR",
+    "SIEM",
+    "EDR",
+    "NAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Think automation and orchestration of security workflows.",
+  "explanation": {
+    "correct": "Security Orchestration, Automation, and Response (SOAR) (Security Orchestration, Automation, and Response) automates repetitive security tasks and orchestrates multiple tools.",
+    "incorrect": {
+      "1": "Security Information and Event Management (SIEM) aggregates and correlates logs but doesn't automate response.",
+      "2": "Endpoint Detection and Response (EDR) detects and responds to endpoint threats specifically.",
+      "3": "Network Access Control (NAC) controls network access based on device compliance."
+    }
+  }
+},
+{
+  "id": 593,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.6",
+  "subdomain_name": "Access Control Models",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which access control model assigns permissions based on a user's job function or position Which answer BEST applies in an enterprise environment? [Variant 1-124]",
+  "options": [
+    "RBAC (Role-Based Access Control)",
+    "DAC",
+    "MAC",
+    "ABAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Permissions are tied to roles, not individual users.",
+  "explanation": {
+    "correct": "Role-Based Access Control (RBAC) assigns permissions based on organizational roles. Users inherit permissions from their assigned role.",
+    "incorrect": {
+      "1": "Discretionary Access Control (DAC) allows resource owners to set permissions at their discretion.",
+      "2": "Mandatory Access Control (MAC) uses security labels and clearance levels set by administrators.",
+      "3": "Attribute-Based Access Control (ABAC) uses attributes (location, time, etc.) for dynamic access decisions."
+    }
+  }
+},
+{
+  "id": 594,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology aggregates logs from multiple sources and correlates events to detect security incidents Which answer BEST applies in an enterprise environment? [Variant 1-125]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 595,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.2",
+  "subdomain_name": "Vulnerability Management",
+  "difficulty": "medium",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which scoring system rates the severity of security vulnerabilities on a scale of 0 to 10 Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "CVSS",
+    "CVE",
+    "CWE",
+    "CPE"
+  ],
+  "correctIndex": 0,
+  "hint": "It provides a numerical severity score.",
+  "explanation": {
+    "correct": "Common Vulnerability Scoring System (CVSS) (Common Vulnerability Scoring System) rates vulnerabilities 0-10 based on impact, exploitability, and other factors.",
+    "incorrect": {
+      "1": "Common Vulnerabilities and Exposures (CVE) is an identifier system (e.g., CVE-2024-1234), not a scoring system.",
+      "2": "Common Weakness Enumeration (CWE) categorizes software weakness types, not severity scores.",
+      "3": "CPE identifies specific software products, not vulnerability severity."
+    }
+  }
+},
+{
+  "id": 596,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.5",
+  "subdomain_name": "Identity and Access Management",
+  "difficulty": "hard",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which authentication method requires MULTIPLE different types of verification factors Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "MFA (Multi-Factor Authentication)",
+    "SSO",
+    "LDAP",
+    "RADIUS"
+  ],
+  "correctIndex": 0,
+  "hint": "Something you know, have, and/or are.",
+  "explanation": {
+    "correct": "Multi-Factor Authentication (MFA) requires two or more different authentication factors: something you know, something you have, and/or something you are.",
+    "incorrect": {
+      "1": "Single Sign-On (SSO) allows one login for multiple applications but doesn't require multiple factors.",
+      "2": "Lightweight Directory Access Protocol (LDAP) is a directory service protocol, not an authentication method requiring multiple factors.",
+      "3": "Remote Authentication Dial-In User Service (RADIUS) is an authentication protocol but doesn't inherently require multiple factors."
+    }
+  }
+},
+{
+  "id": 597,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.3",
+  "subdomain_name": "Incident Response",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: during which incident response phase are infected systems isolated to prevent further damage Which answer BEST applies in an enterprise environment? [Variant 1-128]",
+  "options": [
+    "Containment",
+    "Eradication",
+    "Recovery",
+    "Detection"
+  ],
+  "correctIndex": 0,
+  "hint": "The goal is to stop the spread.",
+  "explanation": {
+    "correct": "Containment isolates affected systems to prevent the incident from spreading while preserving evidence for analysis.",
+    "incorrect": {
+      "1": "Eradication removes the threat; containment isolates it first.",
+      "2": "Recovery restores systems to normal operation after eradication.",
+      "3": "Detection identifies the incident but doesn't isolate systems."
+    }
+  }
+},
+{
+  "id": 598,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.4",
+  "subdomain_name": "Digital Forensics",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "archived",
+  "question": "A security analyst needs to determine: which of the following BEST describes Disk Imaging in the context of Digital Forensics Which answer BEST applies in an enterprise environment?",
+  "options": [
+    "It is a primary component of Digital Forensics that ensures Disk Imaging functionality",
+    "It is unrelated to Digital Forensics",
+    "It replaces all other aspects of Digital Forensics",
+    "It is only used in legacy systems"
+  ],
+  "correctIndex": 0,
+  "hint": "Think about how Disk Imaging relates to the broader concept of Digital Forensics.",
+  "explanation": {
+    "correct": "Disk Imaging is indeed a key component of Digital Forensics and plays a fundamental role in security implementations.",
+    "incorrect": {
+      "1": "Disk Imaging is directly related to Digital Forensics.",
+      "2": "Disk Imaging works alongside other components, it does not replace them.",
+      "3": "Disk Imaging is used in modern systems as well."
+    }
+  }
+},
+{
+  "id": 599,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.1",
+  "subdomain_name": "Monitoring and Logging",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which technology aggregates logs from multiple sources and correlates events to detect security incidents Which answer BEST applies in an enterprise environment? [Variant 1-130]",
+  "options": [
+    "SIEM",
+    "SOAR",
+    "IDS",
+    "EDR"
+  ],
+  "correctIndex": 0,
+  "hint": "It collects, correlates, and analyzes log data.",
+  "explanation": {
+    "correct": "A Security Information and Event Management (SIEM) (Security Information and Event Management) collects logs from multiple sources and uses correlation rules to identify threats.",
+    "incorrect": {
+      "1": "Security Orchestration, Automation, and Response (SOAR) automates incident response workflows but doesn't primarily aggregate logs.",
+      "2": "Intrusion Detection System (IDS) monitors network traffic for threats, not log aggregation.",
+      "3": "Endpoint Detection and Response (EDR) monitors endpoints, not centralized log management."
+    }
+  }
+},
+{
+  "id": 600,
+  "domain": 4,
+  "domainName": "Security Operations",
+  "subdomain_id": "4.6",
+  "subdomain_name": "Access Control Models",
+  "difficulty": "easy",
+  "weight": 1,
+  "status": "active",
+  "question": "A security analyst needs to determine: which access control model assigns permissions based on a user's job function or position Which answer BEST applies in an enterprise environment? [Variant 1-131]",
+  "options": [
+    "RBAC (Role-Based Access Control)",
+    "DAC",
+    "MAC",
+    "ABAC"
+  ],
+  "correctIndex": 0,
+  "hint": "Permissions are tied to roles, not individual users.",
+  "explanation": {
+    "correct": "Role-Based Access Control (RBAC) assigns permissions based on organizational roles. Users inherit permissions from their assigned role.",
+    "incorrect": {
+      "1": "Discretionary Access Control (DAC) allows resource owners to set permissions at their discretion.",
+      "2": "Mandatory Access Control (MAC) uses security labels and clearance levels set by administrators.",
+      "3": "Attribute-Based Access Control (ABAC) uses attributes (location, time, etc.) for dynamic access decisions."
+    }
+  }
+}
 ]);
